@@ -1,13 +1,17 @@
 Package: fgeo.x
 Title: Tiny ForestGEO Datasets For Examples
 Version: 0.0.0.9000
-Authors@R: 
+Authors@R:
     c(person(given = "Mauro",
              family = "Lepore",
              role = c("aut", "ctr", "cre"),
              email = "leporem@si.edu"),
+      person(given = "Jess",
+             family = "Zimmerman",
+             role = "dtc",
+             email = "jesskz@ites.upr.edu"),
       person(given = "CTFS-ForestGEO",
-             role = "cph",
+             role = c("cph", "fnd"),
              email = "ForestGEO@si.edu"))
 Description: Tiny ForestGEO datasets from Luquillo, Puerto Rico.
 License: GPL-3
