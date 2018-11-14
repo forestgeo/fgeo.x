@@ -2,9 +2,12 @@
 % Please edit documentation in R/download_data.R
 \name{download_data}
 \alias{download_data}
+\alias{download_scbi}
 \title{Download data from fgeo.data.}
 \usage{
 download_data(.data)
+
+download_scbi(.data)
 }
 \arguments{
 \item{.data}{A string giving the name of the dataset to download. The name of
