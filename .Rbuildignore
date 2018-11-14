@@ -1,0 +1,4 @@
+^tmp\.R$
+^data-raw$
+^fgeo\.Rproj$
+^\.Rproj\.user$
