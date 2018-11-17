@@ -10,7 +10,7 @@ x_example(path = ".")
 \item{path}{Path to a file (with extension) from inst/extdata/}
 }
 \value{
-A string giving a pato to an example.
+A string giving a path to an example.
 }
 \description{
 Path to directory containing example data.

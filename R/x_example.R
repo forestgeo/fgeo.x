@@ -4,7 +4,7 @@
 #'
 #' @param path 	Path to a file (with extension) from inst/extdata/
 #'
-#' @return A string giving a pato to an example.
+#' @return A string giving a path to an example.
 #' @export
 #'
 #' @examples
