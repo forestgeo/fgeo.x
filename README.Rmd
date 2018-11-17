@@ -1,0 +1,62 @@
+---
+output: github_document 
+---
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+
+# <img src="https://i.imgur.com/vTLlhbp.png" align="right" height=88 /> Tiny datasets for examples
+
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Travis build status](https://travis-ci.org/forestgeo/fgeo.x.svg?branch=master)](https://travis-ci.org/forestgeo/fgeo.x)
+[![CRAN status](https://www.r-pkg.org/badges/version/fgeo.x)](https://cran.r-project.org/package=fgeo.x)
+
+## Installation
+
+Install the development version of **fgeo.x** with:
+
+```
+# install.packages("devtools")
+devtools::install_github("forestgeo/fgeo.x")
+```
+
+Or [install all **fgeo** packages in one step](https://forestgeo.github.io/fgeo/index.html#installation).
+
+For details on how to install packages from GitHub, see [this article](https://goo.gl/dQKEeg).
+
+## Example
+
+```{r example}
+library(fgeo.x)
+
+str(elevation)
+
+str(habitat)
+
+str(vft_4quad)
+
+str(taxa, give.attr = FALSE)
+
+str(tree5)
+
+str(tree6, list.len = 3)
+
+str(stem5)
+
+str(stem6, list.len = 3)
+```
+
+[Get started with __fgeo__](https://forestgeo.github.io/fgeo/articles/fgeo.html)
+
+## Information
+
+* [Getting help](SUPPORT.md).
+* [Contributing](CONTRIBUTING.md).
+* [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+

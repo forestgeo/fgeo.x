@@ -1,3 +1,4 @@
+^\.github$
 ^LICENSE\.md$
 ^\.travis\.yml$
 ^fgeo\.x\.Rproj$
