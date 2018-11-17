@@ -1,6 +1,8 @@
 Package: fgeo.x
 Title: Tiny ForestGEO Datasets For Examples
 Version: 0.0.0.9000
+Depends: 
+    R (>= 3.2)
 Authors@R:
     c(person(given = "Mauro",
              family = "Lepore",

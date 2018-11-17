@@ -8,8 +8,7 @@ download_data(.data)
 }
 \arguments{
 \item{.data}{A string giving the name of the dataset to download. The name of
-any dataset listed at
-https://github.com/forestgeo/fgeo.data/tree/master/data (without the
+any dataset listed \href{https://github.com/forestgeo/fgeo.data/tree/master/data}{here} (without the
 extension).}
 }
 \value{
