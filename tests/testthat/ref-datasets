@@ -88,16 +88,16 @@ $stem5
 # A tibble: 30 x 19
    treeID stemID tag   StemTag sp    quadrat    gx    gy MeasureID CensusID
     <int>  <int> <chr> <chr>   <chr> <chr>   <dbl> <dbl>     <int>    <int>
- 1    180    225 1001~ 100174  CASA~ 921     165.  410.     466623        5
- 2   8366  10435 1098~ 109845  OCOM~ 822     145.  432.     468932        5
- 3  17250  21338 1202~ 120270  CASA~ 725     134.  498.     471152        5
- 4  22486  28064 13104 13104   PREM~ 1615    320.  297.     441858        5
- 5  23710  29640 14434 14434   PREM~ 517      82.7 330.     442548        5
- 6  25067  31518 15881 15881   PREM~ 719     128.  363.     443502        5
- 7  25289  31892 16113 16113   INGV~ 1519    299.  363.     443660        5
- 8  26289  33212 17154 17154   PREM~ 1121    204.  415.     444355        5
- 9  28684  36357 19631 19631   CASS~ 102      19.8  32.6    445962        5
-10  36181  44951 28529 28529   CASS~ 107      10.4 125.     449525        5
+ 1   4832   5905 10554 10554   MANB~ 212      30.8 235.     440357        5
+ 2   9689  12178 1115~ 111528  CORB~ 1524    289.  465.     469305        5
+ 3  23686  29616 14406 14406   PREM~ 417      69.0 335.     442528        5
+ 4  23903  29911 14637 14637   PREM~ 1017    194.  334.     442708        5
+ 5  24526  30750 15309 15309   INGL~ 1018    194.  359.     443140        5
+ 6  24978  31380 15788 15788   CORS~ 419      63.2 371.     443418        5
+ 7  25534  32193 1638  1638    MATD~ 1603    311.   48.6    435148        5
+ 8  30954  38949 22106 22106   MANB~ 1502    283.   31.1    446883        5
+ 9  32644  40902 23959 23958   SLOB~ 1304    251.   68.2    447786        5
+10  34407  42945 2605  2605    DACE~ 304      50.5  67.5    435787        5
 # ... with 20 more rows, and 9 more variables: dbh <dbl>, pom <chr>, hom <dbl>,
 #   ExactDate <date>, DFstatus <chr>, codes <chr>, countPOM <dbl>,
 #   status <chr>, date <dbl>
@@ -106,16 +106,16 @@ $stem6
 # A tibble: 30 x 19
    treeID stemID tag   StemTag sp    quadrat    gx    gy MeasureID CensusID
     <int>  <int> <chr> <chr>   <chr> <chr>   <dbl> <dbl>     <int>    <int>
- 1    180    225 1001~ 100174  CASA~ 921     165.  410.     617049        6
- 2   8366  10435 1098~ 109845  OCOM~ 822     145.  432.     614388        6
- 3  17250  21338 1202~ 120270  CASA~ 725     134.  498.     612036        6
- 4  22486  28064 13104 13104   PREM~ 1615    320.  297.     596599        6
- 5  23710  29640 14434 14434   PREM~ 517      82.7 330.     605813        6
- 6  25067  31518 15881 15881   PREM~ 719     128.  363.     611146        6
- 7  25289  31892 16113 16113   INGV~ 1519    299.  363.     594449        6
- 8  26289  33212 17154 17154   PREM~ 1121    204.  415.     582279        6
- 9  28684  36357 19631 19631   CASS~ 102      19.8  32.6    578550        6
-10  36181  44951 28529 28529   CASS~ 107      10.4 125.     579662        6
+ 1   4832   5905 10554 10554   MANB~ 212      30.8 235.     598341        6
+ 2   9689  12178 1115~ 111528  CORB~ 1524    289.  465.     594736        6
+ 3  23686  29616 14406 14406   PREM~ 417      69.0 335.     603540        6
+ 4  23903  29911 14637 14637   PREM~ 1017    194.  334.     578189        6
+ 5  24526  30750 15309 15309   INGL~ 1018    194.  359.     578323        6
+ 6  24978  31380 15788 15788   CORS~ 419      63.2 371.     603697        6
+ 7  25534  32193 1638  1638    MATD~ 1603    311.   48.6    595353        6
+ 8  30954  38949 22106 22106   MANB~ 1502    283.   31.1    592357        6
+ 9  32644  40902 23959 23958   SLOB~ 1304    251.   68.2    587114        6
+10  34407  42945 2605  2605    DACE~ 304      50.5  67.5    600264        6
 # ... with 20 more rows, and 9 more variables: dbh <dbl>, pom <chr>, hom <dbl>,
 #   ExactDate <date>, DFstatus <chr>, codes <chr>, countPOM <dbl>,
 #   status <chr>, date <dbl>
@@ -143,16 +143,16 @@ $tree5
 # A tibble: 30 x 19
    treeID stemID tag   StemTag sp    quadrat    gx    gy MeasureID CensusID
     <int>  <int> <chr> <chr>   <chr> <chr>   <dbl> <dbl>     <int>    <int>
- 1  10442  13102 1124~ 112421  PREM~ 1423    271.  453.     469482        5
- 2  11386  14246 1134~ 113491  PREM~ 1325    244.  481.     469689        5
- 3  15199  18893 1179~ 117900  MANB~ 924     170.  464.     470582        5
- 4  18680  23015 1218~ 121860  INGL~ 523      99.1 446.     471590        5
- 5  19547  24212 1230~ 123012  CASA~ 423      76.9 458.     471853        5
- 6  20421  25373 1241~ 124127  HIRR~ 325      50.9 489.     472102        5
- 7  22024  27427 12638 12638   MANB~ 215      24.4 289.     441514        5
- 8  26590  33636 17459 17459   PREM~ 322      51.2 423.     444528        5
- 9  28615  36279 19556 19556   PREM~ 1625    306.  493.     445916        5
-10  31570  39655 22763 22763   TETB~ 204      33.3  79.6    447212        5
+ 1   7624 160987 1089~ 175325  TRIP~ 722     139.  425.     486675        5
+ 2   8055  10036 1094~ 109482  CECS~ 522      94.8 424.     468874        5
+ 3  19930 117849 1234~ 165576  CASA~ 425      61.3 496.     471979        5
+ 4  23746  29677 14473 14473   PREM~ 617     100.  328.     442571        5
+ 5  31702  39793 22889 22889   SLOB~ 304      53.8  73.8    447307        5
+ 6  35355  44026 27538 27538   SLOB~ 1106    203.  110.     449169        5
+ 7  35891  44634 282   282     DACE~ 901     172.   14.7    434266        5
+ 8  39705  48888 33371 33370   CASS~ 1010    184.  194.     451067        5
+ 9  50184  60798 5830  5830    MATD~ 1007    191.  132.     437645        5
+10  57380 155867 66962 171649  SLOB~ 1414    274.  279.     459427        5
 # ... with 20 more rows, and 9 more variables: dbh <dbl>, pom <chr>, hom <dbl>,
 #   ExactDate <date>, DFstatus <chr>, codes <chr>, nostems <dbl>, status <chr>,
 #   date <dbl>
@@ -161,16 +161,16 @@ $tree6
 # A tibble: 30 x 19
    treeID stemID tag   StemTag sp    quadrat    gx    gy MeasureID CensusID
     <int>  <int> <chr> <chr>   <chr> <chr>   <dbl> <dbl>     <int>    <int>
- 1  10442  13102 1124~ 112421  PREM~ 1423    271.  453.     591927        6
- 2  11386  14246 1134~ 113491  PREM~ 1325    244.  481.     589403        6
- 3  15199  18893 1179~ 117900  MANB~ 924     170.  464.     617606        6
- 4  18680  23015 1218~ 121860  INGL~ 523      99.1 446.     606559        6
- 5  19547  24212 1230~ 123012  CASA~ 423      76.9 458.     604140        6
- 6  20421  25373 1241~ 124127  HIRR~ 325      50.9 489.     602073        6
- 7  22024  27427 12638 12638   MANB~ 215      24.4 289.     598565        6
- 8  26590  33636 17459 17459   PREM~ 322      51.2 423.     601723        6
- 9  28615  36279 19556 19556   PREM~ 1625    306.  493.     597377        6
-10  31570  39655 22763 22763   TETB~ 204      33.3  79.6    597779        6
+ 1   7624 160987 1089~ 175325  TRIP~ 722     139.  425.     611672        6
+ 2   8055  10036 1094~ 109482  CECS~ 522      94.8 424.     606384        6
+ 3  19930 117849 1234~ 165576  CASA~ 425      61.3 496.     604290        6
+ 4  23746  29677 14473 14473   PREM~ 617     100.  328.     608215        6
+ 5  31702  39793 22889 22889   SLOB~ 304      53.8  73.8    600279        6
+ 6  35355  44026 27538 27538   SLOB~ 1106    203.  110.     580424        6
+ 7  35891  44634 282   282     DACE~ 901     172.   14.7    614986        6
+ 8  39705  48888 33371 33370   CASS~ 1010    184.  194.     577399        6
+ 9  50184  60798 5830  5830    MATD~ 1007    191.  132.     576995        6
+10  57380 155867 66962 171649  SLOB~ 1414    274.  279.     591058        6
 # ... with 20 more rows, and 9 more variables: dbh <dbl>, pom <chr>, hom <dbl>,
 #   ExactDate <date>, DFstatus <chr>, codes <chr>, nostems <dbl>, status <chr>,
 #   date <dbl>
@@ -197,16 +197,16 @@ $vft_4quad
 # A tibble: 500 x 32
     DBHID PlotName PlotID Family Genus SpeciesName Mnemonic Subspecies SpeciesID
     <int> <chr>     <int> <chr>  <chr> <chr>       <chr>    <chr>          <int>
- 1 388084 luquillo      1 Rubia~ Psyc~ brachiata   PSYBRA   <NA>             185
- 2 388580 luquillo      1 Salic~ Case~ arborea     CASARB   <NA>              70
- 3 388488 luquillo      1 Rubia~ Psyc~ brachiata   PSYBRA   <NA>             185
- 4 619629 luquillo      1 Melas~ Mico~ tetrandra   MICTET   <NA>             148
- 5 467050 luquillo      1 Arali~ Sche~ morototoni  SCHMOR   <NA>             196
- 6 384642 luquillo      1 Arali~ Sche~ morototoni  SCHMOR   <NA>             196
- 7 485605 luquillo      1 Salic~ Case~ arborea     CASARB   <NA>              70
- 8 388198 luquillo      1 Urtic~ Cecr~ schreberia~ CECSCH   <NA>              74
- 9 611413 luquillo      1 Rubia~ Psyc~ brachiata   PSYBRA   <NA>             185
-10 619635 luquillo      1 Rubia~ Psyc~ brachiata   PSYBRA   <NA>             185
+ 1 480614 luquillo      1 Fabac~ Inga  laurina     INGLAU   <NA>             128
+ 2 467103 luquillo      1 Salic~ Case~ sylvestris  CASSYL   <NA>              73
+ 3 466804 luquillo      1 Melia~ Guar~ guidonia    GUAGUI   <NA>             117
+ 4 388646 luquillo      1 Salic~ Case~ arborea     CASARB   <NA>              70
+ 5 481054 luquillo      1 Salic~ Case~ arborea     CASARB   <NA>              70
+ 6 388453 luquillo      1 Rubia~ Psyc~ brachiata   PSYBRA   <NA>             185
+ 7 411794 luquillo      1 Rubia~ Psyc~ berteroana  PSYBER   <NA>             184
+ 8 411798 luquillo      1 Melia~ Guar~ guidonia    GUAGUI   <NA>             117
+ 9 411761 luquillo      1 Rubia~ Psyc~ berteroana  PSYBER   <NA>             184
+10 388160 luquillo      1 Salic~ Case~ arborea     CASARB   <NA>              70
 # ... with 490 more rows, and 23 more variables: SubspeciesID <chr>,
 #   QuadratName <chr>, QuadratID <int>, PX <dbl>, PY <dbl>, QX <dbl>, QY <dbl>,
 #   TreeID <int>, Tag <chr>, StemID <int>, StemNumber <int>, StemTag <int>,
