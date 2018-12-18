@@ -14,9 +14,13 @@ expect_printed_output <- function(object, update = FALSE) {
 context("data")
 
 test_that("data remains unchanged", {
+  skip_if_not_installed("purrr")
+  skip_if_not_installed("tibble")
+
   library(fgeo.x)
   pkg <- "fgeo.x"
-  datasets_chr <- handy::pkg_datasets_chr(pkg)
+
+  datasets_chr <-   utils::data(package = pkg)$results[, "Item"]
   datasets <- datasets_chr %>%
     purrr::map(~handy::pkg_get(.x, pkg)) %>%
     purrr::set_names(datasets_chr) %>%
