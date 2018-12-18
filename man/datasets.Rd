@@ -10,6 +10,7 @@
 \alias{tree5}
 \alias{tree6}
 \alias{vft_4quad}
+\alias{tree6_3species}
 \title{Datasets from Luquillo, Puerto Rico.}
 \description{
 These are small datasets for examples, with no value for research. They have
@@ -21,15 +22,18 @@ str(elevation)
 
 str(habitat)
 
-str(vft_4quad)
+str(stem5)
 
-str(taxa)
+str(stem6)
 
 str(tree5)
 
 str(tree6)
 
-str(stem5)
+str(tree6_3species)
 
-str(stem6)
+str(taxa, give.attr = FALSE)
+
+str(vft_4quad)
 }
+\concept{datasets}
