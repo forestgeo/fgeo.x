@@ -1,3 +1,6 @@
+# Ensures data remains the same accross runs
+set.seed(123)
+
 library(dplyr)
 library(usethis)
 library(purrr)
