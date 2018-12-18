@@ -1,5 +1,7 @@
 library(dplyr)
 library(usethis)
+library(purrr)
+library(tibble)
 
 pick_n <- function(x, y, n) {
   list(x, y) %>%
@@ -19,7 +21,6 @@ tree_ls <- pick_n(
 tree5 <- tree_ls[[1]]
 tree6 <- tree_ls[[2]]
 use_data(tree5, tree6, overwrite = TRUE)
-
 
 
 
@@ -56,3 +57,14 @@ use_data(taxa, overwrite = TRUE)
 
 habitat <- as.tibble(fgeo.data::luquillo_habitat)
 use_data(habitat, overwrite = TRUE)
+
+
+
+cns <- fgeo.data::luquillo_tree6_random
+top3_sp <- cns %>%
+  count(sp) %>%
+  arrange(desc(n)) %>%
+  top_n(3) %>%
+  pull(sp)
+tree6_3species <- dplyr::filter(cns, sp %in% top3_sp)
+use_data(tree6_3species, overwrite = TRUE)
