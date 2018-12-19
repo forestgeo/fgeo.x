@@ -19,4 +19,10 @@ Download data from fgeo.data.
 }
 \examples{
 download_data("unique_id")
+
 }
+\seealso{
+Other datasets: \code{\link{datasets}},
+  \code{\link{x_example}}
+}
+\concept{datasets}

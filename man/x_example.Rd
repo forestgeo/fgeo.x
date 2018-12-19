@@ -18,4 +18,10 @@ Path to directory containing example data.
 \examples{
 dir(x_example())
 read.csv(x_example("taxa.csv"))[1:5, 1:5]
+
 }
+\seealso{
+Other datasets: \code{\link{datasets}},
+  \code{\link{download_data}}
+}
+\concept{datasets}

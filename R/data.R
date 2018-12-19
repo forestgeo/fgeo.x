@@ -22,6 +22,7 @@
 #' str(taxa, give.attr = FALSE)
 #'
 #' str(vft_4quad)
+#'
 #' @family datasets
 #' @name datasets
 #' @aliases elevation habitat stem5 stem6 taxa tree5 tree6 vft_4quad

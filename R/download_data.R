@@ -6,10 +6,12 @@
 #'   extension).
 #'
 #' @return A dataset.
-#' @export
 #'
 #' @examples
 #' download_data("unique_id")
+#'
+#' @family datasets
+#' @export
 download_data <- function(.data) {
   tmp <- tempfile()
   utils::download.file(data_url(.data), tmp)
