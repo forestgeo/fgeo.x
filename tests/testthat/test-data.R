@@ -19,10 +19,9 @@ test_that("data remains unchanged", {
 
   library(fgeo.x)
   pkg <- "fgeo.x"
-
   datasets_chr <-   utils::data(package = pkg)$results[, "Item"]
   datasets <- datasets_chr %>%
-    purrr::map(~handy::pkg_get(.x, pkg)) %>%
+    purrr::map(~get(.x, asNamespace(pkg))) %>%
     purrr::set_names(datasets_chr) %>%
     purrr::map_if(is.data.frame, tibble::as.tibble) %>%
     # head of each list item
