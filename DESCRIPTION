@@ -15,7 +15,7 @@ Authors@R:
       person(given = "CTFS-ForestGEO",
              role = c("cph", "fnd"),
              email = "ForestGEO@si.edu"))
-Description: Tiny ForestGEO datasets from Luquillo, Puerto Rico.
+Description: Tiny ForestGEO datasets (from Luquillo, Puerto Rico) for examples.
 License: GPL-3
 URL: https://github.com/forestgeo/fgeo.x
 BugReports: https://github.com/forestgeo/fgeo.x/issues
@@ -24,4 +24,6 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
 Suggests: 
-    testthat
+    testthat,
+    spelling
+Language: en-US

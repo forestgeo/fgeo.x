@@ -6,7 +6,7 @@
 \alias{fgeo.x-package}
 \title{fgeo.x: Tiny ForestGEO Datasets For Examples}
 \description{
-Tiny ForestGEO datasets from Luquillo, Puerto Rico.
+Tiny ForestGEO datasets (from Luquillo, Puerto Rico) for examples.
 }
 \seealso{
 Useful links:
