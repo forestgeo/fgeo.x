@@ -10,6 +10,11 @@
 #'
 #' @family datasets
 #' @export
-x_example <- function(path = ".") {
-  system.file("extdata", path, package = "fgeo.x")
+x_example <- function (path = NULL) {
+  if (is.null(path)) {
+    dir(system.file("extdata", package = "fgeo.x"))
+  }
+  else {
+    system.file("extdata", path, package = "fgeo.x", mustWork = TRUE)
+  }
 }
