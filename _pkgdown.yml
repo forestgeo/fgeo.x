@@ -36,11 +36,7 @@ navbar:
 
 reference:
 
-  - title: Datasets
+  - title: Datasets and functions to access datasets
     contents:
-      - datasets
+      - has_concept("datasets")
 
-  - title: Functions
-    contents:
-      - download_data
-      - x_example
