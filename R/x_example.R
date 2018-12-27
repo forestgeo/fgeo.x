@@ -5,8 +5,8 @@
 #' @return A string giving a path to an example.
 #'
 #' @examples
-#' dir(x_example())
-#' read.csv(x_example("taxa.csv"))[1:5, 1:5]
+#' x_example()
+#' str(read.csv(x_example("taxa.csv")))
 #'
 #' @family datasets
 #' @export

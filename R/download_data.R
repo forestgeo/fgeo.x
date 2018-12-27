@@ -8,7 +8,7 @@
 #' @return A dataset.
 #'
 #' @examples
-#' download_data("unique_id")
+#' str(download_data("luquillo_stem6_random"))
 #'
 #' @family datasets
 #' @export
