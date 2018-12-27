@@ -154,7 +154,66 @@ devtools::install_github("forestgeo/fgeo.x")</a></code></pre>
 <a class="sourceLine" id="cb3-56" data-line-number="56"><span class="co">#&gt;  $ codes    : chr  "MAIN;A" "MAIN;A;LS;DP;ST" "MAIN;A" "MAIN;A" ...</span></a>
 <a class="sourceLine" id="cb3-57" data-line-number="57"><span class="co">#&gt;  $ countPOM : num  1 1 1 1 1 1 1 1 1 1 ...</span></a>
 <a class="sourceLine" id="cb3-58" data-line-number="58"><span class="co">#&gt;  $ status   : chr  "A" "G" "A" "A" ...</span></a>
-<a class="sourceLine" id="cb3-59" data-line-number="59"><span class="co">#&gt;  $ date     : num  18900 19040 18966 19010 19009 ...</span></a></code></pre></div>
+<a class="sourceLine" id="cb3-59" data-line-number="59"><span class="co">#&gt;  $ date     : num  18900 19040 18966 19010 19009 ...</span></a>
+<a class="sourceLine" id="cb3-60" data-line-number="60"></a>
+<a class="sourceLine" id="cb3-61" data-line-number="61"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(vft_4quad)</a>
+<a class="sourceLine" id="cb3-62" data-line-number="62"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    500 obs. of  32 variables:</span></a>
+<a class="sourceLine" id="cb3-63" data-line-number="63"><span class="co">#&gt;  $ DBHID           : int  480614 467103 466804 388646 481054 388453 411794 411798 411761 388160 ...</span></a>
+<a class="sourceLine" id="cb3-64" data-line-number="64"><span class="co">#&gt;  $ PlotName        : chr  "luquillo" "luquillo" "luquillo" "luquillo" ...</span></a>
+<a class="sourceLine" id="cb3-65" data-line-number="65"><span class="co">#&gt;  $ PlotID          : int  1 1 1 1 1 1 1 1 1 1 ...</span></a>
+<a class="sourceLine" id="cb3-66" data-line-number="66"><span class="co">#&gt;  $ Family          : chr  "Fabaceae-mimosoideae" "Salicaceae" "Meliaceae" "Salicaceae" ...</span></a>
+<a class="sourceLine" id="cb3-67" data-line-number="67"><span class="co">#&gt;  $ Genus           : chr  "Inga" "Casearia" "Guarea" "Casearia" ...</span></a>
+<a class="sourceLine" id="cb3-68" data-line-number="68"><span class="co">#&gt;  $ SpeciesName     : chr  "laurina" "sylvestris" "guidonia" "arborea" ...</span></a>
+<a class="sourceLine" id="cb3-69" data-line-number="69"><span class="co">#&gt;  $ Mnemonic        : chr  "INGLAU" "CASSYL" "GUAGUI" "CASARB" ...</span></a>
+<a class="sourceLine" id="cb3-70" data-line-number="70"><span class="co">#&gt;  $ Subspecies      : chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-71" data-line-number="71"><span class="co">#&gt;  $ SpeciesID       : int  128 73 117 70 70 185 184 117 184 70 ...</span></a>
+<a class="sourceLine" id="cb3-72" data-line-number="72"><span class="co">#&gt;  $ SubspeciesID    : chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-73" data-line-number="73"><span class="co">#&gt;  $ QuadratName     : chr  "721" "621" "721" "622" ...</span></a>
+<a class="sourceLine" id="cb3-74" data-line-number="74"><span class="co">#&gt;  $ QuadratID       : int  327 326 327 342 343 342 343 343 342 343 ...</span></a>
+<a class="sourceLine" id="cb3-75" data-line-number="75"><span class="co">#&gt;  $ PX              : num  126 115 127 110 126 ...</span></a>
+<a class="sourceLine" id="cb3-76" data-line-number="76"><span class="co">#&gt;  $ PY              : num  413 405 412 431 420 ...</span></a>
+<a class="sourceLine" id="cb3-77" data-line-number="77"><span class="co">#&gt;  $ QX              : num  5.75 14.59 6.64 9.9 5.66 ...</span></a>
+<a class="sourceLine" id="cb3-78" data-line-number="78"><span class="co">#&gt;  $ QY              : num  13.1 4.9 11.9 10.7 0.5 ...</span></a>
+<a class="sourceLine" id="cb3-79" data-line-number="79"><span class="co">#&gt;  $ TreeID          : int  108604 2092 871 8811 109474 8475 109467 109471 109438 7843 ...</span></a>
+<a class="sourceLine" id="cb3-80" data-line-number="80"><span class="co">#&gt;  $ Tag             : chr  "154809" "102365" "100975" "110415" ...</span></a>
+<a class="sourceLine" id="cb3-81" data-line-number="81"><span class="co">#&gt;  $ StemID          : int  143326 2555 114203 11057 144288 115993 144281 144285 144248 115875 ...</span></a>
+<a class="sourceLine" id="cb3-82" data-line-number="82"><span class="co">#&gt;  $ StemNumber      : int  0 0 0 0 0 0 0 0 0 0 ...</span></a>
+<a class="sourceLine" id="cb3-83" data-line-number="83"><span class="co">#&gt;  $ StemTag         : int  154809 102365 154808 110415 156286 156210 156268 156281 156223 156272 ...</span></a>
+<a class="sourceLine" id="cb3-84" data-line-number="84"><span class="co">#&gt;  $ PrimaryStem     : chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-85" data-line-number="85"><span class="co">#&gt;  $ CensusID        : int  5 5 5 4 5 4 4 4 4 4 ...</span></a>
+<a class="sourceLine" id="cb3-86" data-line-number="86"><span class="co">#&gt;  $ PlotCensusNumber: int  5 5 5 4 5 4 4 4 4 4 ...</span></a>
+<a class="sourceLine" id="cb3-87" data-line-number="87"><span class="co">#&gt;  $ DBH             : num  30.8 74 22.3 NA 33.8 NA NA 16.5 NA 44.6 ...</span></a>
+<a class="sourceLine" id="cb3-88" data-line-number="88"><span class="co">#&gt;  $ HOM             : num  1.3 1.3 1.3 NA 1.3 NA NA 1.3 NA 1.3 ...</span></a>
+<a class="sourceLine" id="cb3-89" data-line-number="89"><span class="co">#&gt;  $ ExactDate       : Date, format: "2012-01-31" "2012-01-30" ...</span></a>
+<a class="sourceLine" id="cb3-90" data-line-number="90"><span class="co">#&gt;  $ Date            : int  19023 19022 19023 17122 19024 17125 17126 17126 17125 17126 ...</span></a>
+<a class="sourceLine" id="cb3-91" data-line-number="91"><span class="co">#&gt;  $ ListOfTSM       : chr  "MAIN;A" "MAIN;A" "SPROUT;A" "MAIN;A;LS;B" ...</span></a>
+<a class="sourceLine" id="cb3-92" data-line-number="92"><span class="co">#&gt;  $ HighHOM         : int  1 1 1 1 1 1 1 1 1 1 ...</span></a>
+<a class="sourceLine" id="cb3-93" data-line-number="93"><span class="co">#&gt;  $ LargeStem       : chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-94" data-line-number="94"><span class="co">#&gt;  $ Status          : chr  "alive" "alive" "alive" "broken below" ...</span></a>
+<a class="sourceLine" id="cb3-95" data-line-number="95"></a>
+<a class="sourceLine" id="cb3-96" data-line-number="96"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(taxa)</a>
+<a class="sourceLine" id="cb3-97" data-line-number="97"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    163 obs. of  21 variables:</span></a>
+<a class="sourceLine" id="cb3-98" data-line-number="98"><span class="co">#&gt;  $ ViewID        : int  1 2 3 4 5 6 7 8 9 10 ...</span></a>
+<a class="sourceLine" id="cb3-99" data-line-number="99"><span class="co">#&gt;  $ SpeciesID     : int  56 57 58 59 60 61 62 63 64 65 ...</span></a>
+<a class="sourceLine" id="cb3-100" data-line-number="100"><span class="co">#&gt;  $ SubspeciesID  : chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-101" data-line-number="101"><span class="co">#&gt;  $ Family        : chr  "Fabaceae" "Euphorbiaceae" "Euphorbiaceae" "Fabaceae-papilionoideae" ...</span></a>
+<a class="sourceLine" id="cb3-102" data-line-number="102"><span class="co">#&gt;  $ Mnemonic      : chr  "AESAME" "ALCFLO" "ALCLAT" "ANDINE" ...</span></a>
+<a class="sourceLine" id="cb3-103" data-line-number="103"><span class="co">#&gt;  $ Genus         : chr  "Aeschynomene" "Alchorneopsis" "Alchornea" "Andira" ...</span></a>
+<a class="sourceLine" id="cb3-104" data-line-number="104"><span class="co">#&gt;  $ SpeciesName   : chr  "americana" "floribunda" "latifolia" "inermis" ...</span></a>
+<a class="sourceLine" id="cb3-105" data-line-number="105"><span class="co">#&gt;  $ Rank          : chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-106" data-line-number="106"><span class="co">#&gt;  $ Subspecies    : chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-107" data-line-number="107"><span class="co">#&gt;  $ Authority     : chr  "(Poir.) Rudd" "(Benth.) Müll. Arg." "Sw." "(W. Wright) Kunth ex DC." ...</span></a>
+<a class="sourceLine" id="cb3-108" data-line-number="108"><span class="co">#&gt;  $ IDLevel       : chr  "species" "species" "species" "species" ...</span></a>
+<a class="sourceLine" id="cb3-109" data-line-number="109"><span class="co">#&gt;  $ subspMnemonic : chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-110" data-line-number="110"><span class="co">#&gt;  $ subspAuthority: chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-111" data-line-number="111"><span class="co">#&gt;  $ FieldFamily   : chr  "Fabaceae" "Euphorbiaceae" "Euphorbiaceae" "Fabaceae" ...</span></a>
+<a class="sourceLine" id="cb3-112" data-line-number="112"><span class="co">#&gt;  $ Lifeform      : chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-113" data-line-number="113"><span class="co">#&gt;  $ Description   : chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-114" data-line-number="114"><span class="co">#&gt;  $ wsg           : num  0.678 0.427 0.42 0.642 0.636 ...</span></a>
+<a class="sourceLine" id="cb3-115" data-line-number="115"><span class="co">#&gt;  $ wsglevel      : chr  "family" "species" "species" "species" ...</span></a>
+<a class="sourceLine" id="cb3-116" data-line-number="116"><span class="co">#&gt;  $ ListOfOldNames: chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-117" data-line-number="117"><span class="co">#&gt;  $ Specimens     : chr  NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb3-118" data-line-number="118"><span class="co">#&gt;  $ Reference     : chr  NA NA NA NA ...</span></a></code></pre></div>
 <p>Some other datasets that install with <strong>fgeo.x</strong>:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="reference/x_example.html">x_example</a></span>()</a>
 <a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; [1] "taxa.csv"      "vft_4quad.csv"</span></a>

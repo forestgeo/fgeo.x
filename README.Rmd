@@ -46,6 +46,10 @@ str(habitat)
 str(tree5)
 
 str(stem5)
+
+str(vft_4quad)
+
+str(taxa)
 ```
 
 Some other datasets that install with __fgeo.x__:
