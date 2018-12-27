@@ -16,8 +16,8 @@ A string giving a path to an example.
 Path to directory containing example data.
 }
 \examples{
-dir(x_example())
-read.csv(x_example("taxa.csv"))[1:5, 1:5]
+x_example()
+str(read.csv(x_example("taxa.csv")))
 
 }
 \seealso{
