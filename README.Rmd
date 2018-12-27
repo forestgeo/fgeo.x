@@ -34,28 +34,32 @@ For details on how to install packages from GitHub, see [this article](https://g
 
 ```{r example}
 library(fgeo.x)
+```
 
-glimpse_structure <- function(x, n = length(x)) {
-  str(x, list.len = n, give.attr = FALSE)
-}
+Some datasets available in __fgeo.x__:
 
-glimpse_structure(elevation)
+```{r}
+str(elevation)
 
-glimpse_structure(habitat)
+str(habitat)
 
-glimpse_structure(stem5)
+str(tree5)
 
-glimpse_structure(stem6, 3)
+str(stem5)
+```
 
-glimpse_structure(tree5)
+Some other datasets that install with __fgeo.x__:
 
-glimpse_structure(tree6, 3)
+```{r}
+x_example()
 
-glimpse_structure(tree6_3species, 3)
+str(read.csv(x_example("taxa.csv")))
+```
 
-glimpse_structure(taxa)
+Download data from [__fgeo.data__](https://forestgeo.github.io/fgeo.data/):
 
-glimpse_structure(vft_4quad)
+```{r}
+str(download_data("luquillo_stem6_random"))
 ```
 
 [Get started with __fgeo__](https://forestgeo.github.io/fgeo/articles/fgeo.html)

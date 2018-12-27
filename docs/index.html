@@ -94,151 +94,116 @@ devtools::install_github("forestgeo/fgeo.x")</a></code></pre>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(fgeo.x)</a>
-<a class="sourceLine" id="cb2-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3">glimpse_structure &lt;-<span class="st"> </span><span class="cf">function</span>(x, <span class="dt">n =</span> <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/length">length</a></span>(x)) {</a>
-<a class="sourceLine" id="cb2-4" data-line-number="4">  <span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(x, <span class="dt">list.len =</span> n, <span class="dt">give.attr =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb2-5" data-line-number="5">}</a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"></a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="kw">glimpse_structure</span>(elevation)</a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; List of 4</span></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;  $ col :Classes 'tbl_df', 'tbl' and 'data.frame':    6565 obs. of  3 variables:</span></a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;   ..$ x   : int [1:6565] 0 0 0 0 0 0 0 0 0 0 ...</span></a>
-<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;   ..$ y   : int [1:6565] 0 5 10 15 20 25 30 35 40 45 ...</span></a>
-<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;   ..$ elev: num [1:6565] 364 364 363 363 363 ...</span></a>
-<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;  $ mat : num [1:101, 1:65] 364 364 363 363 363 ...</span></a>
-<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt;  $ xdim: int 320</span></a>
-<a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt;  $ ydim: int 500</span></a>
-<a class="sourceLine" id="cb2-16" data-line-number="16"></a>
-<a class="sourceLine" id="cb2-17" data-line-number="17"><span class="kw">glimpse_structure</span>(habitat)</a>
-<a class="sourceLine" id="cb2-18" data-line-number="18"><span class="co">#&gt; Classes 'fgeo_habitat', 'tbl_df', 'tbl' and 'data.frame':    400 obs. of  3 variables:</span></a>
-<a class="sourceLine" id="cb2-19" data-line-number="19"><span class="co">#&gt;  $ gx      : num  0 0 0 0 0 0 0 0 0 0 ...</span></a>
-<a class="sourceLine" id="cb2-20" data-line-number="20"><span class="co">#&gt;  $ gy      : num  0 20 40 60 80 100 120 140 160 180 ...</span></a>
-<a class="sourceLine" id="cb2-21" data-line-number="21"><span class="co">#&gt;  $ habitats: int  1 1 1 1 1 1 1 1 1 1 ...</span></a>
-<a class="sourceLine" id="cb2-22" data-line-number="22"></a>
-<a class="sourceLine" id="cb2-23" data-line-number="23"><span class="kw">glimpse_structure</span>(stem5)</a>
-<a class="sourceLine" id="cb2-24" data-line-number="24"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    30 obs. of  19 variables:</span></a>
-<a class="sourceLine" id="cb2-25" data-line-number="25"><span class="co">#&gt;  $ treeID   : int  4832 9689 23686 23903 24526 24978 25534 30954 32644 34407 ...</span></a>
-<a class="sourceLine" id="cb2-26" data-line-number="26"><span class="co">#&gt;  $ stemID   : int  5905 12178 29616 29911 30750 31380 32193 38949 40902 42945 ...</span></a>
-<a class="sourceLine" id="cb2-27" data-line-number="27"><span class="co">#&gt;  $ tag      : chr  "10554" "111528" "14406" "14637" ...</span></a>
-<a class="sourceLine" id="cb2-28" data-line-number="28"><span class="co">#&gt;  $ StemTag  : chr  "10554" "111528" "14406" "14637" ...</span></a>
-<a class="sourceLine" id="cb2-29" data-line-number="29"><span class="co">#&gt;  $ sp       : chr  "MANBID" "CORBOR" "PREMON" "PREMON" ...</span></a>
-<a class="sourceLine" id="cb2-30" data-line-number="30"><span class="co">#&gt;  $ quadrat  : chr  "212" "1524" "417" "1017" ...</span></a>
-<a class="sourceLine" id="cb2-31" data-line-number="31"><span class="co">#&gt;  $ gx       : num  30.8 289 69 193.7 194.2 ...</span></a>
-<a class="sourceLine" id="cb2-32" data-line-number="32"><span class="co">#&gt;  $ gy       : num  235 465 335 334 359 ...</span></a>
-<a class="sourceLine" id="cb2-33" data-line-number="33"><span class="co">#&gt;  $ MeasureID: int  440357 469305 442528 442708 443140 443418 435148 446883 447786 435787 ...</span></a>
-<a class="sourceLine" id="cb2-34" data-line-number="34"><span class="co">#&gt;  $ CensusID : int  5 5 5 5 5 5 5 5 5 5 ...</span></a>
-<a class="sourceLine" id="cb2-35" data-line-number="35"><span class="co">#&gt;  $ dbh      : num  148 NA 154 195 360 185 328 15.7 60 124 ...</span></a>
-<a class="sourceLine" id="cb2-36" data-line-number="36"><span class="co">#&gt;  $ pom      : chr  "1.5" NA "1.3" "1.2" ...</span></a>
-<a class="sourceLine" id="cb2-37" data-line-number="37"><span class="co">#&gt;  $ hom      : num  1.48 NA 1.3 1.2 1.4 1.4 1.5 1.3 1.29 1.35 ...</span></a>
-<a class="sourceLine" id="cb2-38" data-line-number="38"><span class="co">#&gt;  $ ExactDate: Date, format: "2011-09-30" "2012-02-17" ...</span></a>
-<a class="sourceLine" id="cb2-39" data-line-number="39"><span class="co">#&gt;  $ DFstatus : chr  "alive" "stem dead" "alive" "alive" ...</span></a>
-<a class="sourceLine" id="cb2-40" data-line-number="40"><span class="co">#&gt;  $ codes    : chr  "MAIN;A" "MAIN;A;LS;DP;ST" "MAIN;A" "MAIN;A" ...</span></a>
-<a class="sourceLine" id="cb2-41" data-line-number="41"><span class="co">#&gt;  $ countPOM : num  1 1 1 1 1 1 1 1 1 1 ...</span></a>
-<a class="sourceLine" id="cb2-42" data-line-number="42"><span class="co">#&gt;  $ status   : chr  "A" "G" "A" "A" ...</span></a>
-<a class="sourceLine" id="cb2-43" data-line-number="43"><span class="co">#&gt;  $ date     : num  18900 19040 18966 19010 19009 ...</span></a>
-<a class="sourceLine" id="cb2-44" data-line-number="44"></a>
-<a class="sourceLine" id="cb2-45" data-line-number="45"><span class="kw">glimpse_structure</span>(stem6, <span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb2-46" data-line-number="46"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    30 obs. of  19 variables:</span></a>
-<a class="sourceLine" id="cb2-47" data-line-number="47"><span class="co">#&gt;  $ treeID   : int  4832 9689 23686 23903 24526 24978 25534 30954 32644 34407 ...</span></a>
-<a class="sourceLine" id="cb2-48" data-line-number="48"><span class="co">#&gt;  $ stemID   : int  5905 12178 29616 29911 30750 31380 32193 38949 40902 42945 ...</span></a>
-<a class="sourceLine" id="cb2-49" data-line-number="49"><span class="co">#&gt;  $ tag      : chr  "10554" "111528" "14406" "14637" ...</span></a>
-<a class="sourceLine" id="cb2-50" data-line-number="50"><span class="co">#&gt;   [list output truncated]</span></a>
-<a class="sourceLine" id="cb2-51" data-line-number="51"></a>
-<a class="sourceLine" id="cb2-52" data-line-number="52"><span class="kw">glimpse_structure</span>(tree5)</a>
-<a class="sourceLine" id="cb2-53" data-line-number="53"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    30 obs. of  19 variables:</span></a>
-<a class="sourceLine" id="cb2-54" data-line-number="54"><span class="co">#&gt;  $ treeID   : int  7624 8055 19930 23746 31702 35355 35891 39705 50184 57380 ...</span></a>
-<a class="sourceLine" id="cb2-55" data-line-number="55"><span class="co">#&gt;  $ stemID   : int  160987 10036 117849 29677 39793 44026 44634 48888 60798 155867 ...</span></a>
-<a class="sourceLine" id="cb2-56" data-line-number="56"><span class="co">#&gt;  $ tag      : chr  "108958" "109482" "123493" "14473" ...</span></a>
-<a class="sourceLine" id="cb2-57" data-line-number="57"><span class="co">#&gt;  $ StemTag  : chr  "175325" "109482" "165576" "14473" ...</span></a>
-<a class="sourceLine" id="cb2-58" data-line-number="58"><span class="co">#&gt;  $ sp       : chr  "TRIPAL" "CECSCH" "CASARB" "PREMON" ...</span></a>
-<a class="sourceLine" id="cb2-59" data-line-number="59"><span class="co">#&gt;  $ quadrat  : chr  "722" "522" "425" "617" ...</span></a>
-<a class="sourceLine" id="cb2-60" data-line-number="60"><span class="co">#&gt;  $ gx       : num  138.7 94.8 61.3 100.3 53.8 ...</span></a>
-<a class="sourceLine" id="cb2-61" data-line-number="61"><span class="co">#&gt;  $ gy       : num  425.3 424.4 495.7 328 73.8 ...</span></a>
-<a class="sourceLine" id="cb2-62" data-line-number="62"><span class="co">#&gt;  $ MeasureID: int  486675 468874 471979 442571 447307 449169 434266 451067 437645 459427 ...</span></a>
-<a class="sourceLine" id="cb2-63" data-line-number="63"><span class="co">#&gt;  $ CensusID : int  5 5 5 5 5 5 5 5 5 5 ...</span></a>
-<a class="sourceLine" id="cb2-64" data-line-number="64"><span class="co">#&gt;  $ dbh      : num  10.9 165 23.6 170 67 50 269 67 240 16.6 ...</span></a>
-<a class="sourceLine" id="cb2-65" data-line-number="65"><span class="co">#&gt;  $ pom      : chr  "1.3" "1.3" "1.3" "1.3" ...</span></a>
-<a class="sourceLine" id="cb2-66" data-line-number="66"><span class="co">#&gt;  $ hom      : num  1.3 1.3 1.3 1.32 1.37 1.4 1.26 1.5 1.3 1.3 ...</span></a>
-<a class="sourceLine" id="cb2-67" data-line-number="67"><span class="co">#&gt;  $ ExactDate: Date, format: "2012-02-01" "2012-01-30" ...</span></a>
-<a class="sourceLine" id="cb2-68" data-line-number="68"><span class="co">#&gt;  $ DFstatus : chr  "alive" "alive" "alive" "alive" ...</span></a>
-<a class="sourceLine" id="cb2-69" data-line-number="69"><span class="co">#&gt;  $ codes    : chr  "SPROUT;A" "MAIN;A" "SPROUT;A" "MAIN;A" ...</span></a>
-<a class="sourceLine" id="cb2-70" data-line-number="70"><span class="co">#&gt;  $ nostems  : num  2 1 2 1 1 1 1 5 1 3 ...</span></a>
-<a class="sourceLine" id="cb2-71" data-line-number="71"><span class="co">#&gt;  $ status   : chr  "A" "A" "A" "A" ...</span></a>
-<a class="sourceLine" id="cb2-72" data-line-number="72"><span class="co">#&gt;  $ date     : num  19024 19022 19051 18967 18821 ...</span></a>
-<a class="sourceLine" id="cb2-73" data-line-number="73"></a>
-<a class="sourceLine" id="cb2-74" data-line-number="74"><span class="kw">glimpse_structure</span>(tree6, <span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb2-75" data-line-number="75"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    30 obs. of  19 variables:</span></a>
-<a class="sourceLine" id="cb2-76" data-line-number="76"><span class="co">#&gt;  $ treeID   : int  7624 8055 19930 23746 31702 35355 35891 39705 50184 57380 ...</span></a>
-<a class="sourceLine" id="cb2-77" data-line-number="77"><span class="co">#&gt;  $ stemID   : int  160987 10036 117849 29677 39793 44026 44634 48888 60798 155867 ...</span></a>
-<a class="sourceLine" id="cb2-78" data-line-number="78"><span class="co">#&gt;  $ tag      : chr  "108958" "109482" "123493" "14473" ...</span></a>
-<a class="sourceLine" id="cb2-79" data-line-number="79"><span class="co">#&gt;   [list output truncated]</span></a>
-<a class="sourceLine" id="cb2-80" data-line-number="80"></a>
-<a class="sourceLine" id="cb2-81" data-line-number="81"><span class="kw">glimpse_structure</span>(tree6_3species, <span class="dv">3</span>)</a>
-<a class="sourceLine" id="cb2-82" data-line-number="82"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    430 obs. of  19 variables:</span></a>
-<a class="sourceLine" id="cb2-83" data-line-number="83"><span class="co">#&gt;  $ treeID   : int  180 631 1380 1840 2849 3354 3690 4183 5182 5632 ...</span></a>
-<a class="sourceLine" id="cb2-84" data-line-number="84"><span class="co">#&gt;  $ stemID   : int  225 775 1702 2240 3421 4054 4486 5086 6312 6841 ...</span></a>
-<a class="sourceLine" id="cb2-85" data-line-number="85"><span class="co">#&gt;  $ tag      : chr  "100171" "10069" "101560" "10208" ...</span></a>
-<a class="sourceLine" id="cb2-86" data-line-number="86"><span class="co">#&gt;   [list output truncated]</span></a>
-<a class="sourceLine" id="cb2-87" data-line-number="87"></a>
-<a class="sourceLine" id="cb2-88" data-line-number="88"><span class="kw">glimpse_structure</span>(taxa)</a>
-<a class="sourceLine" id="cb2-89" data-line-number="89"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    163 obs. of  21 variables:</span></a>
-<a class="sourceLine" id="cb2-90" data-line-number="90"><span class="co">#&gt;  $ ViewID        : int  1 2 3 4 5 6 7 8 9 10 ...</span></a>
-<a class="sourceLine" id="cb2-91" data-line-number="91"><span class="co">#&gt;  $ SpeciesID     : int  56 57 58 59 60 61 62 63 64 65 ...</span></a>
-<a class="sourceLine" id="cb2-92" data-line-number="92"><span class="co">#&gt;  $ SubspeciesID  : chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-93" data-line-number="93"><span class="co">#&gt;  $ Family        : chr  "Fabaceae" "Euphorbiaceae" "Euphorbiaceae" "Fabaceae-papilionoideae" ...</span></a>
-<a class="sourceLine" id="cb2-94" data-line-number="94"><span class="co">#&gt;  $ Mnemonic      : chr  "AESAME" "ALCFLO" "ALCLAT" "ANDINE" ...</span></a>
-<a class="sourceLine" id="cb2-95" data-line-number="95"><span class="co">#&gt;  $ Genus         : chr  "Aeschynomene" "Alchorneopsis" "Alchornea" "Andira" ...</span></a>
-<a class="sourceLine" id="cb2-96" data-line-number="96"><span class="co">#&gt;  $ SpeciesName   : chr  "americana" "floribunda" "latifolia" "inermis" ...</span></a>
-<a class="sourceLine" id="cb2-97" data-line-number="97"><span class="co">#&gt;  $ Rank          : chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-98" data-line-number="98"><span class="co">#&gt;  $ Subspecies    : chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-99" data-line-number="99"><span class="co">#&gt;  $ Authority     : chr  "(Poir.) Rudd" "(Benth.) Müll. Arg." "Sw." "(W. Wright) Kunth ex DC." ...</span></a>
-<a class="sourceLine" id="cb2-100" data-line-number="100"><span class="co">#&gt;  $ IDLevel       : chr  "species" "species" "species" "species" ...</span></a>
-<a class="sourceLine" id="cb2-101" data-line-number="101"><span class="co">#&gt;  $ subspMnemonic : chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-102" data-line-number="102"><span class="co">#&gt;  $ subspAuthority: chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-103" data-line-number="103"><span class="co">#&gt;  $ FieldFamily   : chr  "Fabaceae" "Euphorbiaceae" "Euphorbiaceae" "Fabaceae" ...</span></a>
-<a class="sourceLine" id="cb2-104" data-line-number="104"><span class="co">#&gt;  $ Lifeform      : chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-105" data-line-number="105"><span class="co">#&gt;  $ Description   : chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-106" data-line-number="106"><span class="co">#&gt;  $ wsg           : num  0.678 0.427 0.42 0.642 0.636 ...</span></a>
-<a class="sourceLine" id="cb2-107" data-line-number="107"><span class="co">#&gt;  $ wsglevel      : chr  "family" "species" "species" "species" ...</span></a>
-<a class="sourceLine" id="cb2-108" data-line-number="108"><span class="co">#&gt;  $ ListOfOldNames: chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-109" data-line-number="109"><span class="co">#&gt;  $ Specimens     : chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-110" data-line-number="110"><span class="co">#&gt;  $ Reference     : chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-111" data-line-number="111"></a>
-<a class="sourceLine" id="cb2-112" data-line-number="112"><span class="kw">glimpse_structure</span>(vft_4quad)</a>
-<a class="sourceLine" id="cb2-113" data-line-number="113"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    500 obs. of  32 variables:</span></a>
-<a class="sourceLine" id="cb2-114" data-line-number="114"><span class="co">#&gt;  $ DBHID           : int  480614 467103 466804 388646 481054 388453 411794 411798 411761 388160 ...</span></a>
-<a class="sourceLine" id="cb2-115" data-line-number="115"><span class="co">#&gt;  $ PlotName        : chr  "luquillo" "luquillo" "luquillo" "luquillo" ...</span></a>
-<a class="sourceLine" id="cb2-116" data-line-number="116"><span class="co">#&gt;  $ PlotID          : int  1 1 1 1 1 1 1 1 1 1 ...</span></a>
-<a class="sourceLine" id="cb2-117" data-line-number="117"><span class="co">#&gt;  $ Family          : chr  "Fabaceae-mimosoideae" "Salicaceae" "Meliaceae" "Salicaceae" ...</span></a>
-<a class="sourceLine" id="cb2-118" data-line-number="118"><span class="co">#&gt;  $ Genus           : chr  "Inga" "Casearia" "Guarea" "Casearia" ...</span></a>
-<a class="sourceLine" id="cb2-119" data-line-number="119"><span class="co">#&gt;  $ SpeciesName     : chr  "laurina" "sylvestris" "guidonia" "arborea" ...</span></a>
-<a class="sourceLine" id="cb2-120" data-line-number="120"><span class="co">#&gt;  $ Mnemonic        : chr  "INGLAU" "CASSYL" "GUAGUI" "CASARB" ...</span></a>
-<a class="sourceLine" id="cb2-121" data-line-number="121"><span class="co">#&gt;  $ Subspecies      : chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-122" data-line-number="122"><span class="co">#&gt;  $ SpeciesID       : int  128 73 117 70 70 185 184 117 184 70 ...</span></a>
-<a class="sourceLine" id="cb2-123" data-line-number="123"><span class="co">#&gt;  $ SubspeciesID    : chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-124" data-line-number="124"><span class="co">#&gt;  $ QuadratName     : chr  "721" "621" "721" "622" ...</span></a>
-<a class="sourceLine" id="cb2-125" data-line-number="125"><span class="co">#&gt;  $ QuadratID       : int  327 326 327 342 343 342 343 343 342 343 ...</span></a>
-<a class="sourceLine" id="cb2-126" data-line-number="126"><span class="co">#&gt;  $ PX              : num  126 115 127 110 126 ...</span></a>
-<a class="sourceLine" id="cb2-127" data-line-number="127"><span class="co">#&gt;  $ PY              : num  413 405 412 431 420 ...</span></a>
-<a class="sourceLine" id="cb2-128" data-line-number="128"><span class="co">#&gt;  $ QX              : num  5.75 14.59 6.64 9.9 5.66 ...</span></a>
-<a class="sourceLine" id="cb2-129" data-line-number="129"><span class="co">#&gt;  $ QY              : num  13.1 4.9 11.9 10.7 0.5 ...</span></a>
-<a class="sourceLine" id="cb2-130" data-line-number="130"><span class="co">#&gt;  $ TreeID          : int  108604 2092 871 8811 109474 8475 109467 109471 109438 7843 ...</span></a>
-<a class="sourceLine" id="cb2-131" data-line-number="131"><span class="co">#&gt;  $ Tag             : chr  "154809" "102365" "100975" "110415" ...</span></a>
-<a class="sourceLine" id="cb2-132" data-line-number="132"><span class="co">#&gt;  $ StemID          : int  143326 2555 114203 11057 144288 115993 144281 144285 144248 115875 ...</span></a>
-<a class="sourceLine" id="cb2-133" data-line-number="133"><span class="co">#&gt;  $ StemNumber      : int  0 0 0 0 0 0 0 0 0 0 ...</span></a>
-<a class="sourceLine" id="cb2-134" data-line-number="134"><span class="co">#&gt;  $ StemTag         : int  154809 102365 154808 110415 156286 156210 156268 156281 156223 156272 ...</span></a>
-<a class="sourceLine" id="cb2-135" data-line-number="135"><span class="co">#&gt;  $ PrimaryStem     : chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-136" data-line-number="136"><span class="co">#&gt;  $ CensusID        : int  5 5 5 4 5 4 4 4 4 4 ...</span></a>
-<a class="sourceLine" id="cb2-137" data-line-number="137"><span class="co">#&gt;  $ PlotCensusNumber: int  5 5 5 4 5 4 4 4 4 4 ...</span></a>
-<a class="sourceLine" id="cb2-138" data-line-number="138"><span class="co">#&gt;  $ DBH             : num  30.8 74 22.3 NA 33.8 NA NA 16.5 NA 44.6 ...</span></a>
-<a class="sourceLine" id="cb2-139" data-line-number="139"><span class="co">#&gt;  $ HOM             : num  1.3 1.3 1.3 NA 1.3 NA NA 1.3 NA 1.3 ...</span></a>
-<a class="sourceLine" id="cb2-140" data-line-number="140"><span class="co">#&gt;  $ ExactDate       : Date, format: "2012-01-31" "2012-01-30" ...</span></a>
-<a class="sourceLine" id="cb2-141" data-line-number="141"><span class="co">#&gt;  $ Date            : int  19023 19022 19023 17122 19024 17125 17126 17126 17125 17126 ...</span></a>
-<a class="sourceLine" id="cb2-142" data-line-number="142"><span class="co">#&gt;  $ ListOfTSM       : chr  "MAIN;A" "MAIN;A" "SPROUT;A" "MAIN;A;LS;B" ...</span></a>
-<a class="sourceLine" id="cb2-143" data-line-number="143"><span class="co">#&gt;  $ HighHOM         : int  1 1 1 1 1 1 1 1 1 1 ...</span></a>
-<a class="sourceLine" id="cb2-144" data-line-number="144"><span class="co">#&gt;  $ LargeStem       : chr  NA NA NA NA ...</span></a>
-<a class="sourceLine" id="cb2-145" data-line-number="145"><span class="co">#&gt;  $ Status          : chr  "alive" "alive" "alive" "broken below" ...</span></a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(fgeo.x)</a></code></pre></div>
+<p>Some datasets available in <strong>fgeo.x</strong>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(elevation)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="co">#&gt; List of 4</span></a>
+<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="co">#&gt;  $ col :Classes 'tbl_df', 'tbl' and 'data.frame':    6565 obs. of  3 variables:</span></a>
+<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="co">#&gt;   ..$ x   : int [1:6565] 0 0 0 0 0 0 0 0 0 0 ...</span></a>
+<a class="sourceLine" id="cb3-5" data-line-number="5"><span class="co">#&gt;   ..$ y   : int [1:6565] 0 5 10 15 20 25 30 35 40 45 ...</span></a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="co">#&gt;   ..$ elev: num [1:6565] 364 364 363 363 363 ...</span></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7"><span class="co">#&gt;  $ mat : num [1:101, 1:65] 364 364 363 363 363 ...</span></a>
+<a class="sourceLine" id="cb3-8" data-line-number="8"><span class="co">#&gt;  $ xdim: int 320</span></a>
+<a class="sourceLine" id="cb3-9" data-line-number="9"><span class="co">#&gt;  $ ydim: int 500</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb3-11" data-line-number="11"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(habitat)</a>
+<a class="sourceLine" id="cb3-12" data-line-number="12"><span class="co">#&gt; Classes 'fgeo_habitat', 'tbl_df', 'tbl' and 'data.frame':    400 obs. of  3 variables:</span></a>
+<a class="sourceLine" id="cb3-13" data-line-number="13"><span class="co">#&gt;  $ gx      : num  0 0 0 0 0 0 0 0 0 0 ...</span></a>
+<a class="sourceLine" id="cb3-14" data-line-number="14"><span class="co">#&gt;  $ gy      : num  0 20 40 60 80 100 120 140 160 180 ...</span></a>
+<a class="sourceLine" id="cb3-15" data-line-number="15"><span class="co">#&gt;  $ habitats: int  1 1 1 1 1 1 1 1 1 1 ...</span></a>
+<a class="sourceLine" id="cb3-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb3-17" data-line-number="17"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(tree5)</a>
+<a class="sourceLine" id="cb3-18" data-line-number="18"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    30 obs. of  19 variables:</span></a>
+<a class="sourceLine" id="cb3-19" data-line-number="19"><span class="co">#&gt;  $ treeID   : int  7624 8055 19930 23746 31702 35355 35891 39705 50184 57380 ...</span></a>
+<a class="sourceLine" id="cb3-20" data-line-number="20"><span class="co">#&gt;  $ stemID   : int  160987 10036 117849 29677 39793 44026 44634 48888 60798 155867 ...</span></a>
+<a class="sourceLine" id="cb3-21" data-line-number="21"><span class="co">#&gt;  $ tag      : chr  "108958" "109482" "123493" "14473" ...</span></a>
+<a class="sourceLine" id="cb3-22" data-line-number="22"><span class="co">#&gt;  $ StemTag  : chr  "175325" "109482" "165576" "14473" ...</span></a>
+<a class="sourceLine" id="cb3-23" data-line-number="23"><span class="co">#&gt;  $ sp       : chr  "TRIPAL" "CECSCH" "CASARB" "PREMON" ...</span></a>
+<a class="sourceLine" id="cb3-24" data-line-number="24"><span class="co">#&gt;  $ quadrat  : chr  "722" "522" "425" "617" ...</span></a>
+<a class="sourceLine" id="cb3-25" data-line-number="25"><span class="co">#&gt;  $ gx       : num  138.7 94.8 61.3 100.3 53.8 ...</span></a>
+<a class="sourceLine" id="cb3-26" data-line-number="26"><span class="co">#&gt;  $ gy       : num  425.3 424.4 495.7 328 73.8 ...</span></a>
+<a class="sourceLine" id="cb3-27" data-line-number="27"><span class="co">#&gt;  $ MeasureID: int  486675 468874 471979 442571 447307 449169 434266 451067 437645 459427 ...</span></a>
+<a class="sourceLine" id="cb3-28" data-line-number="28"><span class="co">#&gt;  $ CensusID : int  5 5 5 5 5 5 5 5 5 5 ...</span></a>
+<a class="sourceLine" id="cb3-29" data-line-number="29"><span class="co">#&gt;  $ dbh      : num  10.9 165 23.6 170 67 50 269 67 240 16.6 ...</span></a>
+<a class="sourceLine" id="cb3-30" data-line-number="30"><span class="co">#&gt;  $ pom      : chr  "1.3" "1.3" "1.3" "1.3" ...</span></a>
+<a class="sourceLine" id="cb3-31" data-line-number="31"><span class="co">#&gt;  $ hom      : num  1.3 1.3 1.3 1.32 1.37 1.4 1.26 1.5 1.3 1.3 ...</span></a>
+<a class="sourceLine" id="cb3-32" data-line-number="32"><span class="co">#&gt;  $ ExactDate: Date, format: "2012-02-01" "2012-01-30" ...</span></a>
+<a class="sourceLine" id="cb3-33" data-line-number="33"><span class="co">#&gt;  $ DFstatus : chr  "alive" "alive" "alive" "alive" ...</span></a>
+<a class="sourceLine" id="cb3-34" data-line-number="34"><span class="co">#&gt;  $ codes    : chr  "SPROUT;A" "MAIN;A" "SPROUT;A" "MAIN;A" ...</span></a>
+<a class="sourceLine" id="cb3-35" data-line-number="35"><span class="co">#&gt;  $ nostems  : num  2 1 2 1 1 1 1 5 1 3 ...</span></a>
+<a class="sourceLine" id="cb3-36" data-line-number="36"><span class="co">#&gt;  $ status   : chr  "A" "A" "A" "A" ...</span></a>
+<a class="sourceLine" id="cb3-37" data-line-number="37"><span class="co">#&gt;  $ date     : num  19024 19022 19051 18967 18821 ...</span></a>
+<a class="sourceLine" id="cb3-38" data-line-number="38"></a>
+<a class="sourceLine" id="cb3-39" data-line-number="39"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(stem5)</a>
+<a class="sourceLine" id="cb3-40" data-line-number="40"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    30 obs. of  19 variables:</span></a>
+<a class="sourceLine" id="cb3-41" data-line-number="41"><span class="co">#&gt;  $ treeID   : int  4832 9689 23686 23903 24526 24978 25534 30954 32644 34407 ...</span></a>
+<a class="sourceLine" id="cb3-42" data-line-number="42"><span class="co">#&gt;  $ stemID   : int  5905 12178 29616 29911 30750 31380 32193 38949 40902 42945 ...</span></a>
+<a class="sourceLine" id="cb3-43" data-line-number="43"><span class="co">#&gt;  $ tag      : chr  "10554" "111528" "14406" "14637" ...</span></a>
+<a class="sourceLine" id="cb3-44" data-line-number="44"><span class="co">#&gt;  $ StemTag  : chr  "10554" "111528" "14406" "14637" ...</span></a>
+<a class="sourceLine" id="cb3-45" data-line-number="45"><span class="co">#&gt;  $ sp       : chr  "MANBID" "CORBOR" "PREMON" "PREMON" ...</span></a>
+<a class="sourceLine" id="cb3-46" data-line-number="46"><span class="co">#&gt;  $ quadrat  : chr  "212" "1524" "417" "1017" ...</span></a>
+<a class="sourceLine" id="cb3-47" data-line-number="47"><span class="co">#&gt;  $ gx       : num  30.8 289 69 193.7 194.2 ...</span></a>
+<a class="sourceLine" id="cb3-48" data-line-number="48"><span class="co">#&gt;  $ gy       : num  235 465 335 334 359 ...</span></a>
+<a class="sourceLine" id="cb3-49" data-line-number="49"><span class="co">#&gt;  $ MeasureID: int  440357 469305 442528 442708 443140 443418 435148 446883 447786 435787 ...</span></a>
+<a class="sourceLine" id="cb3-50" data-line-number="50"><span class="co">#&gt;  $ CensusID : int  5 5 5 5 5 5 5 5 5 5 ...</span></a>
+<a class="sourceLine" id="cb3-51" data-line-number="51"><span class="co">#&gt;  $ dbh      : num  148 NA 154 195 360 185 328 15.7 60 124 ...</span></a>
+<a class="sourceLine" id="cb3-52" data-line-number="52"><span class="co">#&gt;  $ pom      : chr  "1.5" NA "1.3" "1.2" ...</span></a>
+<a class="sourceLine" id="cb3-53" data-line-number="53"><span class="co">#&gt;  $ hom      : num  1.48 NA 1.3 1.2 1.4 1.4 1.5 1.3 1.29 1.35 ...</span></a>
+<a class="sourceLine" id="cb3-54" data-line-number="54"><span class="co">#&gt;  $ ExactDate: Date, format: "2011-09-30" "2012-02-17" ...</span></a>
+<a class="sourceLine" id="cb3-55" data-line-number="55"><span class="co">#&gt;  $ DFstatus : chr  "alive" "stem dead" "alive" "alive" ...</span></a>
+<a class="sourceLine" id="cb3-56" data-line-number="56"><span class="co">#&gt;  $ codes    : chr  "MAIN;A" "MAIN;A;LS;DP;ST" "MAIN;A" "MAIN;A" ...</span></a>
+<a class="sourceLine" id="cb3-57" data-line-number="57"><span class="co">#&gt;  $ countPOM : num  1 1 1 1 1 1 1 1 1 1 ...</span></a>
+<a class="sourceLine" id="cb3-58" data-line-number="58"><span class="co">#&gt;  $ status   : chr  "A" "G" "A" "A" ...</span></a>
+<a class="sourceLine" id="cb3-59" data-line-number="59"><span class="co">#&gt;  $ date     : num  18900 19040 18966 19010 19009 ...</span></a></code></pre></div>
+<p>Some other datasets that install with <strong>fgeo.x</strong>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="reference/x_example.html">x_example</a></span>()</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="co">#&gt; [1] "taxa.csv"      "vft_4quad.csv"</span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/read.table">read.csv</a></span>(<span class="kw"><a href="reference/x_example.html">x_example</a></span>(<span class="st">"taxa.csv"</span>)))</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="co">#&gt; 'data.frame':    163 obs. of  21 variables:</span></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="co">#&gt;  $ ViewID        : int  1 2 3 4 5 6 7 8 9 10 ...</span></a>
+<a class="sourceLine" id="cb4-7" data-line-number="7"><span class="co">#&gt;  $ SpeciesID     : int  56 57 58 59 60 61 62 63 64 65 ...</span></a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"><span class="co">#&gt;  $ SubspeciesID  : logi  NA NA NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9"><span class="co">#&gt;  $ Family        : Factor w/ 57 levels "Anacardiaceae",..: 20 19 19 22 44 31 30 24 51 16 ...</span></a>
+<a class="sourceLine" id="cb4-10" data-line-number="10"><span class="co">#&gt;  $ Mnemonic      : Factor w/ 163 levels "AESAME","ALCFLO",..: 1 2 3 4 5 6 7 8 9 10 ...</span></a>
+<a class="sourceLine" id="cb4-11" data-line-number="11"><span class="co">#&gt;  $ Genus         : Factor w/ 116 levels "Aeschynomene",..: 1 3 2 4 99 5 6 7 8 9 ...</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12"><span class="co">#&gt;  $ SpeciesName   : Factor w/ 145 levels "Â hirsuta","acuminata",..: 10 48 71 66 91 54 6 97 101 132 ...</span></a>
+<a class="sourceLine" id="cb4-13" data-line-number="13"><span class="co">#&gt;  $ Rank          : logi  NA NA NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb4-14" data-line-number="14"><span class="co">#&gt;  $ Subspecies    : logi  NA NA NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="co">#&gt;  $ Authority     : Factor w/ 110 levels "(A. DC.) A. Chev.",..: 40 10 106 65 63 107 37 52 86 7 ...</span></a>
+<a class="sourceLine" id="cb4-16" data-line-number="16"><span class="co">#&gt;  $ IDLevel       : Factor w/ 2 levels "genus","species": 2 2 2 2 2 2 2 2 2 2 ...</span></a>
+<a class="sourceLine" id="cb4-17" data-line-number="17"><span class="co">#&gt;  $ subspMnemonic : logi  NA NA NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb4-18" data-line-number="18"><span class="co">#&gt;  $ subspAuthority: logi  NA NA NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb4-19" data-line-number="19"><span class="co">#&gt;  $ FieldFamily   : Factor w/ 55 levels "Anacardiaceae",..: 20 19 19 20 40 30 29 22 47 16 ...</span></a>
+<a class="sourceLine" id="cb4-20" data-line-number="20"><span class="co">#&gt;  $ Lifeform      : logi  NA NA NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb4-21" data-line-number="21"><span class="co">#&gt;  $ Description   : logi  NA NA NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb4-22" data-line-number="22"><span class="co">#&gt;  $ wsg           : num  0.678 0.427 0.42 0.642 0.636 ...</span></a>
+<a class="sourceLine" id="cb4-23" data-line-number="23"><span class="co">#&gt;  $ wsglevel      : Factor w/ 4 levels "family","genus",..: 1 4 4 4 1 4 4 4 4 4 ...</span></a>
+<a class="sourceLine" id="cb4-24" data-line-number="24"><span class="co">#&gt;  $ ListOfOldNames: logi  NA NA NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb4-25" data-line-number="25"><span class="co">#&gt;  $ Specimens     : logi  NA NA NA NA NA NA ...</span></a>
+<a class="sourceLine" id="cb4-26" data-line-number="26"><span class="co">#&gt;  $ Reference     : logi  NA NA NA NA NA NA ...</span></a></code></pre></div>
+<p>Download data from <a href="https://forestgeo.github.io/fgeo.data/"><strong>fgeo.data</strong></a>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/str">str</a></span>(<span class="kw"><a href="reference/download_data.html">download_data</a></span>(<span class="st">"luquillo_stem6_random"</span>))</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="co">#&gt; Classes 'tbl_df', 'tbl' and 'data.frame':    1320 obs. of  19 variables:</span></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#&gt;  $ treeID   : int  104 119 180 180 180 180 602 631 647 1086 ...</span></a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">#&gt;  $ stemID   : int  143 158 222 223 224 225 736 775 793 1339 ...</span></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#&gt;  $ tag      : chr  "10009" "100104" "100171" "100171" ...</span></a>
+<a class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#&gt;  $ StemTag  : chr  "10009" "100104" "100095" "100096" ...</span></a>
+<a class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt;  $ sp       : chr  "DACEXC" "MYRSPL" "CASARB" "CASARB" ...</span></a>
+<a class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt;  $ quadrat  : chr  "113" "1021" "921" "921" ...</span></a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt;  $ gx       : num  10.3 182.9 164.6 164.6 164.6 ...</span></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt;  $ gy       : num  245 410 410 410 410 ...</span></a>
+<a class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#&gt;  $ MeasureID: int  582850 578696 NA NA 617046 617049 614253 598429 614211 603131 ...</span></a>
+<a class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#&gt;  $ CensusID : int  6 6 NA NA 6 6 6 6 6 6 ...</span></a>
+<a class="sourceLine" id="cb5-13" data-line-number="13"><span class="co">#&gt;  $ dbh      : num  195 44.9 NA NA NA 46.1 33.1 139 248 176 ...</span></a>
+<a class="sourceLine" id="cb5-14" data-line-number="14"><span class="co">#&gt;  $ pom      : chr  "1.45" "1.25" NA NA ...</span></a>
+<a class="sourceLine" id="cb5-15" data-line-number="15"><span class="co">#&gt;  $ hom      : num  1.45 1.26 NA NA NA 1.34 1.3 1.25 1.35 1.42 ...</span></a>
+<a class="sourceLine" id="cb5-16" data-line-number="16"><span class="co">#&gt;  $ ExactDate: Date, format: "2016-04-20" "2016-08-04" ...</span></a>
+<a class="sourceLine" id="cb5-17" data-line-number="17"><span class="co">#&gt;  $ DFstatus : chr  "alive" "alive" NA NA ...</span></a>
+<a class="sourceLine" id="cb5-18" data-line-number="18"><span class="co">#&gt;  $ codes    : chr  "MAIN;A" "MAIN;A" NA NA ...</span></a>
+<a class="sourceLine" id="cb5-19" data-line-number="19"><span class="co">#&gt;  $ countPOM : num  1 1 NA NA 1 1 1 1 1 1 ...</span></a>
+<a class="sourceLine" id="cb5-20" data-line-number="20"><span class="co">#&gt;  $ status   : chr  "A" "A" "G" "G" ...</span></a>
+<a class="sourceLine" id="cb5-21" data-line-number="21"><span class="co">#&gt;  $ date     : num  20564 20670 NA NA 20670 ...</span></a></code></pre></div>
 <p><a href="https://forestgeo.github.io/fgeo/articles/fgeo.html">Get started with <strong>fgeo</strong></a></p>
 </div>
 <div id="information" class="section level2">
