@@ -8,7 +8,6 @@ library(tibble)
 
 pick_n <- function(x, y, n) {
   list(x, y) %>%
-    fgeo.tool::as_censuses() %>%
     fgeo.tool::pick(rowid %in% sample(rowid, n))
 }
 
