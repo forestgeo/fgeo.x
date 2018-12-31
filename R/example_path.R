@@ -18,13 +18,3 @@ example_path <- function(path = NULL) {
     system.file("extdata", path, package = "fgeo.x", mustWork = TRUE)
   }
 }
-
-#' @export
-path_example <- function(path = NULL) {
-  if (is.null(path)) {
-    dir(system.file("extdata", package = "fgeo.x"))
-  }
-  else {
-    system.file("extdata", path, package = "fgeo.x", mustWork = TRUE)
-  }
-}

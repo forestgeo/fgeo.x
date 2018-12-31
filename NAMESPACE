@@ -2,4 +2,3 @@
 
 export(download_data)
 export(example_path)
-export(path_example)
