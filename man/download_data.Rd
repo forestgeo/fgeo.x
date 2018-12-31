@@ -23,6 +23,6 @@ str(download_data("luquillo_stem6_random"))
 }
 \seealso{
 Other datasets: \code{\link{datasets}},
-  \code{\link{x_example}}
+  \code{\link{example_path}}
 }
 \concept{datasets}

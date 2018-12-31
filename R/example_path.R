@@ -5,12 +5,12 @@
 #' @return A string giving a path to an example.
 #'
 #' @examples
-#' x_example()
-#' str(read.csv(x_example("taxa.csv")))
+#' example_path()
+#' str(read.csv(example_path("taxa.csv")))
 #'
 #' @family datasets
 #' @export
-x_example <- function (path = NULL) {
+example_path <- function(path = NULL) {
   if (is.null(path)) {
     dir(system.file("extdata", package = "fgeo.x"))
   }

@@ -1,5 +1,7 @@
 ---
 output: github_document 
+editor_options: 
+  chunk_output_type: console
 ---
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -55,9 +57,11 @@ str(taxa)
 Some other datasets that install with __fgeo.x__:
 
 ```{r}
-x_example()
+example_path()
 
-str(read.csv(x_example("taxa.csv")))
+dir(example_path("view"))
+
+str(read.csv(example_path("vft_4quad.csv")))
 ```
 
 Download data from [__fgeo.data__](https://forestgeo.github.io/fgeo.data/):
