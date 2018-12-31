@@ -39,6 +39,6 @@ str(vft_4quad)
 }
 \seealso{
 Other datasets: \code{\link{download_data}},
-  \code{\link{path_example}}, \code{\link{x_example}}
+  \code{\link{example_path}}
 }
 \concept{datasets}

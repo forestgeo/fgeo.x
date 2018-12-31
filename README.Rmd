@@ -57,11 +57,11 @@ str(taxa)
 Some other datasets that install with __fgeo.x__:
 
 ```{r}
-path_example()
+example_path()
 
-dir(path_example("view"))
+dir(example_path("view"))
 
-str(read.csv(path_example("vft_4quad.csv")))
+str(read.csv(example_path("vft_4quad.csv")))
 ```
 
 Download data from [__fgeo.data__](https://forestgeo.github.io/fgeo.data/):

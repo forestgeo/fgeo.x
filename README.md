@@ -154,15 +154,15 @@ str(taxa)
 Some other datasets that install with **fgeo.x**:
 
 ``` r
-path_example()
+example_path()
 #>  [1] "csv"           "mixed_files"   "rdata"         "rdata_one"    
 #>  [5] "rds"           "taxa.csv"      "tsv"           "vft_4quad.csv"
 #>  [9] "view"          "weird"         "xl"
 
-dir(path_example("view"))
+dir(example_path("view"))
 #> [1] "taxa.csv"      "vft_4quad.csv"
 
-str(read.csv(path_example("vft_4quad.csv")))
+str(read.csv(example_path("vft_4quad.csv")))
 #> 'data.frame':    500 obs. of  32 variables:
 #>  $ DBHID           : int  385164 385261 384600 608789 388579 384626 410958 385102 353163 481018 ...
 #>  $ PlotName        : Factor w/ 1 level "luquillo": 1 1 1 1 1 1 1 1 1 1 ...

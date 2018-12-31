@@ -1,4 +1,4 @@
-context("path_example")
+context("example_path")
 
 expect_printed_output <- function(object, update = FALSE) {
   file <- rlang::quo_text(rlang::enquo(object))
@@ -12,5 +12,5 @@ expect_printed_output <- function(object, update = FALSE) {
 }
 
 test_that("extdata remains the same", {
-  expect_printed_output(path_example())
+  expect_printed_output(example_path())
 })

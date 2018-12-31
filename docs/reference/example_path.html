@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • fgeo.x</title>
+<title>Path to directory containing example data. — example_path • fgeo.x</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,7 +30,10 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="Path to directory containing example data. — example_path" />
+
+<meta property="og:description" content="Path to directory containing example data." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -47,7 +50,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -103,54 +106,79 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>Path to directory containing example data.</h1>
+    <small class="dont-index">Source: <a href='https://github.com/forestgeo/fgeo.x/blob/master/R/path_example.R'><code>R/path_example.R</code></a></small>
+    <div class="hidden name"><code>example_path.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    
+    <p>Path to directory containing example data.</p>
+    
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
-
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-datasets-and-functions-to-access-datasets" class="hasAnchor"><a href="#section-datasets-and-functions-to-access-datasets" class="anchor"></a>Datasets and functions to access datasets</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      <tr>
-        
-        <td>
-          <p><code><a href="datasets.html">datasets</a></code> </p>
-        </td>
-        <td><p>Datasets from Luquillo, Puerto Rico.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="download_data.html">download_data()</a></code> </p>
-        </td>
-        <td><p>Download data from fgeo.data.</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="example_path.html">example_path()</a></code> </p>
-        </td>
-        <td><p>Path to directory containing example data.</p></td>
-      </tr>
-    </tbody>
+    <pre class="usage"><span class='fu'>example_path</span>(<span class='kw'>path</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>path</th>
+      <td><p>Path to a file (with extension) from inst/extdata/</p></td>
+    </tr>
     </table>
-  </div>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
+    <p>A string giving a path to an example.</p>
+    
+    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+
+    <div class='dont-index'><p>Other datasets: <code><a href='datasets.html'>datasets</a></code>,
+  <code><a href='download_data.html'>download_data</a></code></p></div>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>example_path</span>()</div><div class='output co'>#&gt;  [1] "csv"           "mixed_files"   "rdata"         "rdata_one"    
+#&gt;  [5] "rds"           "taxa.csv"      "tsv"           "vft_4quad.csv"
+#&gt;  [9] "view"          "weird"         "xl"           </div><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/str'>str</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/read.table'>read.csv</a></span>(<span class='fu'>example_path</span>(<span class='st'>"taxa.csv"</span>)))</div><div class='output co'>#&gt; 'data.frame':	163 obs. of  21 variables:
+#&gt;  $ ViewID        : int  1 2 3 4 5 6 7 8 9 10 ...
+#&gt;  $ SpeciesID     : int  56 57 58 59 60 61 62 63 64 65 ...
+#&gt;  $ SubspeciesID  : logi  NA NA NA NA NA NA ...
+#&gt;  $ Family        : Factor w/ 57 levels "Anacardiaceae",..: 20 19 19 22 44 31 30 24 51 16 ...
+#&gt;  $ Mnemonic      : Factor w/ 163 levels "AESAME","ALCFLO",..: 1 2 3 4 5 6 7 8 9 10 ...
+#&gt;  $ Genus         : Factor w/ 116 levels "Aeschynomene",..: 1 3 2 4 99 5 6 7 8 9 ...
+#&gt;  $ SpeciesName   : Factor w/ 145 levels "Â hirsuta","acuminata",..: 10 48 71 66 91 54 6 97 101 132 ...
+#&gt;  $ Rank          : logi  NA NA NA NA NA NA ...
+#&gt;  $ Subspecies    : logi  NA NA NA NA NA NA ...
+#&gt;  $ Authority     : Factor w/ 110 levels "(A. DC.) A. Chev.",..: 40 10 106 65 63 107 37 52 86 7 ...
+#&gt;  $ IDLevel       : Factor w/ 2 levels "genus","species": 2 2 2 2 2 2 2 2 2 2 ...
+#&gt;  $ subspMnemonic : logi  NA NA NA NA NA NA ...
+#&gt;  $ subspAuthority: logi  NA NA NA NA NA NA ...
+#&gt;  $ FieldFamily   : Factor w/ 55 levels "Anacardiaceae",..: 20 19 19 20 40 30 29 22 47 16 ...
+#&gt;  $ Lifeform      : logi  NA NA NA NA NA NA ...
+#&gt;  $ Description   : logi  NA NA NA NA NA NA ...
+#&gt;  $ wsg           : num  0.678 0.427 0.42 0.642 0.636 ...
+#&gt;  $ wsglevel      : Factor w/ 4 levels "family","genus",..: 1 4 4 4 1 4 4 4 4 4 ...
+#&gt;  $ ListOfOldNames: logi  NA NA NA NA NA NA ...
+#&gt;  $ Specimens     : logi  NA NA NA NA NA NA ...
+#&gt;  $ Reference     : logi  NA NA NA NA NA NA ...</div><div class='input'>
+</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-datasets-and-functions-to-access-datasets">Datasets and functions to access datasets</a></li>
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+
+      <li><a href="#see-also">See also</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
     </ul>
+
   </div>
 </div>
 
