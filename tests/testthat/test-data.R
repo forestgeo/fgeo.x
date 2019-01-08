@@ -10,7 +10,9 @@ test_that("data remains unchanged", {
   datasets <- datasets_chr %>%
     purrr::map(~get(.x, asNamespace(pkg))) %>%
     purrr::set_names(datasets_chr) %>%
-    purrr::map_if(is.data.frame, tibble::as.tibble) %>%
+
+    # purrr::map_if(is.data.frame, tibble::as.tibble) %>%
+
     # head of each list item
     purrr::map_if(Negate(is.data.frame), ~purrr::map(.x, head))
 

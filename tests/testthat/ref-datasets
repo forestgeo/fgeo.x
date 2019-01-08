@@ -71,7 +71,7 @@ $elevation$ydim
 $habitat
 # A tibble: 400 x 3
       gx    gy habitats
-   <dbl> <dbl>    <int>
+ * <dbl> <dbl>    <int>
  1     0     0        1
  2     0    20        1
  3     0    40        1
