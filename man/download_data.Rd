@@ -19,7 +19,6 @@ Download data from fgeo.data.
 }
 \examples{
 str(download_data("luquillo_stem6_random"))
-
 }
 \seealso{
 Other datasets: \code{\link{datasets}},

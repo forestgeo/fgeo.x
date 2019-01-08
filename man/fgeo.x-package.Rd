@@ -4,9 +4,10 @@
 \name{fgeo.x-package}
 \alias{fgeo.x}
 \alias{fgeo.x-package}
-\title{fgeo.x: Tiny ForestGEO Datasets For Examples}
+\title{fgeo.x: Access Small ForestGEO Datasets For Examples}
 \description{
-Tiny ForestGEO datasets (from Luquillo, Puerto Rico) for examples.
+Access small ForestGEO datasets (from Luquillo,
+    Puerto Rico) for examples.
 }
 \seealso{
 Useful links:

@@ -19,7 +19,6 @@ Get path to file or directory containing example data.
 \examples{
 example_path()
 str(read.csv(example_path("taxa.csv")))
-
 }
 \seealso{
 Other datasets: \code{\link{datasets}},

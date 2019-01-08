@@ -35,7 +35,6 @@ str(tree6_3species)
 str(taxa)
 
 str(vft_4quad)
-
 }
 \seealso{
 Other datasets: \code{\link{download_data}},
