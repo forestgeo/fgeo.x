@@ -19,9 +19,6 @@ Install the development version of **fgeo.x** with:
 Or [install all **fgeo** packages in one
 step](https://forestgeo.github.io/fgeo/index.html#installation).
 
-For details on how to install packages from GitHub, see [this
-article](https://goo.gl/dQKEeg).
-
 ## Example
 
 ``` r
@@ -225,8 +222,7 @@ str(download_data("luquillo_stem6_random"))
 #>  $ date     : num  20564 20670 NA NA 20670 ...
 ```
 
-[Get started with
-**fgeo**](https://forestgeo.github.io/fgeo/articles/fgeo.html)
+[Get started with **fgeo**](https://forestgeo.github.io/fgeo/)
 
 ## Information
 
