@@ -14,6 +14,6 @@ test_that("data remains unchanged", {
     # head of each list item
     purrr::map_if(Negate(is.data.frame), ~purrr::map(.x, head))
 
-  expect_known_output(datasets, "ref-datasets", print = TRUE, update = TRUE)
+  expect_known_output(datasets, "ref-datasets", print = TRUE, update = FALSE)
 })
 
