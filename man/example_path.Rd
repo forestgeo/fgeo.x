@@ -2,23 +2,23 @@
 % Please edit documentation in R/example_path.R
 \name{example_path}
 \alias{example_path}
-\title{Path to directory containing example data.}
+\title{Get path to file or directory containing example data.}
 \usage{
 example_path(path = NULL)
 }
 \arguments{
-\item{path}{Path to a file (with extension) from inst/extdata/}
+\item{path}{Name of file or directory. If \code{NULL}, the example files and
+directories will be listed.}
 }
 \value{
 A string giving a path to an example.
 }
 \description{
-Path to directory containing example data.
+Get path to file or directory containing example data.
 }
 \examples{
 example_path()
 str(read.csv(example_path("taxa.csv")))
-
 }
 \seealso{
 Other datasets: \code{\link{datasets}},

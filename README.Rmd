@@ -48,8 +48,6 @@ str(tree5)
 str(stem5)
 
 str(vft_4quad)
-
-str(taxa)
 ```
 
 Some other datasets that install with __fgeo.x__:
@@ -68,7 +66,7 @@ Download data from [__fgeo.data__](https://forestgeo.github.io/fgeo.data/):
 str(download_data("luquillo_stem6_random"))
 ```
 
-[Get started with __fgeo__](https://forestgeo.github.io/fgeo/articles/fgeo.html)
+[Get started with __fgeo__](https://forestgeo.github.io/fgeo/)
 
 ## Information
 

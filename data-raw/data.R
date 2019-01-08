@@ -52,8 +52,10 @@ use_data(vft_4quad, overwrite = TRUE)
 
 
 
-taxa <- as.tibble(fgeo.data::luquillo_taxa)
-use_data(taxa, overwrite = TRUE)
+# This data contains non-ASCII characters that rise warninngs on CRAN.
+# Instead use example_path("taxa.csv")
+# taxa <- as.tibble(fgeo.data::luquillo_taxa)
+# use_data(taxa, overwrite = TRUE)
 
 
 

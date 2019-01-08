@@ -6,7 +6,6 @@
 \alias{habitat}
 \alias{stem5}
 \alias{stem6}
-\alias{taxa}
 \alias{tree5}
 \alias{tree6}
 \alias{vft_4quad}
@@ -32,10 +31,7 @@ str(tree6)
 
 str(tree6_3species)
 
-str(taxa, give.attr = FALSE)
-
 str(vft_4quad)
-
 }
 \seealso{
 Other datasets: \code{\link{download_data}},
