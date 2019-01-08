@@ -22,8 +22,7 @@ Depends:
     R (>= 3.2)
 Suggests: 
     spelling,
-    testthat,
-    rlang
+    testthat
 Encoding: UTF-8
 Language: en-US
 LazyData: true

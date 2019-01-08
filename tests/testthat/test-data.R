@@ -1,16 +1,3 @@
-expect_printed_output <- function(object, update = FALSE) {
-  file <- rlang::quo_text(rlang::enquo(object))
-
-  testthat::expect_known_output(
-    object, paste0("ref-", file),
-    print = TRUE, update = update
-  )
-
-  invisible(object)
-}
-
-
-
 context("data")
 
 test_that("data remains unchanged", {
@@ -18,6 +5,7 @@ test_that("data remains unchanged", {
   skip_if_not_installed("tibble")
 
   library(fgeo.x)
+
   pkg <- "fgeo.x"
   datasets_chr <- utils::data(package = pkg)$results[, "Item"]
   datasets <- datasets_chr %>%
@@ -27,5 +15,5 @@ test_that("data remains unchanged", {
     # head of each list item
     purrr::map_if(Negate(is.data.frame), ~ purrr::map(.x, head))
 
-  expect_printed_output(datasets)
+  expect_known_output(datasets, "ref-datasets", print = TRUE, update = FALSE)
 })
