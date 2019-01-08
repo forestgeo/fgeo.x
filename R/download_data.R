@@ -9,7 +9,6 @@
 #'
 #' @examples
 #' str(download_data("luquillo_stem6_random"))
-#'
 #' @family datasets
 #' @export
 download_data <- function(.data) {

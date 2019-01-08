@@ -1,13 +1,13 @@
-#' Path to directory containing example data.
+#' Get path to file or directory containing example data.
 #'
-#' @param path Path to a file (with extension) from inst/extdata/
+#' @param path Name of file or directory. If `NULL`, the example files and
+#'   directories will be listed.
 #'
 #' @return A string giving a path to an example.
 #'
 #' @examples
 #' example_path()
 #' str(read.csv(example_path("taxa.csv")))
-#'
 #' @family datasets
 #' @export
 example_path <- function(path = NULL) {
