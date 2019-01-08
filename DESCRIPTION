@@ -23,10 +23,8 @@ Depends:
 Imports: 
     utils
 Suggests: 
-    purrr,
     spelling,
-    testthat,
-    tibble
+    testthat
 Encoding: UTF-8
 Language: en-US
 LazyData: true
