@@ -120,25 +120,6 @@ $stem6
 #   ExactDate <date>, DFstatus <chr>, codes <chr>, countPOM <dbl>,
 #   status <chr>, date <dbl>
 
-$taxa
-# A tibble: 163 x 21
-   ViewID SpeciesID SubspeciesID Family Mnemonic Genus SpeciesName Rank 
-    <int>     <int> <chr>        <chr>  <chr>    <chr> <chr>       <chr>
- 1      1        56 <NA>         Fabac~ AESAME   Aesc~ americana   <NA> 
- 2      2        57 <NA>         Eupho~ ALCFLO   Alch~ floribunda  <NA> 
- 3      3        58 <NA>         Eupho~ ALCLAT   Alch~ latifolia   <NA> 
- 4      4        59 <NA>         Fabac~ ANDINE   Andi~ inermis     <NA> 
- 5      5        60 <NA>         Rubia~ ANTOBT   Sten~ obtusifoli~ <NA> 
- 6      6        61 <NA>         Myrsi~ ARDGLA   Ardi~ glauciflora <NA> 
- 7      7        62 <NA>         Morac~ ARTALT   Arto~ altilis     <NA> 
- 8      8        63 <NA>         Laura~ BEIPEN   Beil~ pendula     <NA> 
- 9      9        64 <NA>         Solan~ BRUPOR   Brun~ portoricen~ <NA> 
-10     10        65 <NA>         Combr~ BUCTET   Buch~ tetraphylla <NA> 
-# ... with 153 more rows, and 13 more variables: Subspecies <chr>,
-#   Authority <chr>, IDLevel <chr>, subspMnemonic <chr>, subspAuthority <chr>,
-#   FieldFamily <chr>, Lifeform <chr>, Description <chr>, wsg <dbl>,
-#   wsglevel <chr>, ListOfOldNames <chr>, Specimens <chr>, Reference <chr>
-
 $tree5
 # A tibble: 30 x 19
    treeID stemID tag   StemTag sp    quadrat    gx    gy MeasureID CensusID
