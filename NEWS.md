@@ -1,3 +1,3 @@
 # fgeo.x (development version)
 
-* Initial release.
+* Prepare initial release.
