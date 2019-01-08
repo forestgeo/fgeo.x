@@ -19,7 +19,7 @@
 #'
 #' str(tree6_3species)
 #'
-#' str(taxa, give.attr = FALSE)
+#' str(taxa)
 #'
 #' str(vft_4quad)
 #'
