@@ -18,7 +18,9 @@ A dataset.
 Download data from fgeo.data.
 }
 \examples{
+\dontrun{
 str(download_data("luquillo_stem6_random"))
+}
 }
 \seealso{
 Other datasets: \code{\link{datasets}},
