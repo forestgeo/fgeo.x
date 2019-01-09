@@ -1,16 +1,17 @@
 context("data")
 
 test_that("data remains unchanged", {
-  library(fgeo.x)
+  datasets <- list(
+    elevation,
+    habitat,
+    stem5,
+    stem6,
+    tree5,
+    tree6,
+    tree6_3species,
+    vft_4quad
+  )
 
-  pkg <- "fgeo.x"
-  datasets_chr <-   utils::data(package = pkg)$results[, "Item"]
-  datasets <- datasets_chr %>%
-    lapply(function(x) get(x, asNamespace(pkg))) %>%
-    stats::setNames(datasets_chr) %>%
-    # head of each list item
-    lapply(function(x) lapply(x, head))
-
-  expect_known_output(datasets, "ref-datasets", print = TRUE, update = T)
+  expect_known_output(datasets, "ref-datasets", print = TRUE, update = FALSE)
 })
 
