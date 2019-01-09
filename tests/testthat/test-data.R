@@ -9,6 +9,6 @@ test_that("data remains unchanged", {
   datasets <- stats::setNames(datasets, datasets_chr)
   datasets <- lapply(datasets, function(x) lapply(x, head))
 
-  expect_known_output(datasets, "ref-datasets", print = TRUE, update = T)
+  expect_known_output(datasets, "ref-datasets", print = TRUE, update = FALSE)
 })
 
