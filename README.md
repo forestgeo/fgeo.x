@@ -14,7 +14,7 @@ status](https://www.r-pkg.org/badges/version/fgeo.x)](https://cran.r-project.org
 Install the latest release of **fgeo.x** with:
 
     # install.packages("devtools")
-    devtools::install_github("forestgeo/fgeo.x@1.0.0")
+    install_github("forestgeo/fgeo.x@*release")
 
 Install the development version of **fgeo.x** with:
 
