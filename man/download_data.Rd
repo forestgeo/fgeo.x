@@ -2,7 +2,7 @@
 % Please edit documentation in R/download_data.R
 \name{download_data}
 \alias{download_data}
-\title{Download data from fgeo.data.}
+\title{Access data stored online.}
 \usage{
 download_data(.data)
 }
@@ -15,12 +15,12 @@ extension).}
 A dataset.
 }
 \description{
-Download data from fgeo.data.
+Access data stored online.
 }
 \examples{
 \dontrun{
-# May take > 5s (i.e. longer than OK for submitting to CRAN)
-str(download_data("luquillo_stem6_random"))
+# May take over 5 seconds (i.e. above the time limit acceptable for CRAN)
+download_data("luquillo_stem6_random")
 }
 }
 \seealso{

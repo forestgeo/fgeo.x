@@ -2,7 +2,7 @@
 % Please edit documentation in R/example_path.R
 \name{example_path}
 \alias{example_path}
-\title{Get path to file or directory containing example data.}
+\title{Access data stored in system files.}
 \usage{
 example_path(path = NULL)
 }
@@ -11,13 +11,18 @@ example_path(path = NULL)
 directories will be listed.}
 }
 \value{
-A string giving a path to an example.
+A character string.
 }
 \description{
-Get path to file or directory containing example data.
+\code{example_path()} mostly wraps \code{system.file(..., package = "fgeo.x")}.
 }
 \examples{
 example_path()
+
+dir(example_path("rdata"))
+
+example_path("taxa.csv")
+
 str(read.csv(example_path("taxa.csv")))
 }
 \seealso{
