@@ -1,5 +1,9 @@
 # fgeo.x (development version)
 
+* Work in progress.
+
+# fgeo.x 1.0.1 (GitHub release)
+
 * Review documentation.
 
 # fgeo.x 1.0.0 (GitHub release)
