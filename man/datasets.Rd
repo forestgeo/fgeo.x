@@ -10,7 +10,7 @@
 \alias{tree6}
 \alias{vft_4quad}
 \alias{tree6_3species}
-\title{Datasets from Luquillo, Puerto Rico.}
+\title{Access data via \code{library(fgeo.x)} or \code{fgeo.x::<dataset-name>}.}
 \description{
 These are small datasets for examples, with no value for research. They have
 been adapted from the package

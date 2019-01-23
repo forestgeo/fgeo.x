@@ -9,6 +9,10 @@ status](https://travis-ci.org/forestgeo/fgeo.x.svg?branch=master)](https://travi
 [![CRAN
 status](https://www.r-pkg.org/badges/version/fgeo.x)](https://cran.r-project.org/package=fgeo.x)
 
+Access small example datasets from
+[Luquillo](https://forestgeo.si.edu/sites/north-america/luquillo), a
+ForestGEO site in Puerto Rico.
+
 ## Installation
 
 Install the latest stable version of **fgeo.x** with:
