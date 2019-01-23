@@ -1,4 +1,4 @@
-#' Datasets from Luquillo, Puerto Rico.
+#' Access data via `library(fgeo.x)` or `fgeo.x::<dataset-name>`.
 #'
 #' These are small datasets for examples, with no value for research. They have
 #' been adapted from the package
