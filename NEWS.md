@@ -4,4 +4,4 @@
 
 # fgeo.x 1.0.0 (GitHub release)
 
-* Initial GitHub release. Pass all checks required for submission to CRAN.
+* Initial GitHub release. Passes all checks required for submission to CRAN.

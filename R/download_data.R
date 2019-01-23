@@ -1,4 +1,4 @@
-#' Download data from fgeo.data.
+#' Access data stored online.
 #'
 #' @param .data A string giving the name of the dataset to download. The name of
 #'   any dataset listed [here](
@@ -9,8 +9,8 @@
 #'
 #' @examples
 #' \dontrun{
-#' # May take > 5s (i.e. longer than OK for submitting to CRAN)
-#' str(download_data("luquillo_stem6_random"))
+#' # May take over 5 seconds (i.e. above the time limit acceptable for CRAN)
+#' download_data("luquillo_stem6_random")
 #' }
 #' @family datasets
 #' @export

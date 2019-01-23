@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get path to file or directory containing example data. — example_path • fgeo.x</title>
+<title>Access data stored in system files. — example_path • fgeo.x</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Get path to file or directory containing example data. — example_path" />
+<meta property="og:title" content="Access data stored in system files. — example_path" />
 
-<meta property="og:description" content="Get path to file or directory containing example data." />
+<meta property="og:description" content="example_path() mostly wraps system.file(..., package = &quot;fgeo.x&quot;)." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -111,14 +111,14 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get path to file or directory containing example data.</h1>
+    <h1>Access data stored in system files.</h1>
     <small class="dont-index">Source: <a href='https://github.com/forestgeo/fgeo.x/blob/master/R/example_path.R'><code>R/example_path.R</code></a></small>
     <div class="hidden name"><code>example_path.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Get path to file or directory containing example data.</p>
+    <p><code>example_path()</code> mostly wraps <code><a href='https://www.rdocumentation.org/packages/base/topics/system.file'>system.file(..., package = "fgeo.x")</a></code>.</p>
     
     </div>
 
@@ -136,7 +136,7 @@ directories will be listed.</p></td>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A string giving a path to an example.</p>
+    <p>A character string.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
@@ -147,7 +147,10 @@ directories will be listed.</p></td>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>example_path</span>()</div><div class='output co'>#&gt;  [1] "csv"           "mixed_files"   "rdata"         "rdata_one"    
 #&gt;  [5] "rds"           "taxa.csv"      "tsv"           "vft_4quad.csv"
-#&gt;  [9] "view"          "weird"         "xl"           </div><div class='input'><span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/str'>str</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/read.table'>read.csv</a></span>(<span class='fu'>example_path</span>(<span class='st'>"taxa.csv"</span>)))</div><div class='output co'>#&gt; 'data.frame':	163 obs. of  21 variables:
+#&gt;  [9] "view"          "weird"         "xl"           </div><div class='input'>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/list.files'>dir</a></span>(<span class='fu'>example_path</span>(<span class='st'>"rdata"</span>))</div><div class='output co'>#&gt; [1] "tree5.RData" "tree6.RData"</div><div class='input'>
+<span class='fu'>example_path</span>(<span class='st'>"taxa.csv"</span>)</div><div class='output co'>#&gt; [1] "C:/Users/LeporeM/Documents/Dropbox/git/ml/fgeo.x/inst/extdata/taxa.csv"</div><div class='input'>
+<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/str'>str</a></span>(<span class='fu'><a href='https://www.rdocumentation.org/packages/utils/topics/read.table'>read.csv</a></span>(<span class='fu'>example_path</span>(<span class='st'>"taxa.csv"</span>)))</div><div class='output co'>#&gt; 'data.frame':	163 obs. of  21 variables:
 #&gt;  $ ViewID        : int  1 2 3 4 5 6 7 8 9 10 ...
 #&gt;  $ SpeciesID     : int  56 57 58 59 60 61 62 63 64 65 ...
 #&gt;  $ SubspeciesID  : logi  NA NA NA NA NA NA ...

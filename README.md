@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# <img src="https://i.imgur.com/vTLlhbp.png" align="right" height=88 /> Tiny ForestGEO datasets for examples
+# <img src="https://i.imgur.com/vTLlhbp.png" align="right" height=88 /> Small ForestGEO datasets for examples
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build
@@ -13,13 +13,17 @@ status](https://www.r-pkg.org/badges/version/fgeo.x)](https://cran.r-project.org
 
 Install the latest stable version of **fgeo.x** with:
 
-    # install.packages("devtools")
-    devtools::install_github("forestgeo/fgeo.x@*release")
+``` r
+# install.packages("devtools")
+devtools::install_github("forestgeo/fgeo.x@*release")
+```
 
 Install the development version of **fgeo.x** with:
 
-    # install.packages("devtools")
-    devtools::install_github("forestgeo/fgeo.x")
+``` r
+# install.packages("devtools")
+devtools::install_github("forestgeo/fgeo.x")
+```
 
 Or [install all **fgeo** packages in one
 step](https://forestgeo.github.io/fgeo/index.html#installation).
