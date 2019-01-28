@@ -18,8 +18,8 @@ ForestGEO site in Puerto Rico.
 Install the latest stable version of **fgeo.x** with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("forestgeo/fgeo.x@*release")
+these_repos <- c(getOption("repos"), "https://forestgeo.github.io/drat")
+install.packages("fgeo.x", repos = these_repos)
 ```
 
 Install the development version of **fgeo.x** with:

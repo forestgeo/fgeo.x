@@ -4,11 +4,11 @@
 \alias{download_data}
 \title{Access data stored online.}
 \usage{
-download_data(.data)
+download_data(x)
 }
 \arguments{
-\item{.data}{A string giving the name of the dataset to download. The name of
-any dataset listed \href{https://github.com/forestgeo/fgeo.data/tree/master/data}{here} (without the
+\item{x}{A string giving the name of the dataset to download. The name
+of any dataset listed \href{https://github.com/forestgeo/fgeo.data/tree/master/data}{here} (without the
 extension).}
 }
 \value{

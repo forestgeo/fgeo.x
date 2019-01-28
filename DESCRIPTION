@@ -1,6 +1,6 @@
 Package: fgeo.x
 Title: Access Small ForestGEO Datasets For Examples
-Version: 1.0.1.9000
+Version: 1.1.0
 Authors@R:
     c(person(given = "Mauro",
              family = "Lepore",

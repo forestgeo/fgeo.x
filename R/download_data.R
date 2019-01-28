@@ -1,7 +1,7 @@
 #' Access data stored online.
 #'
-#' @param .data A string giving the name of the dataset to download. The name of
-#'   any dataset listed [here](
+#' @param x A string giving the name of the dataset to download. The name
+#'   of any dataset listed [here](
 #'   https://github.com/forestgeo/fgeo.data/tree/master/data) (without the
 #'   extension).
 #'
@@ -14,14 +14,14 @@
 #' }
 #' @family datasets
 #' @export
-download_data <- function(.data) {
+download_data <- function(x) {
   tmp <- tempfile()
-  utils::download.file(data_url(.data), tmp)
+  utils::download.file(data_url(x), tmp)
 
   e <- new.env()
   load(tmp, envir = e)
 
-  e[[.data]]
+  e[[x]]
 }
 
 data_url <- function(x) {
