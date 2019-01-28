@@ -2,7 +2,7 @@
 
 * Work in progress.
 
-# fgeo.x 1.1.0 (GithHub release)
+# fgeo.x 1.1.0 (GithHub and drat release)
 
 * First argument of most visible functions are now named following tidyverse principles (<http://bit.ly/2TfDcfX>)
 
