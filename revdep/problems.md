@@ -8,7 +8,7 @@ Version: 1.0.1
     ```
     Re-running with no redirection of stdout/stderr.
     Hmm ... looks like a package
-    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/RtmpaECDmz/Rd2pdf70ac5e121928'
+    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/Rtmps1j34G/Rd2pdf285451951d4'
     ```
 
 *   checking PDF version of manual ... WARNING
@@ -26,7 +26,7 @@ Version: 1.0.1
 
 # fgeo.analyze
 
-Version: 1.0.3
+Version: 1.1.1
 
 ## In both
 
@@ -34,7 +34,7 @@ Version: 1.0.3
     ```
     Re-running with no redirection of stdout/stderr.
     Hmm ... looks like a package
-    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/Rtmp2DhVm6/Rd2pdf40a0497a4404'
+    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/Rtmpc1G8R9/Rd2pdf2f8845332a81'
     ```
 
 *   checking PDF version of manual ... WARNING
@@ -45,7 +45,7 @@ Version: 1.0.3
 
 # fgeo.plot
 
-Version: 1.0.4
+Version: 1.1.0
 
 ## In both
 
@@ -53,25 +53,18 @@ Version: 1.0.4
     ```
     Re-running with no redirection of stdout/stderr.
     Hmm ... looks like a package
-    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/RtmpuUOHi9/Rd2pdf5eb04ff1f4'
+    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/RtmpaguMNf/Rd2pdfe6442823817'
     ```
 
 *   checking PDF version of manual ... WARNING
     ```
     LaTeX errors when creating PDF version.
     This typically indicates Rd problems.
-    ```
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespaces in Imports field not imported from:
-      'fgeo.x' 'grDevices'
-      All declared Imports should be used.
     ```
 
 # fgeo.tool
 
-Version: 1.0.3
+Version: 1.2.0
 
 ## In both
 
@@ -79,18 +72,12 @@ Version: 1.0.3
     ```
     Re-running with no redirection of stdout/stderr.
     Hmm ... looks like a package
-    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/RtmpucjJbl/Rd2pdf7d0c66867ce'
+    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/RtmpsJXlhE/Rd2pdf3a281f1e1752'
     ```
 
 *   checking PDF version of manual ... WARNING
     ```
     LaTeX errors when creating PDF version.
     This typically indicates Rd problems.
-    ```
-
-*   checking dependencies in R code ... NOTE
-    ```
-    Namespace in Imports field not imported from: 'fgeo.x'
-      All declared Imports should be used.
     ```
 
