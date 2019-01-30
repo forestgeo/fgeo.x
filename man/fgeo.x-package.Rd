@@ -6,7 +6,8 @@
 \alias{fgeo.x-package}
 \title{fgeo.x: Access Small ForestGEO Datasets For Examples}
 \description{
-Access small example datasets from Luquillo, a ForestGEO site in Puerto Rico
+Access small example datasets from Luquillo, a
+    ForestGEO site in Puerto Rico
     (<https://forestgeo.si.edu/sites/north-america/luquillo>).
 }
 \seealso{

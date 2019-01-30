@@ -6,10 +6,11 @@
 
 ## R CMD check results
 
-fgeo.x 1.1.0
+1.1.0.9000
 
 NOTE
 New submission
+Version contains large components (1.1.0.9000)
 Availability using Additional_repositories specification:
   ?   ?   https://forestgeo.github.io/drat/
 * <https://forestgeo.github.io/drat/> is used to check reverse dependencies.
