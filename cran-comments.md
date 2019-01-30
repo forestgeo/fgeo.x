@@ -6,10 +6,18 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+1.1.0.9000
 
-* New submission 
+NOTE
+New submission
+Version contains large components (1.1.0.9000)
+Availability using Additional_repositories specification:
+  ?   ?   https://forestgeo.github.io/drat/
+* <https://forestgeo.github.io/drat/> is used to check reverse dependencies.
 
 ## Downstream dependencies
 
-There are currently no downstream dependencies for this package.
+I checked 4 reverse dependencies (0 from CRAN + 4 from  <https://forestgeo.github.io/drat/>).
+
+ * I saw 0 new problems
+ * I failed to check 0 packages

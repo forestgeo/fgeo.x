@@ -4,6 +4,10 @@ git reset --hard upstream/master
 
 git remote prune origin
 
+
+git branch -D
+
+
 message="Use @family datasets."
 
 git add .
