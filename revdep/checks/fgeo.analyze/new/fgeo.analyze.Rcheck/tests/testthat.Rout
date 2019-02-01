@@ -1,0 +1,51 @@
+
+R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(testthat)
+> library(fgeo.analyze)
+> 
+> test_check("fgeo.analyze")
+$N2
+[1] 29
+
+$R
+[1] 3
+
+$rate
+[1] 0.02413113
+
+$lower
+[1] 0.0084585
+
+$upper
+[1] 0.06812388
+
+$time
+[1] 4.525246
+
+$date1
+[1] 18937.96
+
+$date2
+[1] 20600.72
+
+== testthat results  ===============================================================
+OK: 306 SKIPPED: 14 FAILED: 0
+> 
+> proc.time()
+   user  system elapsed 
+  35.50    0.75   66.37 

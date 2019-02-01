@@ -1,0 +1,102 @@
+
+R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "fgeo"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> library('fgeo')
+-- [1mAttaching packages[22m ------------------------------------------------ fgeo 1.1.1 --
+[32mv[39m [34mfgeo.analyze[39m 1.1.2          [32mv[39m [34mfgeo.tool   [39m 1.2.1     
+[32mv[39m [34mfgeo.plot   [39m 1.1.1          [32mv[39m [34mfgeo.x      [39m 1.1.0.[31m9000[39m
+-- [1mConflicts[22m --------------------------------------------------- fgeo_conflicts() --
+[31mx[39m [34mfgeo.tool[39m::[32mfilter()[39m masks [34mstats[39m::filter()
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("fgeo_browse")
+> ### * fgeo_browse
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: fgeo_browse
+> ### Title: Open a web browser on fgeo's website.
+> ### Aliases: fgeo_browse fgeo_browse_reference
+> 
+> ### ** Examples
+> 
+> if (interactive()) {
++   fgeo_browse()
++   fgeo_browse_reference()
++ }
+> 
+> 
+> 
+> cleanEx()
+> nameEx("fgeo_help")
+> ### * fgeo_help
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: fgeo_help
+> ### Title: Get help with fgeo.
+> ### Aliases: fgeo_help
+> 
+> ### ** Examples
+> 
+> if (interactive()) {
++   fgeo_help()
++ }
+> 
+> dplyr::as_tibble(fgeo_help()$matches)
+[90m# A tibble: 331 x 9[39m
+   Topic  Title      Name    ID    Package  LibPath        Type  Field Entry    
+   [3m[90m<chr>[39m[23m  [3m[90m<chr>[39m[23m      [3m[90m<chr>[39m[23m   [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m    [3m[90m<chr>[39m[23m          [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m    
+[90m 1[39m abund~ Abundance~ abunda~ 1/1   fgeo.an~ C:/Users/Lepo~ help  alias abundance
+[90m 2[39m abund~ Abundance~ abunda~ 1/1   fgeo.an~ C:/Users/Lepo~ help  alias basal_ar~
+[90m 3[39m abund~ Abundance~ abunda~ 1/1   fgeo.an~ C:/Users/Lepo~ help  conc~ function~
+[90m 4[39m abund~ Abundance~ abunda~ 1/1   fgeo.an~ C:/Users/Lepo~ help  Title Abundanc~
+[90m 5[39m abund~ Create ta~ abunda~ 1/2   fgeo.an~ C:/Users/Lepo~ help  alias abundanc~
+[90m 6[39m abund~ Create ta~ abunda~ 1/2   fgeo.an~ C:/Users/Lepo~ help  alias basal_ar~
+[90m 7[39m abund~ Create ta~ abunda~ 1/2   fgeo.an~ C:/Users/Lepo~ help  conc~ function~
+[90m 8[39m abund~ Create ta~ abunda~ 1/2   fgeo.an~ C:/Users/Lepo~ help  Title Create t~
+[90m 9[39m fgeo.~ fgeo.anal~ fgeo.a~ 1/3   fgeo.an~ C:/Users/Lepo~ help  alias fgeo.ana~
+[90m10[39m fgeo.~ fgeo.anal~ fgeo.a~ 1/3   fgeo.an~ C:/Users/Lepo~ help  alias fgeo.ana~
+[90m# ... with 321 more rows[39m
+> 
+> if (interactive()) {
++   fgeo_help("stem", package = "fgeo.x")
++ }
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> cleanEx()
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  1.58 0.19 2.75 NA NA 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')
