@@ -1,0 +1,164 @@
+ViewID,SpeciesID,SubspeciesID,Family,Mnemonic,Genus,SpeciesName,Rank,Subspecies,Authority,IDLevel,subspMnemonic,subspAuthority,FieldFamily,Lifeform,Description,wsg,wsglevel,ListOfOldNames,Specimens,Reference
+1,56,NA,Fabaceae,AESAME,Aeschynomene,americana,NA,NA,(Poir.) Rudd,species,NA,NA,Fabaceae,NA,NA,0.678156,family,NA,NA,NA
+2,57,NA,Euphorbiaceae,ALCFLO,Alchorneopsis,floribunda,NA,NA,(Benth.) Müll. Arg.,species,NA,NA,Euphorbiaceae,NA,NA,0.426667,species,NA,NA,NA
+3,58,NA,Euphorbiaceae,ALCLAT,Alchornea,latifolia,NA,NA,Sw.,species,NA,NA,Euphorbiaceae,NA,NA,0.420263,species,NA,NA,NA
+4,59,NA,Fabaceae-papilionoideae,ANDINE,Andira,inermis,NA,NA,(W. Wright) Kunth ex DC.,species,NA,NA,Fabaceae,NA,NA,0.641952,species,NA,NA,NA
+5,60,NA,Rubiaceae,ANTOBT,Stenostomum,obtusifolium,NA,NA,(Urb.) Britton & P. Wilson,species,NA,NA,Rubiaceae,NA,NA,0.63564,family,NA,NA,NA
+6,61,NA,Myrsinaceae,ARDGLA,Ardisia,glauciflora,NA,NA,Urb.,species,NA,NA,Myrsinaceae,NA,NA,0.56,species,NA,NA,NA
+7,62,NA,Moraceae,ARTALT,Artocarpus,altilis,NA,NA,(Parkinson) Fosberg,species,NA,NA,Moraceae,NA,NA,0.424024,species,NA,NA,NA
+8,63,NA,Lauraceae,BEIPEN,Beilschmiedia,pendula,NA,NA,(Sw.) Hemsl.,species,NA,NA,Lauraceae,NA,NA,0.507,species,NA,NA,NA
+9,64,NA,Solanaceae,BRUPOR,Brunfelsia,portoricensis,NA,NA,Krug & Urb.,species,NA,NA,Solanaceae,NA,NA,0.783083,species,NA,NA,NA
+10,65,NA,Combretaceae,BUCTET,Buchenavia,tetraphylla,NA,NA,(Aubl.) R.A. Howard,species,NA,NA,Combretaceae,NA,NA,0.619444,species,NA,NA,NA
+11,66,NA,Malpighiaceae,BYRSPI,Byrsonima,spicata,NA,NA,(Cav.) DC.,species,NA,NA,Malpighiaceae,NA,NA,0.61373200000000006,species,NA,NA,NA
+12,67,NA,Malpighiaceae,BYRWAD,Byrsonima,wadsworthii,NA,NA,Little,species,NA,NA,Malpighiaceae,NA,NA,0.580272,species,NA,NA,NA
+13,68,NA,Clusiaceae,CALCAL,Calophyllum,brasiliense,NA,NA,Cambess.,species,NA,NA,Calophyllaceae,NA,NA,0.589067,species,NA,NA,NA
+14,69,NA,Melastomataceae,CALSQU,Henriettea,squamulosum,NA,NA,(Cogn.) Judd,species,NA,NA,Melastomataceae,NA,NA,0.619966,genus,NA,NA,NA
+15,70,NA,Salicaceae,CASARB,Casearia,arborea,NA,NA,(Rich.) Urb.,species,NA,NA,Salicaceae,NA,NA,0.573826,species,NA,NA,NA
+16,71,NA,Salicaceae,CASDEC,Casearia,decandra,NA,NA,Jacq.,species,NA,NA,Salicaceae,NA,NA,0.667433,species,NA,NA,NA
+17,72,NA,Salicaceae,CASGUI,Casearia,guianensis,NA,NA,(Aubl.) Urb.,species,NA,NA,Salicaceae,NA,NA,0.75481,species,NA,NA,NA
+18,73,NA,Salicaceae,CASSYL,Casearia,sylvestris,NA,NA,Sw.,species,NA,NA,Salicaceae,NA,NA,0.703346,species,NA,NA,NA
+19,74,NA,Urticaceae,CECSCH,Cecropia,schreberiana,NA,NA,Miq.,species,NA,NA,Urticaceae,NA,NA,0.262,species,NA,NA,NA
+20,75,NA,Malvaceae,CEIPEN,Ceiba,pentandra,NA,NA,Gaertn.,species,NA,NA,Malvaceae,NA,NA,0.305149,species,NA,NA,NA
+21,76,NA,Solanaceae,CESMAC,Cestrum,laurifolium,NA,NA,L'Hér.,species,NA,NA,Solanaceae,NA,NA,0.735971,genus,NA,NA,NA
+22,77,NA,Oleaceae,CHIDOM,Chionanthus,domingensis,NA,NA,Lam.,species,NA,NA,Oleaceae,NA,NA,0.865,species,NA,NA,NA
+23,78,NA,Rubiaceae,CHOVEN,Chione,venosa,NA,NA,(Sw.) Urb.,species,NA,NA,Rubiaceae,NA,NA,0.626141,species,NA,NA,NA
+24,79,NA,Sapotaceae,CHRARG,Chrysophyllum,argenteum,NA,NA,Jacq.,species,NA,NA,Sapotaceae,NA,NA,0.764833,species,NA,NA,NA
+25,80,NA,Lauraceae,CINELO,Cinnamomum,elongatum,NA,NA,(Nees) Kosterm.,species,NA,NA,Lauraceae,NA,NA,0.64,species,NA,NA,NA
+26,81,NA,Lauraceae,CINMON,Cinnamomum,montanum,NA,NA,(Sw.) Bercht. & J. Presl,species,NA,NA,Lauraceae,NA,NA,0.56,species,NA,NA,NA
+27,82,NA,Rutaceae,CITAUR,Citrus,X aurantium,NA,NA,L.,species,NA,NA,Rutaceae,NA,NA,0.6625,genus,NA,NA,NA
+28,83,NA,Verbenaceae,CITCAU,Citharexylum,caudatum,NA,NA,L.,species,NA,NA,Verbenaceae,NA,NA,0.646687,species,NA,NA,NA
+29,84,NA,Verbenaceae,CITFRU,Citharexylum,spinosum,NA,NA,L.,species,NA,NA,Verbenaceae,NA,NA,0.660086,genus,NA,NA,NA
+30,85,NA,Asteraceae,CLIERO,Clibadium,erosum,NA,NA,(Sw.) DC.,species,NA,NA,Asteraceae,NA,NA,0.342031,species,NA,NA,NA
+31,86,NA,Clusiaceae,CLUCLU,Clusia,clusioides,NA,NA,(Griseb.) D'Arcy,species,NA,NA,Clusiaceae,NA,NA,0.65,species,NA,NA,NA
+32,87,NA,Clusiaceae,CLUROS,Clusia,rosea,NA,NA,Jacq.,species,NA,NA,Clusiaceae,NA,NA,0.624815,species,NA,NA,NA
+33,88,NA,Polygonaceae,COCPYR,Coccoloba,pyrifolia,NA,NA,Desf.,species,NA,NA,Polygonaceae,NA,NA,0.478217,species,NA,NA,NA
+34,89,NA,Polygonaceae,COCSPP,Coccoloba,spp,NA,NA,NA,species,NA,NA,Polygonaceae,NA,NA,0.671864,genus,NA,NA,NA
+35,90,NA,Polygonaceae,COCSWA,Coccoloba,swartzii,NA,NA,Meisn.,species,NA,NA,Polygonaceae,NA,NA,0.671864,genus,NA,NA,NA
+36,91,NA,Rubiaceae,COFARA,Coffea,arabica,NA,NA,L.,species,NA,NA,Rubiaceae,NA,NA,0.618333,species,NA,NA,NA
+37,92,NA,Anacardiaceae,COMGLA,Comocladia,glabra,NA,NA,Spreng.,species,NA,NA,Anacardiaceae,NA,NA,0.760457,species,NA,NA,NA
+38,93,NA,Boraginaceae,CORBOR,Cordia,borinquensis,NA,NA,Urb.,species,NA,NA,Boraginaceae,NA,NA,0.70625,species,NA,NA,NA
+39,94,NA,Boraginaceae,CORSUL,Cordia,sulcata,NA,NA,DC.,species,NA,NA,Boraginaceae,NA,NA,0.604,species,NA,NA,NA
+40,95,NA,Euphorbiaceae,CROPOE,Croton,poecilanthus,NA,NA,Urb.,species,NA,NA,Euphorbiaceae,NA,NA,0.587742,species,NA,NA,NA
+41,96,NA,Rhizophoraceae,CSSGUI,Cassipourea,guianensis,NA,NA,Aubl.,species,NA,NA,Rhizophoraceae,NA,NA,0.75975,species,NA,NA,NA
+42,97,NA,Sapindaceae,CUPAME,Cupania,americana,NA,NA,L.,species,NA,NA,Sapindaceae,NA,NA,0.544167,species,NA,NA,NA
+43,98,NA,Cyrillaceae,CYRRAC,Cyrilla,racemiflora,NA,NA,L.,species,NA,NA,Cyrillaceae,NA,NA,0.58619,species,NA,NA,NA
+44,99,NA,Burseraceae,DACEXC,Dacryodes,excelsa,NA,NA,Vahl,species,NA,NA,Burseraceae,NA,NA,0.493168,species,NA,NA,NA
+45,100,NA,Thymelaeaceae,DAPPHI,Daphnopsis,philippiana,NA,NA,Krug & Urb.,species,NA,NA,Thymelaeaceae,NA,NA,0.300683,species,NA,NA,NA
+46,101,NA,Araliaceae,DENARB,Dendropanax,arboreus,NA,NA,(L.) Decne. & Planch.,species,NA,NA,Araliaceae,NA,NA,0.420594,species,NA,NA,NA
+47,102,NA,Euphorbiaceae,DITMYR,Ditta,myricoides,NA,NA,Griseb.,species,NA,NA,Euphorbiaceae,NA,NA,0.356778,species,NA,NA,NA
+48,103,NA,Putranjivaceae,DRYALB,Drypetes,alba,NA,NA,Poit.,species,NA,NA,Euphorbiaceae,NA,NA,0.696821,species,NA,NA,NA
+49,104,NA,Putranjivaceae,DRYGLA,Drypetes,glauca,NA,NA,Vahl,species,NA,NA,Euphorbiaceae,NA,NA,0.673058,species,NA,NA,NA
+50,105,NA,Myrtaceae,EUGDOM,Eugenia,domingensis,NA,NA,O. Berg,species,NA,NA,Myrtaceae,NA,NA,0.59,species,NA,NA,NA
+51,106,NA,Myrtaceae,EUGEGG,Eugenia,eggersii,NA,NA,Kiaersk.,species,NA,NA,Myrtaceae,NA,NA,0.6975,species,NA,NA,NA
+52,107,NA,Myrtaceae,EUGSTA,Eugenia,stahlii,NA,NA,(Kiaersk.) Krug & Urb.,species,NA,NA,Myrtaceae,NA,NA,0.709979,species,NA,NA,NA
+53,108,NA,Rubiaceae,FAROCC,Faramea,occidentalis,NA,NA,(L.) A. Rich.,species,NA,NA,Rubiaceae,NA,NA,0.587889,species,NA,NA,NA
+54,109,NA,Moraceae,FICAME,Ficus,americana,NA,NA,Aubl.,species,NA,NA,Moraceae,NA,NA,0.4025,species,NA,NA,NA
+55,110,NA,Moraceae,FICCIT,Ficus,citrifolia,NA,NA,Mill.,species,NA,NA,Moraceae,NA,NA,0.4,species,NA,NA,NA
+56,111,NA,Moraceae,FICCRA,Ficus,crassinervia,NA,NA,Desf.ex Willd.,species,NA,NA,Moraceae,NA,NA,0.42,species,NA,NA,NA
+57,112,NA,Moraceae,FICSPP,Ficus,spp,NA,NA,NA,genus,NA,NA,Moraceae,NA,NA,0.423956,genus,NA,NA,NA
+58,113,NA,Moraceae,FICTRI,Ficus,trigonata,NA,NA,L.,species,NA,NA,Moraceae,NA,NA,0.423956,genus,NA,NA,NA
+59,114,NA,Rubiaceae,GENAME,Genipa,americana,NA,NA,L.,species,NA,NA,Rubiaceae,NA,NA,0.632074,species,NA,NA,NA
+60,115,NA,Rubiaceae,GONSPI,Gonzalagunia, hirsuta,NA,NA,(Jacq.) K. Schum.,species,NA,NA,Rubiaceae,NA,NA,0.693723,genus,NA,NA,NA
+61,116,NA,Meliaceae,GUAGLA,Guarea,glabra,NA,NA,Vahl,species,NA,NA,Meliaceae,NA,NA,0.477806,species,NA,NA,NA
+62,117,NA,Meliaceae,GUAGUI,Guarea,guidonia,NA,NA,(L.) Sleumer,species,NA,NA,Meliaceae,NA,NA,0.567514,species,NA,NA,NA
+63,118,NA,Malvaceae,GUAULM,Guazuma,ulmifolia,NA,NA,Lam.,species,NA,NA,Malvaceae,NA,NA,0.522209,species,NA,NA,NA
+64,119,NA,Rubiaceae,GUEVAL,Guettarda,valenzuelana,NA,NA,A. Rich.,species,NA,NA,Rubiaceae,NA,NA,0.627409,species,NA,NA,NA
+65,120,NA,Annonaceae,GUTCAR,Guatteria,caribaea,NA,NA,Urb.,species,NA,NA,Annonaceae,NA,NA,0.707667,species,NA,NA,NA
+66,121,NA,Rubiaceae,HAMAXI,Hamelia,axillaris,NA,NA,Sw.,species,NA,NA,Rubiaceae,NA,NA,0.6175,species,NA,NA,NA
+67,122,NA,Melastomataceae,HENFAS,Henriettea,fascicularis,NA,NA,(Sw.) M. Gómez,species,NA,NA,Melastomataceae,NA,NA,0.479899,species,NA,NA,NA
+68,123,NA,Melastomataceae,HETCYM,Clidemia,eggersii,NA,NA,(Cogn.) F.S. Axelrod,species,NA,NA,Melastomataceae,NA,NA,0.670511,family,NA,NA,NA
+69,124,NA,Malvaceae,HIBTIL,Talipariti,tiliaceum,NA,NA,(L.) Fryxell,species,NA,NA,Malvaceae,NA,NA,0.475734,family,NA,NA,NA
+70,125,NA,Chrysobalanaceae,HIRRUG,Hirtella,rugosa,NA,NA,Pers.,species,NA,NA,Chrysobalanaceae,NA,NA,0.885519,species,NA,NA,NA
+71,126,NA,Salicaceae,HOMRAC,Homalium,racemosum,NA,NA,Jacq.,species,NA,NA,Salicaceae,NA,NA,0.793889,species,NA,NA,NA
+72,127,NA,Aquifoliaceae,ILESID,Ilex,sideroxyloides,NA,NA,(Sw.) Griseb. ,species,NA,NA,Aquifoliaceae,NA,NA,0.755488,species,NA,NA,NA
+73,128,NA,Fabaceae-mimosoideae,INGLAU,Inga,laurina,NA,NA,(Sw.) Willd.,species,NA,NA,Fabaceae,NA,NA,0.653333,species,NA,NA,NA
+74,129,NA,Fabaceae-mimosoideae,INGVER,Inga,vera,NA,NA,Willd.,species,NA,NA,Fabaceae,NA,NA,0.58,species,NA,NA,NA
+75,130,NA,Rubiaceae,IXOFER,Ixora,ferrea,NA,NA,(J.F. Gmel.) Benth.,species,NA,NA,Rubiaceae,NA,NA,0.65,species,NA,NA,NA
+76,131,NA,Salicaceae,LAEPRO,Laetia,procera,NA,NA,(Poepp.) Eichler,species,NA,NA,Salicaceae,NA,NA,0.647255,species,NA,NA,NA
+77,132,NA,Fabaceae-papilionoideae,LONLAT,Lonchocarpus,heptaphyllus,NA,NA,(Poir.) DC.,species,NA,NA,Fabaceae,NA,NA,0.68675,species,NA,NA,NA
+78,133,NA,Onagraceae,LUDOCT,Ludwigia,octovalvis,NA,NA,(Jacq.) P.H. Raven,species,NA,NA,Onagraceae,NA,NA,0.696,family,NA,NA,NA
+79,134,NA,Rhamnaceae,MAEEMI,Maesopsis,eminii,NA,NA,Engl.,species,NA,NA,Rhamnaceae,NA,NA,0.3835,species,NA,NA,NA
+80,135,NA,Magnoliaceae,MAGSPL,Magnolia,splendens,NA,NA,Urb.,species,NA,NA,Magnoliaceae,NA,NA,0.585,species,NA,NA,NA
+81,136,NA,Malpighiaceae,MALFUR,Malpighia,fucata,NA,NA,Ker Gawl.,species,NA,NA,Malpighiaceae,NA,NA,0.569233,genus,NA,NA,NA
+82,137,NA,Sapotaceae,MANBID,Manilkara,bidentata,NA,NA,(A. DC.) A. Chev.,species,NA,NA,Sapotaceae,NA,NA,0.872014,species,NA,NA,NA
+83,138,NA,Anacardiaceae,MANIND,Mangifera,indica,NA,NA,L.,species,NA,NA,Anacardiaceae,NA,NA,0.555828,species,NA,NA,NA
+84,139,NA,Phyllanthaceae,MARNOB,Margaritaria,nobilis,NA,NA,L.f.,species,NA,NA,Euphorbiaceae,NA,NA,0.59636,species,NA,NA,NA
+85,140,NA,Sapindaceae,MATDOM,Matayba,domingensis,NA,NA,(DC.) Radlk,species,NA,NA,Sapindaceae,NA,NA,0.697,species,NA,NA,NA
+86,141,NA,Celastraceae,MAYELO,Maytenus,elongata,NA,NA,Britton,species,NA,NA,Celastraceae,NA,NA,0.710898,species,NA,NA,NA
+87,142,NA,Sabiaceae,MELHER,Meliosma,herbertii,NA,NA,Rolfe,species,NA,NA,Sabiaceae,NA,NA,0.435,species,NA,NA,NA
+88,143,NA,Melastomataceae,MICAFF,Miconia,affinis,NA,NA,DC.,species,NA,NA,Melastomataceae,NA,NA,0.618877,genus,NA,NA,NA
+89,144,NA,Melastomataceae,MICIMP,Miconia,impetiolaris,NA,NA,(Sw.) D. Don ex DC.,species,NA,NA,Melastomataceae,NA,NA,0.747025,species,NA,NA,NA
+90,145,NA,Melastomataceae,MICMIR,Miconia,mirabilis,NA,NA,(Aubl.) L.O. Williams,species,NA,NA,Melastomataceae,NA,NA,0.603167,species,NA,NA,NA
+91,146,NA,Melastomataceae,MICPRA,Miconia,prasina,NA,NA,(Sw.) DC.,species,NA,NA,Melastomataceae,NA,NA,0.688234,species,NA,NA,NA
+92,147,NA,Melastomataceae,MICRAC,Miconia,racemosa,NA,NA,(Aubl.) DC.,species,NA,NA,Melastomataceae,NA,NA,0.449723,species,NA,NA,NA
+93,148,NA,Melastomataceae,MICTET,Miconia,tetrandra,NA,NA,(Sw.) D. Don,species,NA,NA,Melastomataceae,NA,NA,0.703,species,NA,NA,NA
+94,149,NA,Fabaceae-mimosoideae,MIMPUD,Mimosa,pudica,NA,NA,L.,species,NA,NA,Mimosoideae,NA,NA,0.8235,genus,NA,NA,NA
+95,150,NA,Sapotaceae,MIRCHR,Micropholis,guyanensis,NA,NA,(A.DC.) Pierre,species,NA,NA,Sapotaceae,NA,NA,0.657273,species,NA,NA,NA
+96,151,NA,Sapotaceae,MIRGAR,Micropholis,garciniifolia,NA,NA,Pierre,species,NA,NA,Sapotaceae,NA,NA,0.67,species,NA,NA,NA
+97,152,NA,Myrsinaceae,MYRCOR,Myrsine,coriacea,NA,NA,(Sw.) R. Br. ex Roem. & Schult.,species,NA,NA,Myrsinaceae,NA,NA,0.643556,species,NA,NA,NA
+98,153,NA,Myrtaceae,MYRDEF,Myrcia,deflexa,NA,NA,(Poir.) DC.,species,NA,NA,Myrtaceae,NA,NA,0.8,species,NA,NA,NA
+99,154,NA,Myrtaceae,MYRFAL,Myrcia,fallax,NA,NA,(Rich.) D.C.,species,NA,NA,Myrtaceae,NA,NA,0.885141,species,NA,NA,NA
+100,155,NA,Myrtaceae,MYRLEP,Myrcia,amazonica,NA,NA,DC.,species,NA,NA,Myrtaceae,NA,NA,0.814458,genus,NA,NA,NA
+101,156,NA,Myrtaceae,MYRSPL,Myrcia,splendens,NA,NA,(Sw.) DC.,species,NA,NA,Myrtaceae,NA,NA,0.76777,species,NA,NA,NA
+102,157,NA,Asteraceae,NEULOB,Neurolaena,lobata,NA,NA,(L.) Cass.,species,NA,NA,Asteraceae,NA,NA,0.636096,family,NA,NA,NA
+103,158,NA,Malvaceae,OCHPYR,Ochroma,pyramidale,NA,NA,(Cav. Ex Lam.) Urb.,species,NA,NA,Malvaceae,NA,NA,0.158128,species,NA,NA,NA
+104,159,NA,Lauraceae,OCOFLO,Ocotea,floribunda,NA,NA,(Sw.) Mez,species,NA,NA,Lauraceae,NA,NA,0.401425,species,NA,NA,NA
+105,160,NA,Lauraceae,OCOGLO,Nectandra,hihua,NA,NA,(Ruiz & Pav.) Rohwer,species,NA,NA,Lauraceae,NA,NA,0.57169,genus,NA,NA,NA
+106,161,NA,Lauraceae,OCOLEU,Ocotea,leucoxylon,NA,NA,(Sw.) Laness.,species,NA,NA,Lauraceae,NA,NA,0.46175,species,NA,NA,NA
+107,162,NA,Lauraceae,OCOMOS,Ocotea,moschata,NA,NA,(Meisn) Mez.,species,NA,NA,Lauraceae,NA,NA,0.595333,species,NA,NA,NA
+108,163,NA,Lauraceae,OCOPOR,Ocotea,portoricensis,NA,NA,Mez,species,NA,NA,Lauraceae,NA,NA,0.59,species,NA,NA,NA
+109,164,NA,Lauraceae,OCOSIN,Nectandra,turbacensis,NA,NA,(Knuth) Nees,species,NA,NA,Lauraceae,NA,NA,0.57169,genus,NA,NA,NA
+110,165,NA,Lauraceae,OCOSPA,Ocotea,spathulata,NA,NA,Mez,species,NA,NA,Lauraceae,NA,NA,0.620759,species,NA,NA,NA
+111,166,NA,Fabaceae-papilionoideae,ORMKRU,Ormosia,krugii,NA,NA,Urb.,species,NA,NA,Fabaceae,NA,NA,0.491429,species,NA,NA,NA
+112,167,NA,Annonaceae,OXALAU,Oxandra,laurifolia,NA,NA,(Sw.) A. Rich.,species,NA,NA,Annonaceae,NA,NA,0.588845,species,NA,NA,NA
+113,168,NA,Rubiaceae,PALCRO,Palicourea,crocea,NA,NA,(Sw.)Schult,species,NA,NA,Rubiaceae,NA,NA,0.52667,genus,NA,NA,NA
+114,169,NA,Rubiaceae,PALRIP,Palicourea,croceoides,NA,NA,Ham.,species,NA,NA,Rubiaceae,NA,NA,0.52667,genus,NA,NA,NA
+115,170,NA,Phytolaccaceae,PHYICO,Phytolacca,rivinoides,NA,NA,Kunth & C.D. Bouché,species,NA,NA,Phytolaccaceae,NA,NA,0.258,genus,NA,NA,NA
+116,171,NA,Piperaceae,PIPADU,Piper,aduncum,NA,NA,L.,species,NA,NA,Piperaceae,NA,NA,0.4,species,NA,NA,NA
+117,172,NA,Piperaceae,PIPAMA,Piper,amalago,NA,NA,L.,species,NA,NA,Piperaceae,NA,NA,0.401667,species,NA,NA,NA
+118,173,NA,Piperaceae,PIPBLA,Piper,blattarum,NA,NA,Spreng.,species,NA,NA,Piperaceae,NA,NA,0.455534,species,NA,NA,NA
+119,174,NA,Piperaceae,PIPGLA,Piper,glabrescens,NA,NA,(Miq.) C.DC.,species,NA,NA,Piperaceae,NA,NA,0.288269,species,NA,NA,NA
+120,175,NA,Piperaceae,PIPHIS,Piper,hispidum,NA,NA,Sw.,species,NA,NA,Piperaceae,NA,NA,0.392696,species,NA,NA,NA
+121,176,NA,Piperaceae,PIPJAC,Piper,jacquemontianum,NA,NA,Knuth,species,NA,NA,Piperaceae,NA,NA,0.39,species,NA,NA,NA
+122,177,NA,Nyctaginaceae,PISBOR,Pisonia,sp. 1 borinquena,NA,NA,(undescribed),species,NA,NA,Nyctaginaceae,NA,NA,0.584404,none,NA,NA,NA
+123,178,NA,Canellaceae,PLEMAC,Pleodendron,macranthum,NA,NA,(Baill.) Tiegh.,species,NA,NA,Canellaceae,NA,NA,0.736333,family,NA,NA,NA
+124,179,NA,Asteraceae,PLUSYM,Pluchea,carolinensis,NA,NA,(Jacq.) G. Don,species,NA,NA,Asteraceae,NA,NA,0.636096,family,NA,NA,NA
+125,180,NA,Piperaceae,POTPEL,Piper,peltatum,NA,NA,L.,species,NA,NA,Piperaceae,NA,NA,0.382514,genus,NA,NA,NA
+126,181,NA,Piperaceae,POTUMB,Piper,umbellatum,NA,NA,L.,species,NA,NA,Piperaceae,NA,NA,0.308309,species,NA,NA,NA
+127,182,NA,Arecaceae,PREMON,Prestoea,acuminata,NA,NA,(Willd.) H.E. Moore,species,NA,NA,Arecaceae,NA,NA,0.279657,genus,NA,NA,NA
+128,183,NA,Moraceae,PSESPU,Pseudolmedia,spuria,NA,NA,(Sw.) Griseb.,species,NA,NA,Moraceae,NA,NA,0.675,species,NA,NA,NA
+129,184,NA,Rubiaceae,PSYBER,Psychotria,berteroana,NA,NA,DC.,species,NA,NA,Rubiaceae,NA,NA,0.524742,genus,NA,NA,NA
+130,185,NA,Rubiaceae,PSYBRA,Psychotria,brachiata,NA,NA,Sw.,species,NA,NA,Rubiaceae,NA,NA,0.376259,species,NA,NA,NA
+131,186,NA,Rubiaceae,PSYDEF,Psychotria,deflexa,NA,NA,DC.,species,NA,NA,Rubiaceae,NA,NA,0.480397,species,NA,NA,NA
+132,187,NA,Rubiaceae,PSYGRA,Psychotria,grandis,NA,NA,Sw.,species,NA,NA,Rubiaceae,NA,NA,0.294816,species,NA,NA,NA
+133,188,NA,Fabaceae-papilionoideae,PTEOFF,Pterocarpus,officinalis,NA,NA,Jacq.,species,NA,NA,Fabaceae,NA,NA,0.379868,species,NA,NA,NA
+134,189,NA,Malvaceae,QUATUR,Quararibea,turbinata,NA,NA,(Sw.) Poir,species,NA,NA,Malvaceae,NA,NA,0.57829,species,NA,NA,NA
+135,190,NA,Apocynaceae,RAUNIT,Rauvolfia,nitida,NA,NA,Jacq.,species,NA,NA,Apocynaceae,NA,NA,0.465,species,NA,NA,NA
+136,191,NA,Clusiaceae,RHEPOR,Garcinia,portoricensis,NA,NA,(Urb.) Alain,species,NA,NA,Clusiaceae,NA,NA,0.833585,species,NA,NA,NA
+137,192,NA,Rubiaceae,RONPOR,Rondeletia,portoricensis,NA,NA,Krug & Urb.,species,NA,NA,Rubiaceae,NA,NA,0.775,species,NA,NA,NA
+138,193,NA,Arecaceae,ROYBOR,Roystonea,borinquena,NA,NA,O.F. Cook,species,NA,NA,Arecaceae,NA,NA,0.82,species,NA,NA,NA
+139,194,NA,Salicaceae,SAMSPI,Samyda,spinulosa,NA,NA,Vent.,species,NA,NA,Salicaceae,NA,NA,0.756121,genus,NA,NA,NA
+140,195,NA,Euphorbiaceae,SAPLAU,Sapium,laurocerasus,NA,NA,Desf.,species,NA,NA,Euphorbiaceae,NA,NA,0.380714,species,NA,NA,NA
+141,196,NA,Araliaceae,SCHMOR,Schefflera,morototoni,NA,NA,(Aubl.) Maguire,species,NA,NA,Araliaceae,NA,NA,0.453891,species,NA,NA,NA
+142,197,NA,Simaroubaceae,SIMAMA,Simarouba,amara,NA,NA,Aubl.,species,NA,NA,Simaroubaceae,NA,NA,0.384643,species,NA,NA,NA
+143,198,NA,Elaeocarpaceae,SLOBER,Sloanea,berteroana,NA,NA,Choisy ex DC.,species,NA,NA,Elaeocarpaceae,NA,NA,0.624723,genus,NA,NA,NA
+144,199,NA,Solanaceae,SOLRUG,Solanum,rugosum,NA,NA,Dunal,species,NA,NA,Solanaceae,NA,NA,0.4925,species,NA,NA,NA
+145,200,NA,Solanaceae,SOLTOR,Solanum,torvum,NA,NA,Sw.,species,NA,NA,Solanaceae,NA,NA,0.463333,species,NA,NA,NA
+146,201,NA,Bignoniaceae,SPACAM,Spathodea,campanulata,NA,NA,P. Beauv.,species,NA,NA,Bignoniaceae,NA,NA,0.34396,species,NA,NA,NA
+147,202,NA,Meliaceae,SWIMAC,Swietenia,macrophylla,NA,NA,King,species,NA,NA,Meliaceae,NA,NA,0.522409,species,NA,NA,NA
+148,203,NA,Symplocaceae,SYMMAR,Symplocos,martinicensis,NA,NA,Jacq.,species,NA,NA,Symplocaceae,NA,NA,0.726609,species,NA,NA,NA
+149,204,NA,Myrtaceae,SYZJAM,Syzygium,jambos,NA,NA,(L.) Alston,species,NA,NA,Myrtaceae,NA,NA,0.682282,species,NA,NA,NA
+150,205,NA,Bignoniaceae,TABHET,Tabebuia,heterophylla,NA,NA,(DC.) Britton,species,NA,NA,Bignoniaceae,NA,NA,0.589445,species,NA,NA,NA
+151,206,NA,Pentaphylacaceae,TERLUQ,Ternstroemia,luquillensis,NA,NA,Krug & Urb.,species,NA,NA,Theaceae,NA,NA,0.618091,genus,NA,NA,NA
+152,207,NA,Burseraceae,TETBAL,Tetragastris,balsamifera,NA,NA,Oken,species,NA,NA,Burseraceae,NA,NA,0.591348,species,NA,NA,NA
+153,208,NA,Melastomataceae,TETURB,Tetrazygia,urbanii,NA,NA,Cogn.,species,NA,NA,Melastomataceae,NA,NA,0.670511,family,NA,NA,NA
+154,209,NA,Cannabaceae,TREMIC,Trema,micrantha,NA,NA,(L.) Blume,species,NA,NA,Ulmaceae,NA,NA,0.319417,species,NA,NA,NA
+155,210,NA,Meliaceae,TRIPAL,Trichilia,pallida,NA,NA,Sw.,species,NA,NA,Meliaceae,NA,NA,0.698125,species,NA,NA,NA
+156,211,NA,Tapisciaceae,TUROCC,Turpinia,occidentalis,NA,NA,(Sw.) G. Don,species,NA,NA,Staphyleaceae,NA,NA,0.354805,species,NA,NA,NA
+157,212,NA,Unknown,UNIDEN,Unidentified,SPECIES,NA,NA,NA,species,NA,NA,unknown,NA,NA,0.584404,none,NA,NA,NA
+158,213,NA,Urticaceae,UREBAC,Urera,baccifera,NA,NA,(L.) Gaudich. Ex Wedd.,species,NA,NA,Urticaceae,NA,NA,0.275078,species,NA,NA,NA
+159,214,NA,Lamiaceae,VITDIV,Vitex,divaricata,NA,NA,Sw.,species,NA,NA,Lamiaceae ,NA,NA,0.62375,species,NA,NA,NA
+160,215,NA,Myrsinaceae,WALPEN,Wallenia,lamarckiana,NA,NA,(A. DC.) Mex,species,NA,NA,Myrsinaceae,NA,NA,0.648781,family,NA,NA,NA
+161,216,NA,Salicaceae,XYLSCH,Xylosma,schwaneckeana,NA,NA,(Krug & Urb.) Urb.,species,NA,NA,Salicaceae,NA,NA,0.719491,genus,NA,NA,NA
+162,217,NA,Rutaceae,ZANMAR,Zanthoxylum,martinicense,NA,NA,(Lam.) DC.,species,NA,NA,Rutaceae,NA,NA,0.58425,species,NA,NA,NA
+163,218,NA,Aquifoliaceae,ILENIT,Ilex,nitida,NA,NA,(Vahl) Maxim.,species,NA,NA,Aquifoliaceae,NA,NA,0.569156,genus,NA,NA,NA

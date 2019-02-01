@@ -1,0 +1,4 @@
+datasets                Access data via 'library(fgeo.x)' or
+                        'fgeo.x::<dataset-name>'.
+download_data           Access data stored online.
+example_path            Access data stored in system files.
