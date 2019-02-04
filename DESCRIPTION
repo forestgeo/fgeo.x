@@ -26,7 +26,8 @@ Imports:
 Suggests: 
     spelling,
     testthat
-Additional_repositories: https://forestgeo.github.io/drat/
+Additional_repositories: https://cran.rstudio.com/,
+    https://forestgeo.github.io/drat/
 Encoding: UTF-8
 Language: en-US
 LazyData: true
