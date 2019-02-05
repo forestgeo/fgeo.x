@@ -10,9 +10,7 @@
 
 0 errors | 0 warnings | 1 notes
 
-* using R Under development (unstable) (2019-02-04 r76055)
-* using platform: x86_64-w64-mingw32 (64-bit)
-* this is package 'fgeo.x' version '1.1.0.9001'
+### win-builder
 
 Status: 1 NOTE
 Comments:
@@ -20,11 +18,12 @@ Comments:
 * I use <https://forestgeo.github.io/drat/> to check reverse dependencies.
 
 NOTE
-New submission
-Version contains large components (1.1.0.9001) ... FIXME
-Availability using Additional_repositories specification:
-  ?   ?   https://cran.rstudio.com/        
-  ?   ?   https://forestgeo.github.io/drat/
+
+* New submission
+* Version contains large components (1.1.0.9001) ... FIXME
+* Availability using Additional_repositories specification:
+  * ?   ?   https://cran.rstudio.com/        
+  * ?   ?   https://forestgeo.github.io/drat/
 
 ## Downstream dependencies
 

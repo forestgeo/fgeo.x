@@ -1,0 +1,1374 @@
+
+R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "fgeo.tool"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> library('fgeo.tool')
+
+Attaching package: 'fgeo.tool'
+
+The following object is masked from 'package:stats':
+
+    filter
+
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("add_status_tree")
+> ### * add_status_tree
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: add_status_tree
+> ### Title: Add column 'status_tree' based on the status of all stems of
+> ###   each tree.
+> ### Aliases: add_status_tree
+> 
+> ### ** Examples
+> 
+> stem <- tribble(
++   ~CensusID, ~treeID, ~stemID, ~status,
++           1,       1,       1,     "A",
++           1,       1,       2,     "D",
++           
++           1,       2,       3,     "D",
++           1,       2,       4,     "D",
++           
++           
++           
++           2,       1,       1,     "A",
++           2,       1,       2,     "G",
++           
++           2,       2,       3,     "D",
++           2,       2,       4,     "G"
++ )
+> 
+> add_status_tree(stem)
+[90m# A tibble: 8 x 5[39m
+  CensusID treeID stemID status status_tree
+     [3m[90m<dbl>[39m[23m  [3m[90m<dbl>[39m[23m  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m  [3m[90m<chr>[39m[23m      
+[90m1[39m        1      1      1 A      A          
+[90m2[39m        1      1      2 D      A          
+[90m3[39m        1      2      3 D      D          
+[90m4[39m        1      2      4 D      D          
+[90m5[39m        2      1      1 A      A          
+[90m6[39m        2      1      2 G      A          
+[90m7[39m        2      2      3 D      A          
+[90m8[39m        2      2      4 G      A          
+> 
+> 
+> 
+> 
+> cleanEx()
+
+detaching 'package:bindrcpp'
+
+> nameEx("add_subquad")
+> ### * add_subquad
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: add_subquad
+> ### Title: Add column 'subquadrat' based on 'QX' and 'QY' coordinates.
+> ### Aliases: add_subquad
+> 
+> ### ** Examples
+> 
+> vft <- tribble(
++    ~QX,  ~QY,
++   17.9,    0,
++    4.1,   15,
++    6.1, 17.3,
++    3.8,  5.9,
++    4.5, 12.4,
++    4.9,  9.3,
++    9.8,  3.2,
++   18.6,  1.1,
++   17.3,  4.1,
++    1.5, 16.3
++ )
+> 
+> add_subquad(vft, 20, 20, 5, 5)
+[90m# A tibble: 10 x 3[39m
+      QX    QY subquadrat
+   [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m     
+[90m 1[39m  17.9   0   41        
+[90m 2[39m   4.1  15   14        
+[90m 3[39m   6.1  17.3 24        
+[90m 4[39m   3.8   5.9 12        
+[90m 5[39m   4.5  12.4 13        
+[90m 6[39m   4.9   9.3 12        
+[90m 7[39m   9.8   3.2 21        
+[90m 8[39m  18.6   1.1 41        
+[90m 9[39m  17.3   4.1 41        
+[90m10[39m   1.5  16.3 14        
+> 
+> add_subquad(vft, 20, 20, 5, 5, subquad_offset = -1)
+[90m# A tibble: 10 x 3[39m
+      QX    QY subquadrat
+   [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m     
+[90m 1[39m  17.9   0   31        
+[90m 2[39m   4.1  15   04        
+[90m 3[39m   6.1  17.3 14        
+[90m 4[39m   3.8   5.9 02        
+[90m 5[39m   4.5  12.4 03        
+[90m 6[39m   4.9   9.3 02        
+[90m 7[39m   9.8   3.2 11        
+[90m 8[39m  18.6   1.1 31        
+[90m 9[39m  17.3   4.1 31        
+[90m10[39m   1.5  16.3 04        
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("add_var")
+> ### * add_var
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: add_var
+> ### Title: Add columns 'lx/ly', 'QX/QY', 'index', 'col/row', 'hectindex',
+> ###   'quad', 'gx/gy'.
+> ### Aliases: add_var add_lxly add_qxqy add_index add_col_row add_hectindex
+> ###   add_quad add_gxgy
+> 
+> ### ** Examples
+> 
+> x <- tribble(
++     ~gx,    ~gy,
++       0,      0,
++      50,     25,
++   999.9, 499.95,
++    1000,    500
++ )
+> 
+> # `gridsize` has a common default; `plotdim` is guessed from the data
+> add_lxly(x)
+Guessing: plotdim = c(1000, 500)
+* If guess is wrong, provide the correct argument `plotdim`
+[90m# A tibble: 4 x 4[39m
+     gx    gy    lx    ly
+  [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m
+[90m1[39m    0     0    0     0  
+[90m2[39m   50    25   10     5  
+[90m3[39m [4m1[24m000.  500.  19.9  19.9
+[90m4[39m [4m1[24m000   500   [31mNA[39m    [31mNA[39m  
+> 
+> gridsize <- 20
+> plotdim <- c(1000, 500)
+> 
+> add_qxqy(x, gridsize, plotdim)
+[90m# A tibble: 4 x 4[39m
+     gx    gy    QX    QY
+  [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m
+[90m1[39m    0     0    0     0  
+[90m2[39m   50    25   10     5  
+[90m3[39m [4m1[24m000.  500.  19.9  19.9
+[90m4[39m [4m1[24m000   500   [31mNA[39m    [31mNA[39m  
+> 
+> add_index(x, gridsize, plotdim)
+[90m# A tibble: 4 x 3[39m
+     gx    gy index
+  [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m
+[90m1[39m    0     0      1
+[90m2[39m   50    25     52
+[90m3[39m [4m1[24m000.  500.  [4m1[24m250
+[90m4[39m [4m1[24m000   500     [31mNA[39m
+> 
+> add_hectindex(x, gridsize, plotdim)
+Warning: Some values of `gx` and/or `gy` lay at or beyond plot limits
+
+[90m# A tibble: 4 x 3[39m
+     gx    gy hectindex
+  [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m     [3m[90m<dbl>[39m[23m
+[90m1[39m    0     0          1
+[90m2[39m   50    25          1
+[90m3[39m [4m1[24m000.  500.        50
+[90m4[39m [4m1[24m000   500         56
+> 
+> add_quad(x, gridsize, plotdim)
+[90m# A tibble: 4 x 3[39m
+     gx    gy quad 
+  [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m
+[90m1[39m    0     0  0101 
+[90m2[39m   50    25  0302 
+[90m3[39m [4m1[24m000.  500. 5025 
+[90m4[39m [4m1[24m000   500  [31mNA[39m   
+> 
+> add_quad(x, gridsize, plotdim, start = 0)
+[90m# A tibble: 4 x 3[39m
+     gx    gy quad 
+  [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m
+[90m1[39m    0     0  0000 
+[90m2[39m   50    25  0201 
+[90m3[39m [4m1[24m000.  500. 4924 
+[90m4[39m [4m1[24m000   500  [31mNA[39m   
+> 
+> # `width` gives the nuber of digits to pad the label of plot-rows and
+> # plot-columns, e.g. 3 pads plot-rows with three zeros and plot-columns with
+> # an extra trhree zeros, resulting in a total of 6 zeros.
+> add_quad(x, gridsize, plotdim, start = 0, width = 3)
+[90m# A tibble: 4 x 3[39m
+     gx    gy quad  
+  [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m    0     0  000000
+[90m2[39m   50    25  002001
+[90m3[39m [4m1[24m000.  500. 049024
+[90m4[39m [4m1[24m000   500  [31mNA[39m    
+> 
+> add_col_row(x, gridsize, plotdim)
+[90m# A tibble: 4 x 4[39m
+     gx    gy col   row  
+  [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m
+[90m1[39m    0     0  01    01   
+[90m2[39m   50    25  03    02   
+[90m3[39m [4m1[24m000.  500. 50    25   
+[90m4[39m [4m1[24m000   500  [31mNA[39m    [31mNA[39m   
+> 
+> 
+> # From `quadrat` or `QuadratName` --------------------------------------
+> x <- tribble(
++   ~QuadratName,
++         "0001",
++         "0011",
++         "0101",
++         "1001"
++ )
+> 
+> # Output `gx` and `gy` ---------------
+> 
+> add_gxgy(x)
+[90m# A tibble: 4 x 3[39m
+  QuadratName    gx    gy
+  [3m[90m<chr>[39m[23m       [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m
+[90m1[39m 0001            0    20
+[90m2[39m 0011            0   220
+[90m3[39m 0101           20    20
+[90m4[39m 1001          200    20
+>  
+> assert_is_installed("fgeo.x")
+> # Warning: The data may already have `gx` and `gx` columns
+> gxgy <- add_gxgy(fgeo.x::tree5)
+> select(gxgy, matches("gx|gy"))
+[90m# A tibble: 30 x 4[39m
+      gx    gy   gx1   gy1
+   [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m
+[90m 1[39m 139.  425.    140   440
+[90m 2[39m  94.8 424.    100   440
+[90m 3[39m  61.3 496.     80   500
+[90m 4[39m 100.  328.    120   340
+[90m 5[39m  53.8  73.8    60    80
+[90m 6[39m 203.  110.    220   120
+[90m 7[39m 172.   14.7   180    20
+[90m 8[39m 184.  194.    200   200
+[90m 9[39m 191.  132.    200   140
+[90m10[39m 274.  279.    280   280
+[90m# ... with 20 more rows[39m
+> 
+> # Output `col` and `row` -------------
+> 
+> # Create columns `col` and `row` from `QuadratName` with `tidyr::separate()`
+> # The argument `sep` lets you separate `QuadratName` at any positon
+> ## Not run: 
+> ##D tidyr_is_installed <- requireNamespace("tidyr", quietly = TRUE)
+> ##D stringr_is_installed <- requireNamespace("stringr", quietly = TRUE)
+> ##D 
+> ##D if (tidyr_is_installed && stringr_is_installed) {
+> ##D   library(tidyr)
+> ##D   library(stringr)
+> ##D 
+> ##D   vft <- tibble(QuadratName = c("0001", "0011"))
+> ##D   vft
+> ##D 
+> ##D   separate(
+> ##D     vft,
+> ##D     QuadratName,
+> ##D     into = c("col", "row"),
+> ##D     sep = 2
+> ##D   )
+> ##D 
+> ##D   census <- select(fgeo.x::tree5, quadrat)
+> ##D   census
+> ##D 
+> ##D   census$quadrat <- str_pad(census$quadrat, width = 4, pad = 0)
+> ##D 
+> ##D   separate(
+> ##D     census,
+> ##D     quadrat,
+> ##D     into = c("col", "row"),
+> ##D     sep = 2,
+> ##D     remove = FALSE
+> ##D   )
+> ##D }
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("assert_is_installed")
+> ### * assert_is_installed
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: assert_is_installed
+> ### Title: Assert a package is installed.
+> ### Aliases: assert_is_installed
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> assert_is_installed("base")
+> ## Not run: 
+> ##D try(assert_is_installed("bad"))
+> ## End(Not run)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("check_crucial_names")
+> ### * check_crucial_names
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: check_crucial_names
+> ### Title: Check if an object contains specific names.
+> ### Aliases: check_crucial_names
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> v <- c(x = 1)
+> check_crucial_names(v, "x")
+> 
+> dfm <- data.frame(x = 1)
+> check_crucial_names(dfm, "x")
+> 
+> 
+> 
+> cleanEx()
+> nameEx("drop_if_na")
+> ### * drop_if_na
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: drop_if_na
+> ### Title: Drop if missing values.
+> ### Aliases: drop_if_na
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> dfm <- data.frame(a = 1, b = NA)
+> drop_if_na(dfm, "b")
+Warning: Dropping 1 rows with missing `b` values.
+[1] a b
+<0 rows> (or 0-length row.names)
+> drop_if_na(dfm, "a")
+  a  b
+1 1 NA
+> 
+> 
+> 
+> cleanEx()
+> nameEx("extract_from_habitat")
+> ### * extract_from_habitat
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: extract_from_habitat
+> ### Title: Extract plot dimensions from habitat data.
+> ### Aliases: extract_from_habitat extract_gridsize extract_plotdim
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> assert_is_installed("fgeo.x")
+> habitat <- fgeo.x::habitat
+> extract_plotdim(habitat)
+[1] 320 500
+> extract_gridsize(habitat)
+[1] 20
+> 
+> 
+> 
+> cleanEx()
+> nameEx("extract_insensitive")
+> ### * extract_insensitive
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: extract_insensitive
+> ### Title: Detect and extract matching strings - ignoring case.
+> ### Aliases: extract_insensitive detect_insensitive
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> x <- c("stemid", "n")
+> y <- c("StemID", "treeID")
+> detect_insensitive(x, y)
+[1]  TRUE FALSE
+> extract_insensitive(x, y)
+[1] "StemID" "n"     
+> 
+> vft <- data.frame(TreeID = 1, Status = 1)
+> extract_insensitive(tolower(names(vft)), names(vft))
+[1] "TreeID" "Status"
+> extract_insensitive(names(vft), tolower(names(vft)))
+[1] "treeid" "status"
+> 
+> 
+> 
+> cleanEx()
+> nameEx("fgeo_elevation")
+> ### * fgeo_elevation
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: fgeo_elevation
+> ### Title: Create elevation data.
+> ### Aliases: fgeo_elevation
+> 
+> ### ** Examples
+> 
+> assert_is_installed("fgeo.x")
+> 
+> # Input: Elevation dataframe
+> elevation_df <- fgeo.x::elevation$col
+> fgeo_elevation(elevation_df)
+[90m# A tibble: 6,565 x 3[39m
+      gx    gy  elev
+ [90m*[39m [3m[90m<int>[39m[23m [3m[90m<int>[39m[23m [3m[90m<dbl>[39m[23m
+[90m 1[39m     0     0  364.
+[90m 2[39m     0     5  364.
+[90m 3[39m     0    10  363.
+[90m 4[39m     0    15  363.
+[90m 5[39m     0    20  363 
+[90m 6[39m     0    25  363.
+[90m 7[39m     0    30  363.
+[90m 8[39m     0    35  363.
+[90m 9[39m     0    40  363.
+[90m10[39m     0    45  364.
+[90m# ... with 6,555 more rows[39m
+> 
+> class(elevation_df)
+[1] "tbl_df"     "tbl"        "data.frame"
+> class(fgeo_elevation(elevation_df))
+[1] "fgeo_elevation" "tbl_df"         "tbl"            "data.frame"    
+> 
+> names(elevation_df)
+[1] "x"    "y"    "elev"
+> names(fgeo_elevation(elevation_df))
+[1] "gx"   "gy"   "elev"
+> 
+> # Input: Elevation list
+> elevation_ls <- fgeo.x::elevation
+> fgeo_elevation(elevation_ls)
+[90m# A tibble: 6,565 x 3[39m
+      gx    gy  elev
+ [90m*[39m [3m[90m<int>[39m[23m [3m[90m<int>[39m[23m [3m[90m<dbl>[39m[23m
+[90m 1[39m     0     0  364.
+[90m 2[39m     0     5  364.
+[90m 3[39m     0    10  363.
+[90m 4[39m     0    15  363.
+[90m 5[39m     0    20  363 
+[90m 6[39m     0    25  363.
+[90m 7[39m     0    30  363.
+[90m 8[39m     0    35  363.
+[90m 9[39m     0    40  363.
+[90m10[39m     0    45  364.
+[90m# ... with 6,555 more rows[39m
+> 
+> class(elevation_ls)
+[1] "list"
+> class(fgeo_elevation(elevation_ls))
+[1] "fgeo_elevation" "tbl_df"         "tbl"            "data.frame"    
+> 
+> names(elevation_ls)
+[1] "col"  "mat"  "xdim" "ydim"
+> names(fgeo_elevation(elevation_ls))
+[1] "gx"   "gy"   "elev"
+> 
+> 
+> 
+> cleanEx()
+> nameEx("flag_if")
+> ### * flag_if
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: flag_if
+> ### Title: Flag if a vector or dataframe-column meets a condition.
+> ### Aliases: flag_if flag_if.default flag_if.data.frame
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> # WITH VECTORS
+> dupl <- c(1, 1)
+> flag_if(dupl, is_duplicated)
+Warning in flag_if.default(dupl, is_duplicated) :
+  Flagged values were detected.
+> # Silent
+> flag_if(dupl, is_multiple)
+> 
+> mult <- c(1, 2)
+> flag_if(mult, is_multiple, message, "Custom")
+Custom
+> # Silent
+> flag_if(mult, is_duplicated)
+> 
+> # Both silent
+> flag_if(c(1, NA), is_multiple)
+> flag_if(c(1, NA), is_duplicated)
+> 
+> # WITH DATAFRAMES
+> .df <- data.frame(a = 1:3, b = 1, stringsAsFactors = FALSE)
+> flag_if(.df, "b", is_multiple)
+> flag_if(.df, "a", is_multiple)
+Warning in flag_if.default(extract_column(.data, name), predicate, condition,  :
+  a: Flagged values were detected.
+> flag_if(.df, "a", is_multiple, message, "Custom")
+Custom
+> 
+> 
+> 
+> cleanEx()
+> nameEx("flag_if_group")
+> ### * flag_if_group
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: flag_if_group
+> ### Title: Detect and flag based on a predicate applied to a variable by
+> ###   groups.
+> ### Aliases: flag_if_group detect_if_group
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> tree <- tibble(CensusID = c(1, 2), treeID = c(1, 2))
+> detect_if_group(tree, "treeID", is_multiple)
+[1] TRUE
+> flag_if_group(tree, "treeID", is_multiple)
+Warning: treeID: Flagged values were detected.
+> 
+> by_censusid <- group_by(tree, CensusID)
+> detect_if_group(by_censusid, "treeID", is_multiple)
+[1] FALSE
+> flag_if_group(by_censusid, "treeID", is_multiple)
+> 
+> 
+> 
+> cleanEx()
+> nameEx("from_var_to_var")
+> ### * from_var_to_var
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: from_var_to_var
+> ### Title: Functions to get variables from other variables.
+> ### Aliases: from_var_to_var rowcol_to_index index_to_rowcol gxgy_to_index
+> ###   gxgy_to_lxly gxgy_to_qxqy gxgy_to_rowcol gxgy_to_hectindex
+> ###   index_to_gxgy
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> gxgy_to_index(c(0, 400, 990), c(0, 200, 490), gridsize = 20)
+Guessing: plotdim = c(1000, 500)
+[1]    1  511 1250
+> 
+> gridsize <- 20
+> plotdim <- c(1000, 500)
+> 
+> x <- gxgy_to_hectindex(1:3, 1:3, plotdim)
+> x
+[1] 1 1 1
+> typeof(x)
+[1] "double"
+> is.data.frame(x)
+[1] FALSE
+> is.vector(x)
+[1] TRUE
+> 
+> x <- gxgy_to_index(1:3, 1:3, gridsize, plotdim)
+> x
+[1] 1 1 1
+> typeof(x)
+[1] "double"
+> is.data.frame(x)
+[1] FALSE
+> is.vector(x)
+[1] TRUE
+> 
+> x <- gxgy_to_lxly(1:3, 1:3, gridsize, plotdim)
+> x
+  lx ly
+1  1  1
+2  2  2
+3  3  3
+> typeof(x)
+[1] "list"
+> is.data.frame(x)
+[1] TRUE
+> is.vector(x)
+[1] FALSE
+> 
+> x <- gxgy_to_rowcol(1:3, 1:3, gridsize, plotdim)
+> x
+  row col
+1   1   1
+2   1   1
+3   1   1
+> typeof(x)
+[1] "list"
+> is.data.frame(x)
+[1] TRUE
+> is.vector(x)
+[1] FALSE
+> 
+> x <- index_to_rowcol(1:3, gridsize, plotdim)
+> x
+  row col
+1   1   1
+2   2   1
+3   3   1
+> typeof(x)
+[1] "list"
+> is.data.frame(x)
+[1] TRUE
+> is.vector(x)
+[1] FALSE
+> 
+> x <- rowcol_to_index(1:3, 1:3, gridsize, plotdim)
+> x
+[1]  1 27 53
+> typeof(x)
+[1] "double"
+> is.data.frame(x)
+[1] FALSE
+> is.vector(x)
+[1] TRUE
+> 
+> index_to_gxgy(1:3, gridsize, plotdim)
+  gx gy
+1  0  0
+2  0 20
+3  0 40
+> 
+> 
+> 
+> cleanEx()
+> nameEx("guess_plotdim")
+> ### * guess_plotdim
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: guess_plotdim
+> ### Title: Guess plot dimensions.
+> ### Aliases: guess_plotdim
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> x <- data.frame(
++   gx = c(0, 300, 979),
++   gy = c(0, 300, 481)
++ )
+> guess_plotdim(x)
+Guessing: plotdim = c(980, 500)
+[1] 980 500
+> 
+> 
+> 
+> cleanEx()
+> nameEx("is_multiple")
+> ### * is_multiple
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: is_multiple
+> ### Title: Predicates to detect and flag duplicated and multiple values of
+> ###   a variable.
+> ### Aliases: is_multiple is_duplicated
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> is_multiple(c(1, 2))
+[1] TRUE
+> is_multiple(c(1, 1))
+[1] FALSE
+> is_multiple(c(1, NA))
+[1] FALSE
+> 
+> is_duplicated(c(1, 2))
+[1] FALSE
+> is_duplicated(c(1, 1))
+[1] TRUE
+> is_duplicated(c(1, NA))
+[1] FALSE
+> 
+> 
+> 
+> cleanEx()
+> nameEx("nms_try_rename")
+> ### * nms_try_rename
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: nms_try_rename
+> ### Title: Try to rename an object.
+> ### Aliases: nms_try_rename
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> nms_try_rename(c(a = 1), "A", "a")
+A 
+1 
+> nms_try_rename(data.frame(a = 1), "A", "a")
+  A
+1 1
+> 
+> # Passes
+> nms_try_rename(c(a = 1, 1), "A", "a")
+A   
+1 1 
+> ## Not run: 
+> ##D # Errs
+> ##D # nms_try_rename(1, "A", "A")
+> ## End(Not run)
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("pick_drop")
+> ### * pick_drop
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: pick_drop
+> ### Title: Pick and drop rows from _ViewFullTable_, _tree_, and _stem_
+> ###   tables.
+> ### Aliases: pick_drop pick_dbh_min pick_dbh_max pick_dbh_under
+> ###   pick_dbh_over pick_status drop_status
+> 
+> ### ** Examples
+> 
+> census <- tribble(
++   ~dbh, ~status,
++      0,     "A",
++     50,     "A",
++    100,     "A",
++    150,     "A",
++     NA,     "M",
++     NA,     "D",
++     NA,      NA
++   )
+> 
+> # <=
+> pick_dbh_max(census, 100)
+[90m# A tibble: 6 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m     0 A     
+[90m2[39m    50 A     
+[90m3[39m   100 A     
+[90m4[39m    [31mNA[39m M     
+[90m5[39m    [31mNA[39m D     
+[90m6[39m    [31mNA[39m [31mNA[39m    
+> pick_dbh_max(census, 100, na.rm = TRUE)
+[90m# A tibble: 3 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m     0 A     
+[90m2[39m    50 A     
+[90m3[39m   100 A     
+> 
+> # >=
+> pick_dbh_min(census, 100)
+[90m# A tibble: 5 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m   100 A     
+[90m2[39m   150 A     
+[90m3[39m    [31mNA[39m M     
+[90m4[39m    [31mNA[39m D     
+[90m5[39m    [31mNA[39m [31mNA[39m    
+> pick_dbh_min(census, 100, na.rm = TRUE)
+[90m# A tibble: 2 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m   100 A     
+[90m2[39m   150 A     
+> 
+> # <
+> pick_dbh_under(census, 100)
+[90m# A tibble: 5 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m     0 A     
+[90m2[39m    50 A     
+[90m3[39m    [31mNA[39m M     
+[90m4[39m    [31mNA[39m D     
+[90m5[39m    [31mNA[39m [31mNA[39m    
+> pick_dbh_under(census, 100, na.rm = TRUE)
+[90m# A tibble: 2 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m     0 A     
+[90m2[39m    50 A     
+> 
+> # >
+> pick_dbh_over(census, 100)
+[90m# A tibble: 4 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m   150 A     
+[90m2[39m    [31mNA[39m M     
+[90m3[39m    [31mNA[39m D     
+[90m4[39m    [31mNA[39m [31mNA[39m    
+> pick_dbh_over(census, 100, na.rm = TRUE)
+[90m# A tibble: 1 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m   150 A     
+> # Same, but `subset()` does not let you keep NAs.
+> subset(census, dbh > 100)
+[90m# A tibble: 1 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m   150 A     
+> 
+> # ==
+> pick_status(census, "A")
+[90m# A tibble: 5 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m     0 A     
+[90m2[39m    50 A     
+[90m3[39m   100 A     
+[90m4[39m   150 A     
+[90m5[39m    [31mNA[39m [31mNA[39m    
+> pick_status(census, "A", na.rm = TRUE)
+[90m# A tibble: 4 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m     0 A     
+[90m2[39m    50 A     
+[90m3[39m   100 A     
+[90m4[39m   150 A     
+> 
+> # !=
+> drop_status(census, "D")
+[90m# A tibble: 6 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m     0 A     
+[90m2[39m    50 A     
+[90m3[39m   100 A     
+[90m4[39m   150 A     
+[90m5[39m    [31mNA[39m M     
+[90m6[39m    [31mNA[39m [31mNA[39m    
+> drop_status(census, "D", na.rm = TRUE)
+[90m# A tibble: 5 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m     0 A     
+[90m2[39m    50 A     
+[90m3[39m   100 A     
+[90m4[39m   150 A     
+[90m5[39m    [31mNA[39m M     
+> 
+> # Compose
+> pick_dbh_over(
++   drop_status(census, "D", na.rm = TRUE), 
++   100
++ )
+[90m# A tibble: 2 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m   150 A     
+[90m2[39m    [31mNA[39m M     
+> 
+> # More readable as a pipiline
+> census %>%
++   drop_status("D", na.rm = TRUE) %>%
++   pick_dbh_over(100)
+[90m# A tibble: 2 x 2[39m
+    dbh status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m   150 A     
+[90m2[39m    [31mNA[39m M     
+>  
+> # Also works with ViewFullTables
+> vft <- tribble(
++   ~DBH,   ~Status,
++      0,   "alive",
++     50,   "alive",
++    100,   "alive",
++    150,   "alive",
++     NA, "missing",
++     NA,    "dead",
++     NA,        NA
++ )
+> 
+> pick_dbh_max(vft, 100)
+[90m# A tibble: 6 x 2[39m
+    DBH Status 
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m  
+[90m1[39m     0 alive  
+[90m2[39m    50 alive  
+[90m3[39m   100 alive  
+[90m4[39m    [31mNA[39m missing
+[90m5[39m    [31mNA[39m dead   
+[90m6[39m    [31mNA[39m [31mNA[39m     
+> 
+> pick_status(vft, "alive",  na.rm = TRUE)
+[90m# A tibble: 4 x 2[39m
+    DBH Status
+  [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m 
+[90m1[39m     0 alive 
+[90m2[39m    50 alive 
+[90m3[39m   100 alive 
+[90m4[39m   150 alive 
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("pick_main_stem")
+> ### * pick_main_stem
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: pick_main_stem
+> ### Title: Pick the main stem or main stemid(s) of each tree in each
+> ###   census.
+> ### Aliases: pick_main_stem pick_main_stemid
+> 
+> ### ** Examples
+> 
+> # One `treeID` with multiple stems. 
+> # `stemID == 1.1` has two measurements (due to buttresses).
+> # `stemID == 1.2` has a single measurement.
+> census <- tribble(
++     ~sp, ~treeID, ~stemID,  ~hom, ~dbh, ~CensusID,
++   "sp1",     "1",   "1.1",   140,   40,         1,  # main stemID (max `hom`)
++   "sp1",     "1",   "1.1",   130,   60,         1,  
++   "sp1",     "1",   "1.2",   130,   55,         1   # main stemID (only one)
++ )
+> 
+> # Picks a unique row per unique `treeID`
+> pick_main_stem(census)
+[90m# A tibble: 1 x 6[39m
+  sp    treeID stemID   hom   dbh CensusID
+  [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m  [3m[90m<chr>[39m[23m  [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m    [3m[90m<dbl>[39m[23m
+[90m1[39m sp1   1      1.1      140    40        1
+> 
+> # Picks a unique row per unique `stemID`
+> pick_main_stemid(census)
+[90m# A tibble: 2 x 6[39m
+  sp    treeID stemID   hom   dbh CensusID
+  [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m  [3m[90m<chr>[39m[23m  [3m[90m<dbl>[39m[23m [3m[90m<dbl>[39m[23m    [3m[90m<dbl>[39m[23m
+[90m1[39m sp1   1      1.1      140    40        1
+[90m2[39m sp1   1      1.2      130    55        1
+> 
+> 
+> 
+> 
+> cleanEx()
+> nameEx("read_vft")
+> ### * read_vft
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: read_vft
+> ### Title: Import _ViewFullTable_ or _ViewTaxonomy_ data from a .tsv or
+> ###   .csv file.
+> ### Aliases: read_vft read_taxa
+> 
+> ### ** Examples
+> 
+> assert_is_installed("fgeo.x")
+> library(fgeo.x)
+> 
+> example_path()
+ [1] "csv"           "mixed_files"   "rdata"         "rdata_one"    
+ [5] "rds"           "taxa.csv"      "tsv"           "vft_4quad.csv"
+ [9] "view"          "weird"         "xl"           
+> 
+> file_vft <- example_path("view/vft_4quad.csv")
+> read_vft(file_vft)
+[90m# A tibble: 500 x 32[39m
+    DBHID PlotName PlotID Family Genus SpeciesName Mnemonic Subspecies SpeciesID
+    [3m[90m<int>[39m[23m [3m[90m<chr>[39m[23m     [3m[90m<int>[39m[23m [3m[90m<chr>[39m[23m  [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m       [3m[90m<chr>[39m[23m    [3m[90m<chr>[39m[23m          [3m[90m<int>[39m[23m
+[90m 1[39m [4m3[24m[4m8[24m[4m5[24m164 luquillo      1 Rubia~ Psyc~ brachiata   PSYBRA   [31mNA[39m               185
+[90m 2[39m [4m3[24m[4m8[24m[4m5[24m261 luquillo      1 Urtic~ Cecr~ schreberia~ CECSCH   [31mNA[39m                74
+[90m 3[39m [4m3[24m[4m8[24m[4m4[24m600 luquillo      1 Rubia~ Psyc~ brachiata   PSYBRA   [31mNA[39m               185
+[90m 4[39m [4m6[24m[4m0[24m[4m8[24m789 luquillo      1 Rubia~ Psyc~ berteroana  PSYBER   [31mNA[39m               184
+[90m 5[39m [4m3[24m[4m8[24m[4m8[24m579 luquillo      1 Areca~ Pres~ acuminata   PREMON   [31mNA[39m               182
+[90m 6[39m [4m3[24m[4m8[24m[4m4[24m626 luquillo      1 Arali~ Sche~ morototoni  SCHMOR   [31mNA[39m               196
+[90m 7[39m [4m4[24m[4m1[24m[4m0[24m958 luquillo      1 Rubia~ Psyc~ brachiata   PSYBRA   [31mNA[39m               185
+[90m 8[39m [4m3[24m[4m8[24m[4m5[24m102 luquillo      1 Piper~ Piper glabrescens PIPGLA   [31mNA[39m               174
+[90m 9[39m [4m3[24m[4m5[24m[4m3[24m163 luquillo      1 Areca~ Pres~ acuminata   PREMON   [31mNA[39m               182
+[90m10[39m [4m4[24m[4m8[24m[4m1[24m018 luquillo      1 Salic~ Case~ arborea     CASARB   [31mNA[39m                70
+[90m# ... with 490 more rows, and 23 more variables: SubspeciesID [3m[90m<chr>[90m[23m,
+#   QuadratName [3m[90m<chr>[90m[23m, QuadratID [3m[90m<int>[90m[23m, PX [3m[90m<dbl>[90m[23m, PY [3m[90m<dbl>[90m[23m, QX [3m[90m<dbl>[90m[23m, QY [3m[90m<dbl>[90m[23m,
+#   TreeID [3m[90m<int>[90m[23m, Tag [3m[90m<chr>[90m[23m, StemID [3m[90m<int>[90m[23m, StemNumber [3m[90m<int>[90m[23m, StemTag [3m[90m<int>[90m[23m,
+#   PrimaryStem [3m[90m<chr>[90m[23m, CensusID [3m[90m<int>[90m[23m, PlotCensusNumber [3m[90m<int>[90m[23m, DBH [3m[90m<dbl>[90m[23m,
+#   HOM [3m[90m<dbl>[90m[23m, ExactDate [3m[90m<date>[90m[23m, Date [3m[90m<int>[90m[23m, ListOfTSM [3m[90m<chr>[90m[23m, HighHOM [3m[90m<int>[90m[23m,
+#   LargeStem [3m[90m<chr>[90m[23m, Status [3m[90m<chr>[90m[23m[39m
+> 
+> file_taxa <- example_path("view/taxa.csv")
+> read_taxa(file_taxa)
+[90m# A tibble: 163 x 21[39m
+   ViewID SpeciesID SubspeciesID Family Mnemonic Genus SpeciesName Rank 
+    [3m[90m<int>[39m[23m     [3m[90m<int>[39m[23m [3m[90m<chr>[39m[23m        [3m[90m<chr>[39m[23m  [3m[90m<chr>[39m[23m    [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m       [3m[90m<chr>[39m[23m
+[90m 1[39m      1        56 [31mNA[39m           Fabac~ AESAME   Aesc~ americana   [31mNA[39m   
+[90m 2[39m      2        57 [31mNA[39m           Eupho~ ALCFLO   Alch~ floribunda  [31mNA[39m   
+[90m 3[39m      3        58 [31mNA[39m           Eupho~ ALCLAT   Alch~ latifolia   [31mNA[39m   
+[90m 4[39m      4        59 [31mNA[39m           Fabac~ ANDINE   Andi~ inermis     [31mNA[39m   
+[90m 5[39m      5        60 [31mNA[39m           Rubia~ ANTOBT   Sten~ obtusifoli~ [31mNA[39m   
+[90m 6[39m      6        61 [31mNA[39m           Myrsi~ ARDGLA   Ardi~ glauciflora [31mNA[39m   
+[90m 7[39m      7        62 [31mNA[39m           Morac~ ARTALT   Arto~ altilis     [31mNA[39m   
+[90m 8[39m      8        63 [31mNA[39m           Laura~ BEIPEN   Beil~ pendula     [31mNA[39m   
+[90m 9[39m      9        64 [31mNA[39m           Solan~ BRUPOR   Brun~ portoricen~ [31mNA[39m   
+[90m10[39m     10        65 [31mNA[39m           Combr~ BUCTET   Buch~ tetraphylla [31mNA[39m   
+[90m# ... with 153 more rows, and 13 more variables: Subspecies [3m[90m<chr>[90m[23m,
+#   Authority [3m[90m<chr>[90m[23m, IDLevel [3m[90m<chr>[90m[23m, subspMnemonic [3m[90m<chr>[90m[23m, subspAuthority [3m[90m<chr>[90m[23m,
+#   FieldFamily [3m[90m<chr>[90m[23m, Lifeform [3m[90m<chr>[90m[23m, Description [3m[90m<chr>[90m[23m, wsg [3m[90m<dbl>[90m[23m,
+#   wsglevel [3m[90m<chr>[90m[23m, ListOfOldNames [3m[90m<chr>[90m[23m, Specimens [3m[90m<chr>[90m[23m, Reference [3m[90m<chr>[90m[23m[39m
+> 
+> 
+> 
+> cleanEx()
+
+detaching 'package:fgeo.x'
+
+> nameEx("recode_subquad")
+> ### * recode_subquad
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: recode_subquad
+> ### Title: Recode subquadrat.
+> ### Aliases: recode_subquad
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> first_subquad_11 <- tibble(subquadrat = c("11", "12", "22"))
+> first_subquad_11
+[90m# A tibble: 3 x 1[39m
+  subquadrat
+  [3m[90m<chr>[39m[23m     
+[90m1[39m 11        
+[90m2[39m 12        
+[90m3[39m 22        
+> 
+> first_subquad_01 <- recode_subquad(first_subquad_11, offset = -1)
+> first_subquad_01
+[90m# A tibble: 3 x 1[39m
+  subquadrat
+  [3m[90m<chr>[39m[23m     
+[90m1[39m 01        
+[90m2[39m 02        
+[90m3[39m 12        
+> 
+> first_subquad_11 <- recode_subquad(first_subquad_01, offset = 1)
+> first_subquad_11
+[90m# A tibble: 3 x 1[39m
+  subquadrat
+  [3m[90m<chr>[39m[23m     
+[90m1[39m 11        
+[90m2[39m 12        
+[90m3[39m 22        
+> 
+> 
+> 
+> cleanEx()
+> nameEx("rename_matches")
+> ### * rename_matches
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: rename_matches
+> ### Title: Rename an object based on case-insensitive match of the names of
+> ###   a reference.
+> ### Aliases: rename_matches
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> ref <- data.frame(COL1 = 1, COL2 = 1)
+> x <- data.frame(col1 = 5, col2 = 1, n = 5)
+> rename_matches(x, ref)
+  COL1 COL2 n
+1    5    1 5
+> 
+> 
+> 
+> cleanEx()
+> nameEx("sanitize_vft")
+> ### * sanitize_vft
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: sanitize_vft
+> ### Title: Fix common problems in _ViewFullTable_ and _ViewTaxonomy_ data.
+> ### Aliases: sanitize_vft sanitize_taxa
+> 
+> ### ** Examples
+> 
+> assert_is_installed("fgeo.x")
+> 
+> vft <- fgeo.x::vft_4quad
+> 
+> # Introduce problems to show how to fix them
+> # Bad column types
+> vft[] <- lapply(vft, as.character)
+> # Bad representation of missing values
+> vft$PlotName <- "NULL"
+> 
+> # "NULL" should be replaced by `NA` and `DBH` should be numeric
+> str(vft[c("PlotName", "DBH")])
+Classes 'tbl_df', 'tbl' and 'data.frame':	500 obs. of  2 variables:
+ $ PlotName: chr  "NULL" "NULL" "NULL" "NULL" ...
+ $ DBH     : chr  "30.8" "74" "22.3" NA ...
+> 
+> # Fix
+> vft_sane <- sanitize_vft(vft)
+> str(vft_sane[c("PlotName", "DBH")])
+Classes 'tbl_df', 'tbl' and 'data.frame':	500 obs. of  2 variables:
+ $ PlotName: chr  NA NA NA NA ...
+ $ DBH     : num  30.8 74 22.3 NA 33.8 NA NA 16.5 NA 44.6 ...
+> 
+> taxa <- read.csv(fgeo.x::example_path("taxa.csv"))
+> # E.g. inserting bad column types
+> taxa[] <- lapply(taxa, as.character)
+> # E.g. inserting bad representation of missing values
+> taxa$SubspeciesID <- "NULL"
+> 
+> # "NULL" should be replaced by `NA` and `ViewID` should be integer
+> str(taxa[c("SubspeciesID", "ViewID")])
+'data.frame':	163 obs. of  2 variables:
+ $ SubspeciesID: chr  "NULL" "NULL" "NULL" "NULL" ...
+ $ ViewID      : chr  "1" "2" "3" "4" ...
+> 
+> # Fix
+> taxa_sane <- sanitize_taxa(taxa)
+> str(taxa_sane[c("SubspeciesID", "ViewID")])
+'data.frame':	163 obs. of  2 variables:
+ $ SubspeciesID: chr  NA NA NA NA ...
+ $ ViewID      : int  1 2 3 4 5 6 7 8 9 10 ...
+> 
+> 
+> 
+> cleanEx()
+> nameEx("type_ensure")
+> ### * type_ensure
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: type_ensure
+> ### Title: Ensure the specific columns of a dataframe have a particular
+> ###   type.
+> ### Aliases: type_ensure
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> dfm <- tibble(
++   w = c(NA, 1, 2),
++   x = 1:3,
++   y = as.character(1:3),
++   z = letters[1:3]
++ )
+> dfm
+[90m# A tibble: 3 x 4[39m
+      w     x y     z    
+  [3m[90m<dbl>[39m[23m [3m[90m<int>[39m[23m [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m
+[90m1[39m    [31mNA[39m     1 1     a    
+[90m2[39m     1     2 2     b    
+[90m3[39m     2     3 3     c    
+> type_ensure(dfm, c("w", "x", "y"), "numeric")
+Warning: y should be numeric. Type found: character
+* Changing type (of y) accordingly.
+[90m# A tibble: 3 x 4[39m
+      w     x     y z    
+  [3m[90m<dbl>[39m[23m [3m[90m<int>[39m[23m [3m[90m<dbl>[39m[23m [3m[90m<chr>[39m[23m
+[90m1[39m    [31mNA[39m     1     1 a    
+[90m2[39m     1     2     2 b    
+[90m3[39m     2     3     3 c    
+> type_ensure(dfm, c("w", "x", "y", "z"), "character")
+Warning: w, x should be character. Type found: double, integer
+* Changing type (of w, x) accordingly.
+[90m# A tibble: 3 x 4[39m
+  w     x     y     z    
+  [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m
+[90m1[39m [31mNA[39m    1     1     a    
+[90m2[39m 1     2     2     b    
+[90m3[39m 2     3     3     c    
+> 
+> 
+> 
+> cleanEx()
+> nameEx("type_vft")
+> ### * type_vft
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: type_vft
+> ### Title: Help to read ForestGEO data safely, with consistent columns
+> ###   type.
+> ### Aliases: type_vft type_taxa
+> ### Keywords: internal
+> 
+> ### ** Examples
+> 
+> assert_is_installed("fgeo.x")
+> library(fgeo.x)
+> library(readr)
+> 
+> str(type_vft())
+List of 32
+ $ DBHID           : chr "i"
+ $ PlotName        : chr "c"
+ $ PlotID          : chr "i"
+ $ Family          : chr "c"
+ $ Genus           : chr "c"
+ $ SpeciesName     : chr "c"
+ $ Mnemonic        : chr "c"
+ $ Subspecies      : chr "c"
+ $ SpeciesID       : chr "i"
+ $ SubspeciesID    : chr "c"
+ $ QuadratName     : chr "c"
+ $ QuadratID       : chr "i"
+ $ PX              : chr "d"
+ $ PY              : chr "d"
+ $ QX              : chr "d"
+ $ QY              : chr "d"
+ $ TreeID          : chr "i"
+ $ Tag             : chr "c"
+ $ StemID          : chr "i"
+ $ StemNumber      : chr "i"
+ $ StemTag         : chr "i"
+ $ PrimaryStem     : chr "c"
+ $ CensusID        : chr "i"
+ $ PlotCensusNumber: chr "i"
+ $ DBH             : chr "d"
+ $ HOM             : chr "d"
+ $ ExactDate       : chr "D"
+ $ Date            : chr "i"
+ $ ListOfTSM       : chr "c"
+ $ HighHOM         : chr "i"
+ $ LargeStem       : chr "c"
+ $ Status          : chr "c"
+> 
+> read_csv(example_path("view/vft_4quad.csv"), col_types = type_vft())
+[90m# A tibble: 500 x 32[39m
+    DBHID PlotName PlotID Family Genus SpeciesName Mnemonic Subspecies SpeciesID
+    [3m[90m<int>[39m[23m [3m[90m<chr>[39m[23m     [3m[90m<int>[39m[23m [3m[90m<chr>[39m[23m  [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m       [3m[90m<chr>[39m[23m    [3m[90m<chr>[39m[23m          [3m[90m<int>[39m[23m
+[90m 1[39m [4m3[24m[4m8[24m[4m5[24m164 luquillo      1 Rubia~ Psyc~ brachiata   PSYBRA   [31mNA[39m               185
+[90m 2[39m [4m3[24m[4m8[24m[4m5[24m261 luquillo      1 Urtic~ Cecr~ schreberia~ CECSCH   [31mNA[39m                74
+[90m 3[39m [4m3[24m[4m8[24m[4m4[24m600 luquillo      1 Rubia~ Psyc~ brachiata   PSYBRA   [31mNA[39m               185
+[90m 4[39m [4m6[24m[4m0[24m[4m8[24m789 luquillo      1 Rubia~ Psyc~ berteroana  PSYBER   [31mNA[39m               184
+[90m 5[39m [4m3[24m[4m8[24m[4m8[24m579 luquillo      1 Areca~ Pres~ acuminata   PREMON   [31mNA[39m               182
+[90m 6[39m [4m3[24m[4m8[24m[4m4[24m626 luquillo      1 Arali~ Sche~ morototoni  SCHMOR   [31mNA[39m               196
+[90m 7[39m [4m4[24m[4m1[24m[4m0[24m958 luquillo      1 Rubia~ Psyc~ brachiata   PSYBRA   [31mNA[39m               185
+[90m 8[39m [4m3[24m[4m8[24m[4m5[24m102 luquillo      1 Piper~ Piper glabrescens PIPGLA   [31mNA[39m               174
+[90m 9[39m [4m3[24m[4m5[24m[4m3[24m163 luquillo      1 Areca~ Pres~ acuminata   PREMON   [31mNA[39m               182
+[90m10[39m [4m4[24m[4m8[24m[4m1[24m018 luquillo      1 Salic~ Case~ arborea     CASARB   [31mNA[39m                70
+[90m# ... with 490 more rows, and 23 more variables: SubspeciesID [3m[90m<chr>[90m[23m,
+#   QuadratName [3m[90m<chr>[90m[23m, QuadratID [3m[90m<int>[90m[23m, PX [3m[90m<dbl>[90m[23m, PY [3m[90m<dbl>[90m[23m, QX [3m[90m<dbl>[90m[23m, QY [3m[90m<dbl>[90m[23m,
+#   TreeID [3m[90m<int>[90m[23m, Tag [3m[90m<chr>[90m[23m, StemID [3m[90m<int>[90m[23m, StemNumber [3m[90m<int>[90m[23m, StemTag [3m[90m<int>[90m[23m,
+#   PrimaryStem [3m[90m<chr>[90m[23m, CensusID [3m[90m<int>[90m[23m, PlotCensusNumber [3m[90m<int>[90m[23m, DBH [3m[90m<dbl>[90m[23m,
+#   HOM [3m[90m<dbl>[90m[23m, ExactDate [3m[90m<date>[90m[23m, Date [3m[90m<int>[90m[23m, ListOfTSM [3m[90m<chr>[90m[23m, HighHOM [3m[90m<int>[90m[23m,
+#   LargeStem [3m[90m<chr>[90m[23m, Status [3m[90m<chr>[90m[23m[39m
+> 
+> str(type_taxa())
+List of 21
+ $ ViewID        : chr "i"
+ $ SpeciesID     : chr "i"
+ $ SubspeciesID  : chr "c"
+ $ Family        : chr "c"
+ $ Mnemonic      : chr "c"
+ $ Genus         : chr "c"
+ $ SpeciesName   : chr "c"
+ $ Rank          : chr "c"
+ $ Subspecies    : chr "c"
+ $ Authority     : chr "c"
+ $ IDLevel       : chr "c"
+ $ subspMnemonic : chr "c"
+ $ subspAuthority: chr "c"
+ $ FieldFamily   : chr "c"
+ $ Lifeform      : chr "c"
+ $ Description   : chr "c"
+ $ wsg           : chr "d"
+ $ wsglevel      : chr "c"
+ $ ListOfOldNames: chr "c"
+ $ Specimens     : chr "c"
+ $ Reference     : chr "c"
+> 
+> read_csv(example_path("view/taxa.csv"), col_types = type_taxa())
+[90m# A tibble: 163 x 21[39m
+   ViewID SpeciesID SubspeciesID Family Mnemonic Genus SpeciesName Rank 
+    [3m[90m<int>[39m[23m     [3m[90m<int>[39m[23m [3m[90m<chr>[39m[23m        [3m[90m<chr>[39m[23m  [3m[90m<chr>[39m[23m    [3m[90m<chr>[39m[23m [3m[90m<chr>[39m[23m       [3m[90m<chr>[39m[23m
+[90m 1[39m      1        56 [31mNA[39m           Fabac~ AESAME   Aesc~ americana   [31mNA[39m   
+[90m 2[39m      2        57 [31mNA[39m           Eupho~ ALCFLO   Alch~ floribunda  [31mNA[39m   
+[90m 3[39m      3        58 [31mNA[39m           Eupho~ ALCLAT   Alch~ latifolia   [31mNA[39m   
+[90m 4[39m      4        59 [31mNA[39m           Fabac~ ANDINE   Andi~ inermis     [31mNA[39m   
+[90m 5[39m      5        60 [31mNA[39m           Rubia~ ANTOBT   Sten~ obtusifoli~ [31mNA[39m   
+[90m 6[39m      6        61 [31mNA[39m           Myrsi~ ARDGLA   Ardi~ glauciflora [31mNA[39m   
+[90m 7[39m      7        62 [31mNA[39m           Morac~ ARTALT   Arto~ altilis     [31mNA[39m   
+[90m 8[39m      8        63 [31mNA[39m           Laura~ BEIPEN   Beil~ pendula     [31mNA[39m   
+[90m 9[39m      9        64 [31mNA[39m           Solan~ BRUPOR   Brun~ portoricen~ [31mNA[39m   
+[90m10[39m     10        65 [31mNA[39m           Combr~ BUCTET   Buch~ tetraphylla [31mNA[39m   
+[90m# ... with 153 more rows, and 13 more variables: Subspecies [3m[90m<chr>[90m[23m,
+#   Authority [3m[90m<chr>[90m[23m, IDLevel [3m[90m<chr>[90m[23m, subspMnemonic [3m[90m<chr>[90m[23m, subspAuthority [3m[90m<chr>[90m[23m,
+#   FieldFamily [3m[90m<chr>[90m[23m, Lifeform [3m[90m<chr>[90m[23m, Description [3m[90m<chr>[90m[23m, wsg [3m[90m<dbl>[90m[23m,
+#   wsglevel [3m[90m<chr>[90m[23m, ListOfOldNames [3m[90m<chr>[90m[23m, Specimens [3m[90m<chr>[90m[23m, Reference [3m[90m<chr>[90m[23m[39m
+> 
+> 
+> 
+> ### * <FOOTER>
+> ###
+> cleanEx()
+
+detaching 'package:readr', 'package:fgeo.x'
+
+> options(digits = 7L)
+> base::cat("Time elapsed: ", proc.time() - base::get("ptime", pos = 'CheckExEnv'),"\n")
+Time elapsed:  4.35 0.22 6.7 NA NA 
+> grDevices::dev.off()
+null device 
+          1 
+> ###
+> ### Local variables: ***
+> ### mode: outline-minor ***
+> ### outline-regexp: "\\(> \\)?### [*]+" ***
+> ### End: ***
+> quit('no')

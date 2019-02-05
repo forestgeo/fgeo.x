@@ -8,7 +8,7 @@ Version: 1.1.1
     ```
     Re-running with no redirection of stdout/stderr.
     Hmm ... looks like a package
-    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/RtmpGOjzvQ/Rd2pdf47fc1ac9466a'
+    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/Rtmp0cYtkR/Rd2pdf3ba01f274ac'
     ```
 
 *   checking PDF version of manual ... WARNING
@@ -26,7 +26,7 @@ Version: 1.1.1
 
 # fgeo.analyze
 
-Version: 1.1.2
+Version: 1.1.3
 
 ## In both
 
@@ -34,7 +34,7 @@ Version: 1.1.2
     ```
     Re-running with no redirection of stdout/stderr.
     Hmm ... looks like a package
-    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/Rtmp8Q8pOC/Rd2pdf4120441a68e5'
+    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/Rtmp8uXQwk/Rd2pdf256844301768'
     ```
 
 *   checking PDF version of manual ... WARNING
@@ -45,7 +45,7 @@ Version: 1.1.2
 
 # fgeo.plot
 
-Version: 1.1.1
+Version: 1.1.2
 
 ## In both
 
@@ -53,7 +53,7 @@ Version: 1.1.1
     ```
     Re-running with no redirection of stdout/stderr.
     Hmm ... looks like a package
-    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/RtmpsP5lF9/Rd2pdf3b1c4b4962e3'
+    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/RtmpUbtpbI/Rd2pdf41507fa7642b'
     ```
 
 *   checking PDF version of manual ... WARNING
@@ -72,7 +72,7 @@ Version: 1.2.1
     ```
     Re-running with no redirection of stdout/stderr.
     Hmm ... looks like a package
-    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/RtmpuGAlMV/Rd2pdf38e42024707e'
+    You may want to clean up by 'rm -Rf C:/Users/LeporeM/AppData/Local/Temp/1/RtmpKKpVqf/Rd2pdf2a0069c94999'
     ```
 
 *   checking PDF version of manual ... WARNING
