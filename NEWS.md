@@ -2,6 +2,10 @@
 
 * Work in progress.
 
+# fgeo.x 1.1.2 ([GitHub](https://github.com/forestgeo/fgeo.x/releases) and [drat](https://forestgeo.github.io/drat/))
+
+* Mantainance release.
+
 # fgeo.x 1.1.1 ([GitHub](https://github.com/forestgeo/fgeo.x/releases) and [drat](https://forestgeo.github.io/drat/))
 
 _fgeo.x_ now requires R >= 3.2.
