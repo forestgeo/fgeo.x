@@ -28,5 +28,5 @@ NOTE
 
 I checked 4 reverse dependencies (0 from CRAN + 4 from  <https://forestgeo.github.io/drat/>).
 
- * I saw 0 new problems
- * I failed to check 0 packages
+* I saw 0 new problems
+* I failed to check 0 packages
