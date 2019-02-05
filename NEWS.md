@@ -1,7 +1,10 @@
 # fgeo.x (development version)
 
 * Work in progress.
-* Travis now errs on warnings.
+
+# fgeo.x 1.1.0.9001 (pre-release)
+
+_fgeo.x_ now requires R >= 3.2.
 
 # fgeo.x 1.1.0 (GithHub and drat release)
 
