@@ -1,0 +1,900 @@
+\nonstopmode{}
+\documentclass[a4paper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\usepackage[utf8]{inputenc} % @SET ENCODING@
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package `fgeo.plot'}}
+\par\bigskip{\large \today}
+\end{center}
+\begin{description}
+\raggedright{}
+\inputencoding{utf8}
+\item[Title]\AsIs{Plot ForestGEO Data}
+\item[Version]\AsIs{1.1.2}
+\item[Description]\AsIs{Plot ForestGEO data
+(<http://www.forestgeo.si.edu/>).}
+\item[License]\AsIs{GPL-3}
+\item[URL]\AsIs{}\url{https://github.com/forestgeo/fgeo.plot}\AsIs{,
+}\url{https://forestgeo.github.io/fgeo.plot/}\AsIs{}
+\item[BugReports]\AsIs{}\url{https://github.com/forestgeo/fgeo.plot/issues}\AsIs{}
+\item[Depends]\AsIs{R (>= 3.3)}
+\item[Imports]\AsIs{dplyr (>= 0.7.8), fgeo.tool (>= 1.2.1), ggplot2 (>= 3.1.0),
+ggrepel (>= 0.8.0), glue (>= 1.3.0), magrittr (>= 1.5), purrr
+(>= 0.3.0), rlang (>= 0.3.1), stats, stringr (>= 1.3.1)}
+\item[Suggests]\AsIs{covr (>= 3.2.1), fgeo.x (>= 1.1.0), gridExtra (>= 2.3), knitr
+(>= 1.21), rmarkdown (>= 1.11), spelling (>= 2.0), testthat (>=
+2.0.1)}
+\item[Additional\_repositories]\AsIs{https://forestgeo.github.io/drat/}
+\item[Encoding]\AsIs{UTF-8}
+\item[Language]\AsIs{en-US}
+\item[LazyData]\AsIs{true}
+\item[Roxygen]\AsIs{list(markdown = TRUE)}
+\item[RoxygenNote]\AsIs{6.1.1}
+\item[NeedsCompilation]\AsIs{no}
+\item[Author]\AsIs{Mauro Lepore [aut, ctr, cre],
+CTFS-ForestGEO [cph, fnd]}
+\item[Maintainer]\AsIs{Mauro Lepore }\email{leporem@si.edu}\AsIs{}
+\end{description}
+\Rdcontents{\R{} topics documented:}
+\inputencoding{utf8}
+\HeaderA{autoplot.fgeo\_habitat}{Plot habitats.}{autoplot.fgeo.Rul.habitat}
+%
+\begin{Description}\relax
+Plot habitats.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+## S3 method for class 'fgeo_habitat'
+autoplot(object, ...)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{object}] An object of class "fgeo\_habitat" (see \code{fgeo\_habitat} at
+\url{http://bit.ly/fgeo-reference}).
+
+\item[\code{...}] Not used (included for compatibility across methods).
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+An object of class "ggplot".
+\end{Value}
+%
+\begin{SeeAlso}\relax
+Other plot functions: \code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{elev}{elev}},
+\code{\LinkA{plot\_dbh\_bubbles\_by\_quadrat}{plot.Rul.dbh.Rul.bubbles.Rul.by.Rul.quadrat}},
+\code{\LinkA{plot\_tag\_status\_by\_subquadrat}{plot.Rul.tag.Rul.status.Rul.by.Rul.subquadrat}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}, \code{\LinkA{sp}{sp}}
+
+Other autoplots: \code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{elev}{elev}}, \code{\LinkA{sp\_elev}{sp.Rul.elev}},
+\code{\LinkA{sp}{sp}}
+\end{SeeAlso}
+%
+\begin{Examples}
+\begin{ExampleCode}
+## Not run: 
+assert_is_installed("fgeo.x")
+assert_is_installed("fgeo.analyze")
+library(fgeo.analyze)
+
+habitats <- fgeo_habitat(fgeo.x::elevation, gridsize = 20, n = 4)
+autoplot(habitats)
+
+## End(Not run)
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{autoplot.sp\_elev}{Plot species distribution and/or topography.}{autoplot.sp.Rul.elev}
+\aliasA{autoplot.elev}{autoplot.sp\_elev}{autoplot.elev}
+\aliasA{autoplot.sp}{autoplot.sp\_elev}{autoplot.sp}
+%
+\begin{Description}\relax
+Plot the columns \code{sp} and/or \code{elev} of ForestGEO-like datasets of class 'sp'
+and/or 'sp\_elev'.
+\begin{itemize}
+
+\item You can create a 'sp' \code{object} with:
+
+\end{itemize}
+
+
+\begin{alltt}    object <- sp(DATA-WITH-VARIABLE-sp)
+\end{alltt}
+
+\begin{itemize}
+
+\item You can create an 'elev' \code{object} with:
+
+\end{itemize}
+
+
+\begin{alltt}    object <- elev(DATA-WITH-VARIABLE-elev)
+\end{alltt}
+
+
+\begin{itemize}
+
+\item You can create a 'sp\_elev' \code{object} with:
+
+\end{itemize}
+
+
+\begin{alltt}    object <- sp_elev(DATA-WITH-VARIABLE-sp, DATA-WITH-VARIABLE-elev)
+\end{alltt}
+
+
+See \strong{Examples} below.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+## S3 method for class 'sp_elev'
+autoplot(object, fill = "sp",
+  hide_fill_legend = FALSE, shape = 21, point_size = 3,
+  facet = TRUE, contour_size = 0.5, low = "blue", high = "red",
+  hide_color_legend = FALSE, bins = NULL,
+  add_elevation_labels = TRUE, label_size = 3, label_color = "grey",
+  xyjust = 1, fontface = "italic", xlim = NULL, ylim = NULL,
+  custom_theme = NULL, ...)
+
+## S3 method for class 'sp'
+autoplot(object, fill = "sp", hide_fill_legend = FALSE,
+  shape = 21, point_size = 3, facet = TRUE, xlim = NULL,
+  ylim = NULL, custom_theme = NULL, ...)
+
+## S3 method for class 'elev'
+autoplot(object, contour_size = 0.5, low = "blue",
+  high = "red", hide_color_legend = FALSE, bins = NULL,
+  add_elevation_labels = TRUE, label_size = 3, label_color = "grey",
+  xyjust = 1, fontface = "italic", xlim = NULL, ylim = NULL,
+  custom_theme = NULL, ...)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{object}] An object created with \code{\LinkA{sp()}{sp}}, \code{\LinkA{elev()}{elev}}, or \code{\LinkA{sp\_elev()}{sp.Rul.elev}}.
+
+\item[\code{fill}] Character; either a color or "sp", which maps each species to a
+different color.
+
+\item[\code{hide\_fill\_legend}] Logical; \code{TRUE} hides the fill legend.
+
+\item[\code{shape}] A number giving point shape (as in \code{\LinkA{graphics::points()}{graphics::points()}}). Passed
+to \code{\LinkA{ggplot2::geom\_point()}{ggplot2::geom.Rul.point()}}.
+
+\item[\code{point\_size}] A number giving point size. Passed to
+\code{\LinkA{ggplot2::geom\_point()}{ggplot2::geom.Rul.point()}}.
+
+\item[\code{facet}] Logical; \code{TRUE} wraps multiple panels within the area of a single
+graphic plot.
+
+\item[\code{contour\_size}] A number giving the size of the contour of elevation
+lines. Passed to \code{ggplot2::stat\_contour()} (see \code{\LinkA{ggplot2::geom\_contour()}{ggplot2::geom.Rul.contour()}}).
+
+\item[\code{low, high}] A string giving a color of the elevation lines representing
+low and high elevation.
+
+\item[\code{hide\_color\_legend}] Logical; \code{TRUE} hides the color legend.
+
+\item[\code{bins}] A number giving the number of elevation lines to plot.
+
+\item[\code{add\_elevation\_labels}] Logical; \code{FALSE} hides elevation labels.
+
+\item[\code{label\_size, label\_color, fontface}] A number (\code{label\_size}) or character
+string (\code{label\_color} and \code{fontface}) giving the size, colour and fontface
+of the text labels for the elevation lines.
+
+\item[\code{xyjust}] A number to adjust the position of the text labels of the
+elevation lines.
+
+\item[\code{xlim, ylim}] A vector of length 2, for example \code{c(0, 500)}, giving the
+minimum and maximum limits of the vertical and horizontal coordinates.
+
+\item[\code{custom\_theme}] A valid \code{\LinkA{ggplot2::theme()}{ggplot2::theme()}}. \code{NULL} uses the default
+theme \code{\LinkA{theme\_default()}{theme.Rul.default}}.
+
+\item[\code{...}] Not used (included for compatibility across methods).
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Details}\relax
+\code{autoplot(sp\_elev(DATA-WITH-VARIABLE-sp)} (without elevation data) is
+equivalent to \code{autoplot(sp(DATA-WITH-VARIABLE-sp))}.
+
+\strong{fgeo.plot} wraps some functions from the \strong{ggplot2} package.
+For more control you can use \strong{ggplot2} directly.
+\end{Details}
+%
+\begin{Value}
+A "ggplot".
+\end{Value}
+%
+\begin{SeeAlso}\relax
+Other plot functions: \code{\LinkA{autoplot.fgeo\_habitat}{autoplot.fgeo.Rul.habitat}},
+\code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{elev}{elev}},
+\code{\LinkA{plot\_dbh\_bubbles\_by\_quadrat}{plot.Rul.dbh.Rul.bubbles.Rul.by.Rul.quadrat}},
+\code{\LinkA{plot\_tag\_status\_by\_subquadrat}{plot.Rul.tag.Rul.status.Rul.by.Rul.subquadrat}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}, \code{\LinkA{sp}{sp}}
+
+Other autoplots: \code{\LinkA{autoplot.fgeo\_habitat}{autoplot.fgeo.Rul.habitat}},
+\code{\LinkA{elev}{elev}}, \code{\LinkA{sp\_elev}{sp.Rul.elev}},
+\code{\LinkA{sp}{sp}}
+
+Other functions to plot elevation: \code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{elev}{elev}}, \code{\LinkA{sp\_elev}{sp.Rul.elev}}
+
+Other functions to plot species: \code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}, \code{\LinkA{sp}{sp}}
+\end{SeeAlso}
+%
+\begin{Examples}
+\begin{ExampleCode}
+assert_is_installed("fgeo.x")
+
+# Species ---------------------------------------------------------------
+
+# Small dataset with a few species for quick examples
+census <- fgeo.x::tree5 %>%
+  subset(sp %in% c("PREMON", "CASARB"))
+
+autoplot(sp(census))
+
+## Not run: 
+# Customize
+autoplot(sp(census), point_size = 1)
+
+## End(Not run)
+
+# Elevation -------------------------------------------------------------
+
+elevation <- fgeo.x::elevation
+autoplot(elev(elevation))  
+
+## Not run: 
+# Same as `autoplot(elev(elevation))`
+autoplot(elev(elevation$col))
+
+# Customize
+autoplot(elev(elevation), contour_size = 1)
+
+## End(Not run)
+
+# Species and elevation -------------------------------------------------
+
+autoplot(sp_elev(census, elevation), facet = FALSE, point_size = 1)
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{autoplot\_by\_species.sp\_elev}{List plots of species distribution and topography (good for pdf output).}{autoplot.Rul.by.Rul.species.sp.Rul.elev}
+\aliasA{autoplot\_by\_species.sp}{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp}
+%
+\begin{Description}\relax
+These functions extend \code{\LinkA{autoplot.sp()}{autoplot.sp}} and \code{\LinkA{autoplot.elev()}{autoplot.elev}} and return not a
+single plot but a list of plots. They are particularly useful if you want to
+print a \emph{.pdf} file with one plot per page. They automatically plot the
+variables \code{sp} and \code{elev} of a ForestGEO-like dataset of class 'sp' or
+'sp\_elev'.
+\begin{itemize}
+
+\item Create a 'sp' \code{object} with:
+
+\end{itemize}
+
+
+\begin{alltt}    object <- sp(DATA-WITH-VARIABLE-sp)
+\end{alltt}
+
+\begin{itemize}
+
+\item Create a 'sp\_elev' \code{object} with:
+
+\end{itemize}
+
+
+\begin{alltt}    object <- sp_elev(DATA-WITH-VARIABLE-sp, DATA-WITH-VARIABLE-elev)
+\end{alltt}
+
+
+See sections \strong{Usage} and \strong{Examples}.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+## S3 method for class 'sp_elev'
+autoplot_by_species(object, species = "all",
+  fill = "black", shape = 21, point_size = 3, contour_size = 0.5,
+  low = "blue", high = "red", hide_color_legend = FALSE,
+  bins = NULL, add_elevation_labels = TRUE, label_size = 3,
+  label_color = "grey", xyjust = 1, fontface = "italic",
+  xlim = NULL, ylim = NULL, custom_theme = NULL, ...)
+
+## S3 method for class 'sp'
+autoplot_by_species(object, species = "all",
+  fill = "black", shape = 21, point_size = 3,
+  hide_color_legend = FALSE, xlim = NULL, ylim = NULL,
+  custom_theme = NULL, ...)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{object}] An object created with \code{\LinkA{sp()}{sp}} or \code{\LinkA{sp\_elev()}{sp.Rul.elev}}.
+
+\item[\code{species}] A character vector giving values in the column \code{sp}. The
+output will be a list with as many plots as elements in this vector.
+The string "all" (default) plots all unique values of \code{sp}.
+
+\item[\code{fill}] Character; either a color or "sp", which maps each species to a
+different color.
+
+\item[\code{shape}] A number giving point shape (as in \code{\LinkA{graphics::points()}{graphics::points()}}). Passed
+to \code{\LinkA{ggplot2::geom\_point()}{ggplot2::geom.Rul.point()}}.
+
+\item[\code{point\_size}] A number giving point size. Passed to
+\code{\LinkA{ggplot2::geom\_point()}{ggplot2::geom.Rul.point()}}.
+
+\item[\code{contour\_size}] A number giving the size of the contour of elevation
+lines. Passed to \code{ggplot2::stat\_contour()} (see \code{\LinkA{ggplot2::geom\_contour()}{ggplot2::geom.Rul.contour()}}).
+
+\item[\code{low, high}] A string giving a color of the elevation lines representing
+low and high elevation.
+
+\item[\code{hide\_color\_legend}] Logical; \code{TRUE} hides the color legend.
+
+\item[\code{bins}] A number giving the number of elevation lines to plot.
+
+\item[\code{add\_elevation\_labels}] Logical; \code{FALSE} hides elevation labels.
+
+\item[\code{label\_size, label\_color, fontface}] A number (\code{label\_size}) or character
+string (\code{label\_color} and \code{fontface}) giving the size, colour and fontface
+of the text labels for the elevation lines.
+
+\item[\code{xyjust}] A number to adjust the position of the text labels of the
+elevation lines.
+
+\item[\code{xlim, ylim}] A vector of length 2, for example \code{c(0, 500)}, giving the
+minimum and maximum limits of the vertical and horizontal coordinates.
+
+\item[\code{custom\_theme}] A valid \code{\LinkA{ggplot2::theme()}{ggplot2::theme()}}. \code{NULL} uses the default
+theme \code{\LinkA{theme\_default()}{theme.Rul.default}}.
+
+\item[\code{...}] Not used (included for compatibility across methods).
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Details}\relax
+\code{autoplot\_by\_species(sp\_elev(DATA-WITH-VARIABLE-sp)} (without elevation data)
+is equivalent to \code{autoplot\_by\_species(sp(DATA-WITH-VARIABLE-sp))}.
+
+\strong{fgeo.plot} wraps some functions from the \strong{ggplot2} package.
+For more control you can use \strong{ggplot2} directly.
+\end{Details}
+%
+\begin{Value}
+A list of objects of class "ggplot".
+\end{Value}
+%
+\begin{SeeAlso}\relax
+\code{\LinkA{autoplot()}{autoplot}}, \code{\LinkA{sp()}{sp}}, \code{\LinkA{sp\_elev()}{sp.Rul.elev}}.
+
+Other plot functions: \code{\LinkA{autoplot.fgeo\_habitat}{autoplot.fgeo.Rul.habitat}},
+\code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}}, \code{\LinkA{elev}{elev}},
+\code{\LinkA{plot\_dbh\_bubbles\_by\_quadrat}{plot.Rul.dbh.Rul.bubbles.Rul.by.Rul.quadrat}},
+\code{\LinkA{plot\_tag\_status\_by\_subquadrat}{plot.Rul.tag.Rul.status.Rul.by.Rul.subquadrat}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}, \code{\LinkA{sp}{sp}}
+
+Other functions to plot elevation: \code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{elev}{elev}}, \code{\LinkA{sp\_elev}{sp.Rul.elev}}
+
+Other functions to plot species: \code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}, \code{\LinkA{sp}{sp}}
+\end{SeeAlso}
+%
+\begin{Examples}
+\begin{ExampleCode}
+assert_is_installed("fgeo.x")
+
+# Species ---------------------------------------------------------------
+# Small dataset with a few species for quick examples
+census <- fgeo.x::tree6_3species
+
+# Showing only two species for speed
+autoplot_by_species(sp(census))[1:2]
+## Not run: 
+# Print all plots in the list
+pdf("map.pdf", paper = "letter", height = 10.5, width = 8)
+autoplot_by_species(sp(census))
+dev.off()
+
+## End(Not run)
+
+# Species and elevation (optional) ---------------------------------------
+
+# Species and elevation
+elevation <- fgeo.x::elevation
+autoplot_by_species(sp_elev(census, elevation))
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{elev}{Allow autoplotting the column \code{elev}.}{elev}
+%
+\begin{Description}\relax
+Allow autoplotting the column \code{elev}.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+elev(elev)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{elev}] A ForestGEO-like elevation list or its \code{col} dataframe (with
+the column \code{elev}).
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+An S3 object of class 'elev'.
+\end{Value}
+%
+\begin{SeeAlso}\relax
+\code{\LinkA{autoplot.elev()}{autoplot.elev}}.
+
+Other plot functions: \code{\LinkA{autoplot.fgeo\_habitat}{autoplot.fgeo.Rul.habitat}},
+\code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{plot\_dbh\_bubbles\_by\_quadrat}{plot.Rul.dbh.Rul.bubbles.Rul.by.Rul.quadrat}},
+\code{\LinkA{plot\_tag\_status\_by\_subquadrat}{plot.Rul.tag.Rul.status.Rul.by.Rul.subquadrat}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}, \code{\LinkA{sp}{sp}}
+
+Other autoplots: \code{\LinkA{autoplot.fgeo\_habitat}{autoplot.fgeo.Rul.habitat}},
+\code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}}, \code{\LinkA{sp\_elev}{sp.Rul.elev}},
+\code{\LinkA{sp}{sp}}
+
+Other functions to construct fgeo classes: \code{\LinkA{sp\_elev}{sp.Rul.elev}},
+\code{\LinkA{sp}{sp}}
+
+Other functions to plot elevation: \code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}
+\end{SeeAlso}
+%
+\begin{Examples}
+\begin{ExampleCode}
+assert_is_installed("fgeo.x")
+
+inherits(elev(fgeo.x::elevation), "elev")
+inherits(elev(fgeo.x::elevation$col), "elev")
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{plot\_dbh\_bubbles\_by\_quadrat}{List dbh bubble-plots by quadrat (good for .pdf output).}{plot.Rul.dbh.Rul.bubbles.Rul.by.Rul.quadrat}
+%
+\begin{Description}\relax
+List dbh bubble-plots by quadrat (good for .pdf output).
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+plot_dbh_bubbles_by_quadrat(vft,
+  title_quad = "Site Name, YYYY, Quadrat:",
+  header = header_dbh_bubbles(), theme = theme_dbh_bubbles(),
+  lim_min = 0, lim_max = 20, subquadrat_side = 5, tag_size = 2,
+  move_edge = 0, status_d = "dead")
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{vft}] A ForestGEO ViewFullTable (dataframe).
+
+\item[\code{title\_quad}] A string to use as a title.
+
+\item[\code{header}] A string to use as a header (see \LinkA{headers}{headers}).
+
+\item[\code{theme}] An object of class "theme".
+
+\item[\code{lim\_min, lim\_max}] Minimum and maximum limits of the plot area.
+
+\item[\code{subquadrat\_side}] Length in meters of the side of a subquadrat.
+
+\item[\code{tag\_size}] A number giving tag size. Passed to
+\LinkA{ggrepel::geom\_text\_repel}{ggrepel::geom.Rul.text.Rul.repel}.
+
+\item[\code{move\_edge}] A number to adjust the extension of the grid lines beyond
+the plot limits.
+
+\item[\code{status\_d}] A character string indicating the value of the variable
+status that corresponds to dead stems.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A list which each element is a plot of class ggplot.
+\end{Value}
+%
+\begin{SeeAlso}\relax
+Other plot functions: \code{\LinkA{autoplot.fgeo\_habitat}{autoplot.fgeo.Rul.habitat}},
+\code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{elev}{elev}},
+\code{\LinkA{plot\_tag\_status\_by\_subquadrat}{plot.Rul.tag.Rul.status.Rul.by.Rul.subquadrat}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}, \code{\LinkA{sp}{sp}}
+
+Other functions to list plots from ForestGEO ViewFullTable: \code{\LinkA{plot\_tag\_status\_by\_subquadrat}{plot.Rul.tag.Rul.status.Rul.by.Rul.subquadrat}}
+
+Other functions to plot dbh bubbles: \code{\LinkA{header\_dbh\_bubbles}{header.Rul.dbh.Rul.bubbles}},
+\code{\LinkA{theme\_dbh\_bubbles}{theme.Rul.dbh.Rul.bubbles}}
+\end{SeeAlso}
+%
+\begin{Examples}
+\begin{ExampleCode}
+assert_is_installed("fgeo.x")
+
+# Create a small VieFullTable
+first_n <- function(x, n) x %in% sort(unique(x))[1:n]
+small_vft <- fgeo.x::vft_4quad %>%
+  dplyr::filter(first_n(CensusID, 1) & first_n(QuadratID, 2)) %>%
+  dplyr::sample_n(50)
+
+plot_dbh_bubbles_by_quadrat(small_vft)
+
+# Printing all plots to .pdf, with parameters optimized for size letter
+## Not run: 
+pdf("map.pdf", paper = "letter", height = 10.5, width = 8)
+plot_dbh_bubbles_by_quadrat(small_vft)
+dev.off()
+
+# Be careful if subsetting by DBH: You may unintentionally remove dead trees.
+# You should explicietly inlcude missing `DBH` values with `is.na(DBH)`
+include_missing_dbh <- subset(small_vft, DBH > 20 | is.na(DBH))
+plot_dbh_bubbles_by_quadrat(include_missing_dbh)
+
+## End(Not run)
+
+# Customizing the maps ----------------------------------------------------
+# A custom title and header
+myheader <- paste(
+  " ",
+  "Head column 1                     Head column 2                          ",
+  " ",
+  " ........................................................................",
+  " ........................................................................",
+  sep = "\n"
+)
+
+plot_dbh_bubbles_by_quadrat(
+  small_vft,
+  title_quad = "My Site, 2018. Quad:",
+  header = myheader
+)
+
+## Not run: 
+# Tweak the theme with ggplot
+library(ggplot2)
+
+plot_dbh_bubbles_by_quadrat(
+  small_vft,
+  title_quad = "My Site, 2018. Quad:",
+  header = header_dbh_bubbles("spanish"),
+  tag_size = 3,
+  theme = theme_dbh_bubbles(
+    axis.text = NULL, # NULL shows axis.text; element_blank() doesn't.
+    plot.title = element_text(size = 15),
+    plot.subtitle = element_text(size = 5),
+    panel.background = element_rect(fill = "grey")
+  )
+)
+
+## End(Not run)
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{plot\_tag\_status\_by\_subquadrat}{List plots of tree-tag status by subquadrat (good for .pdf output).}{plot.Rul.tag.Rul.status.Rul.by.Rul.subquadrat}
+%
+\begin{Description}\relax
+This function plots tree tags by status and outputs a list of plots that can
+be printed on a .pdf file. Each plot shows four subquadrats within a quadrat.
+The symbols on the plot represent the status of each tree -- not the status of
+each stem. Although you should likely provide data of only one or two
+censuses, \code{plot\_tag\_status\_by\_subquadrat()} will summarize the data to reduce
+overplotting. The data on the plot summarizes the history of each stem across
+all censuses provided. Each tag will appear in the plot only once or twice:
+\begin{itemize}
+
+\item A tag will appear once if it belongs to a tree which status was unique
+across all censuses provided -- either "alive" or "dead".
+\item A tag will appear twice if it belongs to a tree which status was "alive" in
+at least one census, and also "dead" in at least one other census. This
+feature avoids unintentional overplotting and makes interpreting the plot
+easier.
+
+\end{itemize}
+
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+plot_tag_status_by_subquadrat(vft, x_q = 20, x_sq = 5, y_q = 20,
+  y_sq = 5, subquad_offset = NULL, bl = 1, br = 2, tr = 3,
+  tl = 4, title_quad = "Site Name, YYYY. Quadrat:", show_page = TRUE,
+  show_subquad = TRUE, point_shape = c(19, 4), point_size = 1.5,
+  tag_size = 3, header = header_tag_status(),
+  theme = theme_tag_status(), move_edge = 0)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{vft}] A ForestGEO ViewFullTable (dataframe).
+
+\item[\code{x\_q, y\_q}] Size in meters of a quadrat's side. For ForestGEO sites, a
+common value is 20.
+
+\item[\code{x\_sq, y\_sq}] Size in meters of a subquadrat's side. For ForestGEO-CTFS
+sites, a common value is 5.
+
+\item[\code{subquad\_offset}] \code{NULL} or \code{-1}. \code{NULL} defines the first column of
+subquadrats as 1.  \code{-1} defines the first column of subquadrats as 0.\begin{alltt}subquad_offset = NULL    subquad_offset = -1
+---------------------    -------------------
+     14 24 34 44             04 14 24 34
+     13 23 33 43             03 13 23 33
+     12 22 32 42             02 12 22 32
+     11 21 31 41             01 11 21 31
+\end{alltt}
+
+
+\item[\code{bl, br, tr, tl}] Number or character giving the label of the four
+subquadrats on each or the four divisions of a quadrat: bottom left (bl),
+bottom right (br), top right (tr), and top left (tl).
+
+\item[\code{title\_quad}] A string to use as a title.
+
+\item[\code{show\_page}] Logical; \code{FALSE} removes the page label from the plot title.
+
+\item[\code{show\_subquad}] Logical; \code{FALSE} removes subquadrat labels on each plot.
+
+\item[\code{point\_shape}] A vector of two numbers giving the shape of the points to
+plot (see possible shapes in the documentation of ?\code{\LinkA{graphics::points()}{graphics::points()}},
+under the section entitled \emph{'pch' values}).
+
+\item[\code{point\_size}] A number giving points size. Passed to
+\code{\LinkA{ggplot2::geom\_point()}{ggplot2::geom.Rul.point()}}.
+
+\item[\code{tag\_size}] A number giving tag size. Passed to
+\LinkA{ggrepel::geom\_text\_repel}{ggrepel::geom.Rul.text.Rul.repel}.
+
+\item[\code{header}] A string to use as a header (see \LinkA{headers}{headers}).
+
+\item[\code{theme}] An object of class "theme".
+
+\item[\code{move\_edge}] A number to adjust the extension of the grid lines beyond
+the plot limits.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+A list of objects of class "ggplot".
+\end{Value}
+%
+\begin{Section}{Acknowledgment}
+
+Useful ideas and guidance came from Suzanne Lao, Stuart Davis, Shameema
+Jafferjee Esufali, David Kenfack and Anudeep Singh. Anudeep Sinh also wrote
+the algorithm to calculate subquadrats.
+\end{Section}
+%
+\begin{SeeAlso}\relax
+\code{\LinkA{graphics::points()}{graphics::points()}}, \code{\LinkA{ggplot2::geom\_point()}{ggplot2::geom.Rul.point()}}, \code{\LinkA{ggplot2::theme()}{ggplot2::theme()}}
+\code{\LinkA{header\_tag\_status()}{header.Rul.tag.Rul.status}}, \code{\LinkA{theme\_tag\_status()}{theme.Rul.tag.Rul.status}}, \code{\LinkA{fgeo.tool::add\_subquad()}{fgeo.tool::add.Rul.subquad()}},
+\LinkA{ggrepel::geom\_text\_repel}{ggrepel::geom.Rul.text.Rul.repel}.
+
+Other plot functions: \code{\LinkA{autoplot.fgeo\_habitat}{autoplot.fgeo.Rul.habitat}},
+\code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{elev}{elev}},
+\code{\LinkA{plot\_dbh\_bubbles\_by\_quadrat}{plot.Rul.dbh.Rul.bubbles.Rul.by.Rul.quadrat}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}, \code{\LinkA{sp}{sp}}
+
+Other functions to list plots from ForestGEO ViewFullTable: \code{\LinkA{plot\_dbh\_bubbles\_by\_quadrat}{plot.Rul.dbh.Rul.bubbles.Rul.by.Rul.quadrat}}
+
+Other functions to plot tag status: \code{\LinkA{header\_tag\_status}{header.Rul.tag.Rul.status}},
+\code{\LinkA{theme\_tag\_status}{theme.Rul.tag.Rul.status}}
+\end{SeeAlso}
+%
+\begin{Examples}
+\begin{ExampleCode}
+assert_is_installed("fgeo.x")
+
+# Create a small VieFullTable
+first <- function(x) x %in% sort(unique(x))[1]
+small_vft <- subset(fgeo.x::vft_4quad, first(CensusID) & first(QuadratID))
+
+p <- plot_tag_status_by_subquadrat(small_vft)
+# Showing only two sub-quadtrats
+p[1:2]
+
+# Print all plots to .pdf, with parameters optimized for size letter
+## Not run: 
+pdf("map.pdf", paper = "letter", height = 10.5, width = 8)
+plot_tag_status_by_subquadrat(small_vft)
+dev.off()
+
+# Be careful if filtering by DBH: You may unintentionally remove dead trees.
+# * If you filter by `DBH`, you loose the dead trees becaue their `DBH = NA`
+# * You should explicietly inlcude missing DBH values with `is.na(DBH)`
+include_missing_dbh <- subset(small_vft, DBH > 20 | is.na(DBH))
+p <- plot_tag_status_by_subquadrat(include_missing_dbh)
+# Showing only the first plot to keep the output short
+p[[1]]
+
+## End(Not run)
+
+# Customizing the maps ----------------------------------------------------
+# Common tweaks
+p <- plot_tag_status_by_subquadrat(
+  small_vft,
+  title_quad = "BCI 2012. Quadrat: ",
+  bl = "bottom-left", br = "bottom-right", tr = "top-right", tl = "top-left",
+  header = "Line 1: _________\nLine 2:\nLine 3:.....................",
+  subquad_offset = -1,
+  point_size = 3, point_shape = c(17, 6),
+  tag_size = 2,
+  move_edge = 0.5
+)
+p[[1]]
+
+## Not run: 
+p <- plot_tag_status_by_subquadrat(
+  small_vft,
+  show_page = FALSE,
+  show_subquad = FALSE
+)
+p[[1]]
+
+# Themes
+library(ggplot2)
+
+p <- plot_tag_status_by_subquadrat(small_vft, theme = theme_gray())
+p[[1]]
+
+# Tweaking the default theme of plot_tag_status_by_subquadrat()
+# For many more options see ?ggplot2::theme
+small_tweak <- theme_tag_status(legend.position = "bottom")
+p <- plot_tag_status_by_subquadrat(small_vft, theme = small_tweak)
+p[[1]]
+
+## End(Not run)
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{sp}{Allow autoplotting the column \code{sp}.}{sp}
+%
+\begin{Description}\relax
+Allow autoplotting the column \code{sp}.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+sp(sp)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{sp}] A ForestGEO-like dataframe with the column \code{sp}.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+An S3 object of class 'sp'.
+\end{Value}
+%
+\begin{SeeAlso}\relax
+\code{\LinkA{autoplot.sp()}{autoplot.sp}}.
+
+Other plot functions: \code{\LinkA{autoplot.fgeo\_habitat}{autoplot.fgeo.Rul.habitat}},
+\code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{elev}{elev}},
+\code{\LinkA{plot\_dbh\_bubbles\_by\_quadrat}{plot.Rul.dbh.Rul.bubbles.Rul.by.Rul.quadrat}},
+\code{\LinkA{plot\_tag\_status\_by\_subquadrat}{plot.Rul.tag.Rul.status.Rul.by.Rul.subquadrat}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}
+
+Other autoplots: \code{\LinkA{autoplot.fgeo\_habitat}{autoplot.fgeo.Rul.habitat}},
+\code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}}, \code{\LinkA{elev}{elev}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}
+
+Other functions to construct fgeo classes: \code{\LinkA{elev}{elev}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}
+
+Other functions to plot species: \code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{sp\_elev}{sp.Rul.elev}}
+\end{SeeAlso}
+%
+\begin{Examples}
+\begin{ExampleCode}
+assert_is_installed("fgeo.x")
+
+inherits(sp(fgeo.x::stem5), "sp")
+\end{ExampleCode}
+\end{Examples}
+\inputencoding{utf8}
+\HeaderA{sp\_elev}{Allow autoplotting the columns \code{sp} and \code{elev}.}{sp.Rul.elev}
+%
+\begin{Description}\relax
+Allow autoplotting the columns \code{sp} and \code{elev}.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+sp_elev(sp, elev = NULL)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{sp}] A ForestGEO-like dataframe with the column \code{sp}.
+
+\item[\code{elev}] A ForestGEO-like elevation list or its \code{col} dataframe -- with
+the column \code{elev}.
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+An S3 object of class 'sp\_elev'.
+\end{Value}
+%
+\begin{SeeAlso}\relax
+\code{\LinkA{autoplot.sp\_elev()}{autoplot.sp.Rul.elev}}.
+
+Other plot functions: \code{\LinkA{autoplot.fgeo\_habitat}{autoplot.fgeo.Rul.habitat}},
+\code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{elev}{elev}},
+\code{\LinkA{plot\_dbh\_bubbles\_by\_quadrat}{plot.Rul.dbh.Rul.bubbles.Rul.by.Rul.quadrat}},
+\code{\LinkA{plot\_tag\_status\_by\_subquadrat}{plot.Rul.tag.Rul.status.Rul.by.Rul.subquadrat}},
+\code{\LinkA{sp}{sp}}
+
+Other autoplots: \code{\LinkA{autoplot.fgeo\_habitat}{autoplot.fgeo.Rul.habitat}},
+\code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}}, \code{\LinkA{elev}{elev}},
+\code{\LinkA{sp}{sp}}
+
+Other functions to construct fgeo classes: \code{\LinkA{elev}{elev}},
+\code{\LinkA{sp}{sp}}
+
+Other functions to plot elevation: \code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{elev}{elev}}
+
+Other functions to plot species: \code{\LinkA{autoplot.sp\_elev}{autoplot.sp.Rul.elev}},
+\code{\LinkA{autoplot\_by\_species.sp\_elev}{autoplot.Rul.by.Rul.species.sp.Rul.elev}},
+\code{\LinkA{sp}{sp}}
+\end{SeeAlso}
+%
+\begin{Examples}
+\begin{ExampleCode}
+assert_is_installed("fgeo.x")
+
+species_elevation <- sp_elev(fgeo.x::stem5, fgeo.x::elevation)
+inherits(species_elevation, "sp_elev")
+\end{ExampleCode}
+\end{Examples}
+\printindex{}
+\end{document}

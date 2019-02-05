@@ -10,13 +10,13 @@
 |collate  |English_United States.1252   |
 |ctype    |English_United States.1252   |
 |tz       |America/New_York             |
-|date     |2019-02-01                   |
+|date     |2019-02-05                   |
 
 # Dependencies
 
 |package |old   |new        |<U+0394>  |
 |:-------|:-----|:----------|:--|
-|fgeo.x  |1.1.0 |1.1.0.9000 |*  |
+|fgeo.x  |1.1.0 |1.1.0.9001 |*  |
 
 # Revdeps
 
@@ -25,7 +25,7 @@
 |package                                 |version |error |warning |note |
 |:---------------------------------------|:-------|:-----|:-------|:----|
 |[fgeo](problems.md#fgeo)                |1.1.1   |1     |1       |1    |
-|[fgeo.analyze](problems.md#fgeoanalyze) |1.1.2   |1     |1       |     |
-|[fgeo.plot](problems.md#fgeoplot)       |1.1.1   |1     |1       |     |
+|[fgeo.analyze](problems.md#fgeoanalyze) |1.1.3   |1     |1       |     |
+|[fgeo.plot](problems.md#fgeoplot)       |1.1.2   |1     |1       |     |
 |[fgeo.tool](problems.md#fgeotool)       |1.2.1   |1     |1       |     |
 
