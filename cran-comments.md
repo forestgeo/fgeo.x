@@ -10,17 +10,12 @@
 
 0 errors | 0 warnings | 1 notes
 
-### win-builder
-
-Status: 1 NOTE
-Comments:
-* This note is safe to ignore, except FIXME
+* This note is safe to ignore.
 * I use <https://forestgeo.github.io/drat/> to check reverse dependencies.
 
 NOTE
 
 * New submission
-* Version contains large components (1.1.0.9001) ... FIXME
 * Availability using Additional_repositories specification:
   * ?   ?   https://cran.rstudio.com/        
   * ?   ?   https://forestgeo.github.io/drat/
