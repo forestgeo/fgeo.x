@@ -23,7 +23,8 @@ BugReports: https://github.com/forestgeo/fgeo.x/issues
 Depends: 
     R (>= 3.2)
 Imports: 
-    utils
+    utils,
+    memoise
 Suggests: 
     spelling,
     testthat

@@ -21,12 +21,12 @@ A dataset.
 Access data stored online.
 }
 \examples{
-\dontrun{
-available_data <- "https://github.com/forestgeo/fgeo.data/tree/master/data"
-browseURL(available_data)
-
-# May take over 5 seconds (i.e. above the time limit acceptable for CRAN)
 # Defaults to read data
+# The first call is memoised
+system.time(download_data("unique_id"))
+# Subsequent calls use the memoised data, so takes no time
+system.time(download_data("unique_id"))
+
 download_data("unique_id")
 
 # Can download data to a destination file given by `destfile`
@@ -34,7 +34,9 @@ tmp <- tempfile()
 download_data("unique_id", destfile = tmp)
 load(tmp)
 unique_id
-}
+
+available_data <- "https://github.com/forestgeo/fgeo.data/tree/master/data"
+if (interactive()) browseURL(available_data)
 }
 \seealso{
 \code{\link[utils:download.file]{utils::download.file()}}

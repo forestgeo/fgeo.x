@@ -2,7 +2,9 @@
 
 * Work in progress.
 
-* New `destfile` to `download_data()` allows to download data. By default (`destdata = NULL`) `download_data()` continues to read data.
+* `download_data()` is now memoised. Calls after the first one take no time.
+
+* `download_data()` gains `destfile` to download data (defaults to read data).
 
 # fgeo.x 1.1.2 ([GitHub](https://github.com/forestgeo/fgeo.x/releases) and [drat](https://forestgeo.github.io/drat/))
 
