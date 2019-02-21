@@ -4,12 +4,15 @@
 \alias{download_data}
 \title{Access data stored online.}
 \usage{
-download_data(x)
+download_data(x, destfile = NULL)
 }
 \arguments{
 \item{x}{A string giving the name of the dataset to download. The name
 of any dataset listed \href{https://github.com/forestgeo/fgeo.data/tree/master/data}{here} (without the
 extension).}
+
+\item{destfile}{A character string with the name where the downloaded
+    file is saved.  Tilde-expansion is performed.}
 }
 \value{
 A dataset.
@@ -19,11 +22,23 @@ Access data stored online.
 }
 \examples{
 \dontrun{
+available_data <- "https://github.com/forestgeo/fgeo.data/tree/master/data"
+browseURL(available_data)
+
 # May take over 5 seconds (i.e. above the time limit acceptable for CRAN)
-download_data("luquillo_stem6_random")
+# Defaults to read data
+download_data("unique_id")
+
+# Can download data to a destination file given by `destfile`
+tmp <- tempfile()
+download_data("unique_id", destfile = tmp)
+load(tmp)
+unique_id
 }
 }
 \seealso{
+\code{\link[utils:download.file]{utils::download.file()}}
+
 Other datasets: \code{\link{datasets}},
   \code{\link{example_path}}
 }
