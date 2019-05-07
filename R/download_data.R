@@ -32,11 +32,13 @@ download_data_impl <- function(x, destfile = NULL) {
 #'
 #' download_data("unique_id")
 #'
+#' \dontrun{
 #' # Can download data to a destination file given by `destfile`
 #' tmp <- tempfile()
 #' download_data("unique_id", destfile = tmp)
 #' load(tmp)
 #' unique_id
+#' }
 #'
 #' available_data <- "https://github.com/forestgeo/fgeo.data/tree/master/data"
 #' if (interactive()) browseURL(available_data)
