@@ -11,8 +11,9 @@ download_data(x, destfile = NULL)
 of any dataset listed \href{https://github.com/forestgeo/fgeo.data/tree/master/data}{here} (without the
 extension).}
 
-\item{destfile}{A character string with the name where the downloaded
-    file is saved.  Tilde-expansion is performed.}
+\item{destfile}{a character string (or vector, see \code{url}) with
+    the name where the downloaded file is saved.  Tilde-expansion is
+    performed.}
 }
 \value{
 A dataset.
