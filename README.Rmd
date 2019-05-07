@@ -23,14 +23,13 @@ Access small example datasets from [Luquillo](https://forestgeo.si.edu/sites/nor
 
 ## Installation
 
-Install the latest stable version of **fgeo.x** with:
+Install the latest stable version of **fgeo.x** from CRAN with:
 
 ```R
-these_repos <- c(getOption("repos"), "https://forestgeo.github.io/drat")
-install.packages("fgeo.x", repos = these_repos)
+install.packages("fgeo.x")
 ```
 
-Install the development version of **fgeo.x** with:
+Install the development version of **fgeo.x** from GitHub with:
 
 ```R
 # install.packages("devtools")

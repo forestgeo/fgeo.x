@@ -15,14 +15,13 @@ ForestGEO site in Puerto Rico.
 
 ## Installation
 
-Install the latest stable version of **fgeo.x** with:
+Install the latest stable version of **fgeo.x** from CRAN with:
 
 ``` r
-these_repos <- c(getOption("repos"), "https://forestgeo.github.io/drat")
-install.packages("fgeo.x", repos = these_repos)
+install.packages("fgeo.x")
 ```
 
-Install the development version of **fgeo.x** with:
+Install the development version of **fgeo.x** from GitHub with:
 
 ``` r
 # install.packages("devtools")
