@@ -32,13 +32,15 @@
 #' @family datasets
 #' @seealso [utils::download.file()]
 #' @export
-download_data <- memoise::memoise(function(x, destfile = NULL) {
+#' @importFrom memoise memoise
+#' @importFrom utils download.file
+download_data <- memoise(function(x, destfile = NULL) {
   if (!is.null(destfile)) {
-    return(utils::download.file(data_url(x), destfile = destfile))
+    return(download.file(data_url(x), destfile = destfile))
   }
 
   tmp <- tempfile()
-  utils::download.file(data_url(x), tmp)
+  download.file(data_url(x), tmp)
 
   e <- new.env()
   load(tmp, envir = e)
