@@ -1,17 +1,3 @@
-download_data_impl <- function(x, destfile = NULL) {
-  if (!is.null(destfile)) {
-    return(utils::download.file(data_url(x), destfile = destfile))
-  }
-
-  tmp <- tempfile()
-  utils::download.file(data_url(x), tmp)
-
-  e <- new.env()
-  load(tmp, envir = e)
-
-  e[[x]]
-}
-
 #' Access data stored online.
 #'
 #' @param x A string giving the name of the dataset to download. The name
@@ -46,7 +32,19 @@ download_data_impl <- function(x, destfile = NULL) {
 #' @family datasets
 #' @seealso [utils::download.file()]
 #' @export
-download_data <- memoise::memoise(download_data_impl)
+download_data <- memoise::memoise(function(x, destfile = NULL) {
+  if (!is.null(destfile)) {
+    return(utils::download.file(data_url(x), destfile = destfile))
+  }
+
+  tmp <- tempfile()
+  utils::download.file(data_url(x), tmp)
+
+  e <- new.env()
+  load(tmp, envir = e)
+
+  e[[x]]
+})
 
 data_url <- function(x) {
   paste0("https://github.com/forestgeo/fgeo.data/raw/master/data/", x, ".rda")
