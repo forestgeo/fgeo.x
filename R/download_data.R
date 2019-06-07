@@ -24,6 +24,8 @@ download_data_impl <- function(x, destfile = NULL) {
 #' @return A dataset.
 #'
 #' @examples
+#' # Not running CRAN checks (may take longer than the allowed run time limit)
+#' \donttest{
 #' # Defaults to read data
 #' # The first call is memoised
 #' system.time(download_data("unique_id"))
@@ -32,7 +34,6 @@ download_data_impl <- function(x, destfile = NULL) {
 #'
 #' download_data("unique_id")
 #'
-#' \dontrun{
 #' # Can download data to a destination file given by `destfile`
 #' tmp <- tempfile()
 #' download_data("unique_id", destfile = tmp)
