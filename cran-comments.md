@@ -14,10 +14,7 @@
    Old maintainer(s):
    Mauro Lepore <leporem@si.edu>
 
-I have changed my email address.
-
-FIXME
-* Version contains large components (1.1.3.9000)
+The maintainer's email address has changed. Immediately after submission, you'll receive a confirmation email to CRAN-submissions@R-project.org from the previous address.
 
 ## revdepcheck results
 
