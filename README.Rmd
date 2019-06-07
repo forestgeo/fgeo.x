@@ -78,7 +78,7 @@ str(download_data("luquillo_stem6_random"))
 
 ## Information
 
-* [Getting help](SUPPORT.md).
-* [Contributing](CONTRIBUTING.md).
-* [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
+* [Getting help](https://forestgeo.github.io/fgeo.x/SUPPORT.html).
+* [Contributing](https://forestgeo.github.io/fgeo.x/CONTRIBUTING.html).
+* [Contributor Code of Conduct](https://forestgeo.github.io/fgeo.x/CODE_OF_CONDUCT.html).
 
