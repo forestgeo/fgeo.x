@@ -18,9 +18,6 @@ I have changed my email address.
 
 FIXME
 * Version contains large components (1.1.3.9000)
-* Examples with CPU or elapsed time > 5s
-  user system elapsed
-  download_data 0.04   0.06   13.59
 
 ## Downstream dependencies
 
