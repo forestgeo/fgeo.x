@@ -37,10 +37,10 @@ tmp <- tempfile()
 download_data("unique_id", destfile = tmp)
 load(tmp)
 unique_id
-}
 
 available_data <- "https://github.com/forestgeo/fgeo.data/tree/master/data"
 if (interactive()) browseURL(available_data)
+}
 }
 \seealso{
 \code{\link[utils:download.file]{utils::download.file()}}

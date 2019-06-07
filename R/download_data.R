@@ -39,10 +39,10 @@ download_data_impl <- function(x, destfile = NULL) {
 #' download_data("unique_id", destfile = tmp)
 #' load(tmp)
 #' unique_id
-#' }
 #'
 #' available_data <- "https://github.com/forestgeo/fgeo.data/tree/master/data"
 #' if (interactive()) browseURL(available_data)
+#' }
 #' @family datasets
 #' @seealso [utils::download.file()]
 #' @export
