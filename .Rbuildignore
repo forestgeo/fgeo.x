@@ -1,6 +1,5 @@
 ^revdep$
 ^cran-comments\.md$
-^\.buildignore$
 ^README\.Rmd$
 ^docs$
 ^_pkgdown\.yml$
@@ -10,3 +9,4 @@
 ^fgeo\.x\.Rproj$
 ^data-raw$
 ^\.Rproj\.user$
+^buildignore$
