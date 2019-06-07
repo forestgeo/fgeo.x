@@ -2,3 +2,5 @@
 
 export(download_data)
 export(example_path)
+importFrom(memoise,memoise)
+importFrom(utils,download.file)

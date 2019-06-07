@@ -19,7 +19,9 @@ I have changed my email address.
 FIXME
 * Version contains large components (1.1.3.9000)
 
-## Downstream dependencies
+## revdepcheck results
 
-There are currently no downstream dependencies for this package.
+We checked 4 reverse dependencies (from CRAN), comparing R CMD check results across CRAN and dev versions of this package.
 
+ * We saw 0 new problems
+ * We failed to check 0 packages

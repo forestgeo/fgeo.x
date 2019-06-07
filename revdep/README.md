@@ -2,30 +2,32 @@
 
 |field    |value                        |
 |:--------|:----------------------------|
-|version  |R version 3.5.2 (2018-12-20) |
-|os       |Windows >= 8 x64             |
-|system   |x86_64, mingw32              |
+|version  |R version 3.6.0 (2019-04-26) |
+|os       |Ubuntu 18.04.2 LTS           |
+|system   |x86_64, linux-gnu            |
 |ui       |RStudio                      |
 |language |(EN)                         |
-|collate  |English_United States.1252   |
-|ctype    |English_United States.1252   |
-|tz       |America/New_York             |
-|date     |2019-02-05                   |
+|collate  |C.UTF-8                      |
+|ctype    |C.UTF-8                      |
+|tz       |America/Costa_Rica           |
+|date     |2019-06-07                   |
 
 # Dependencies
 
-|package |old   |new        |<U+0394>  |
-|:-------|:-----|:----------|:--|
-|fgeo.x  |1.1.0 |1.1.0.9001 |*  |
+|package |old    |new    |Δ  |
+|:-------|:------|:------|:--|
+|fgeo.x  |1.1.3  |1.1.4  |*  |
+|digest  |0.6.19 |0.6.19 |   |
+|memoise |1.1.0  |1.1.0  |   |
 
 # Revdeps
 
-## All (4)
+## Failed to check (4)
 
-|package                                 |version |error |warning |note |
-|:---------------------------------------|:-------|:-----|:-------|:----|
-|[fgeo](problems.md#fgeo)                |1.1.1   |1     |1       |1    |
-|[fgeo.analyze](problems.md#fgeoanalyze) |1.1.3   |1     |1       |     |
-|[fgeo.plot](problems.md#fgeoplot)       |1.1.2   |1     |1       |     |
-|[fgeo.tool](problems.md#fgeotool)       |1.2.1   |1     |1       |     |
+|package      |version |error |warning |note |
+|:------------|:-------|:-----|:-------|:----|
+|fgeo         |?       |      |        |     |
+|fgeo.analyze |?       |      |        |     |
+|fgeo.plot    |?       |      |        |     |
+|fgeo.tool    |?       |      |        |     |
 
