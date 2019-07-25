@@ -157,9 +157,9 @@ extension).</p></td>
 </div><div class='input'><span class='co'># Defaults to read data</span>
 <span class='co'># The first call is memoised</span>
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.time'>system.time</a></span>(<span class='fu'>download_data</span>(<span class='st'>"unique_id"</span>))</div><div class='output co'>#&gt;    user  system elapsed 
-#&gt;   0.020   0.000   0.485 </div><div class='input'><span class='co'># Subsequent calls use the memoised data, so takes no time</span>
+#&gt;   0.022   0.000   0.453 </div><div class='input'><span class='co'># Subsequent calls use the memoised data, so takes no time</span>
 <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/system.time'>system.time</a></span>(<span class='fu'>download_data</span>(<span class='st'>"unique_id"</span>))</div><div class='output co'>#&gt;    user  system elapsed 
-#&gt;   0.012   0.000   0.014 </div><div class='input'>
+#&gt;   0.015   0.000   0.015 </div><div class='input'>
 <span class='fu'>download_data</span>(<span class='st'>"unique_id"</span>)</div><div class='output co'>#&gt; # A tibble: 3 x 2
 #&gt;   table         column
 #&gt;   &lt;chr&gt;         &lt;chr&gt; 
