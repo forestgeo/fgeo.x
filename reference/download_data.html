@@ -160,9 +160,9 @@ extension).</p></td>
 <span class='co'># Defaults to read data</span>
 <span class='co'># The first call is memoised</span>
 <span class='fu'><a href='https://rdrr.io/r/base/system.time.html'>system.time</a></span>(<span class='fu'>download_data</span>(<span class='st'>"unique_id"</span>))</div><div class='output co'>#&gt;    user  system elapsed 
-#&gt;   0.018   0.000   0.383 </div><div class='input'><span class='co'># Subsequent calls use the memoised data, so takes no time</span>
+#&gt;   0.017   0.000   0.158 </div><div class='input'><span class='co'># Subsequent calls use the memoised data, so takes no time</span>
 <span class='fu'><a href='https://rdrr.io/r/base/system.time.html'>system.time</a></span>(<span class='fu'>download_data</span>(<span class='st'>"unique_id"</span>))</div><div class='output co'>#&gt;    user  system elapsed 
-#&gt;   0.001   0.000   0.000 </div><div class='input'>
+#&gt;       0       0       0 </div><div class='input'>
 <span class='fu'>download_data</span>(<span class='st'>"unique_id"</span>)</div><div class='output co'>#&gt; # A tibble: 3 x 2
 #&gt;   table         column
 #&gt;   &lt;chr&gt;         &lt;chr&gt; 
